@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #include <Photos/Photos.h>
-#import "HYWIPAsset.h"
-#import "HYWImagePickerConfig.h"
+#import "JNIPAsset.h"
+#import "JNImagePickerConfig.h"
 
 @protocol HYWIPGridCollectionViewCellDelegate <NSObject>
 
-- (void)overlayButtonPressed:(UIButton *)button withHYWIPAsset:(HYWIPAsset *)hywIPAsset;
+- (void)overlayButtonPressed:(UIButton *)button withHYWIPAsset:(JNIPAsset *)hywIPAsset;
 
 @end
 
@@ -23,12 +23,12 @@
 @property (strong, nonatomic) IBOutlet UIView *videoMetaView;
 @property (strong, nonatomic) IBOutlet UILabel *durationLabel;
 
-@property (strong, nonatomic) HYWIPAsset              *hywIPAsset;
+@property (strong, nonatomic) JNIPAsset              *hywIPAsset;
 @property (weak, nonatomic) id<HYWIPGridCollectionViewCellDelegate> cellDelegate;
 
 @property (strong) PHCachingImageManager *imageManager;
 
-- (void)drawViewWithHYWIPAsset:(HYWIPAsset *)hywIPAsset
+- (void)drawViewWithHYWIPAsset:(JNIPAsset *)hywIPAsset
                    mediaType:(ImagePickerMediaType)mediaType;
 
 @end

@@ -1,5 +1,5 @@
 //
-//  HYWIPAssetHelper.h
+//  JNIPAssetHelper.h
 //  yixin_iphone
 //
 //  Created by huangyaowu on 13-9-4.
@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #include <Photos/Photos.h>
-#import "HYWIPAsset.h"
+#import "JNIPAsset.h"
 
-@interface HYWIPAssetHelper : NSObject
+@interface JNIPAssetHelper : NSObject
 
-+ (UIImage *)imageWithHYWIPAsset:(HYWIPAsset *)hywIPAsset original:(BOOL)original;
++ (UIImage *)imageWithHYWIPAsset:(JNIPAsset *)hywIPAsset original:(BOOL)original;
 
 
 /**
@@ -25,7 +25,7 @@
 /**
  *  获得原图的数据
  */
-+ (NSData *)imageOriginalDataWithHYWIPAsset:(HYWIPAsset *)hywIPAsset;
++ (NSData *)imageOriginalDataWithHYWIPAsset:(JNIPAsset *)hywIPAsset;
 
 /**
  *  缩略图
@@ -46,6 +46,6 @@
  *
  *  @return BOOL
  */
-+ (BOOL)writeHYWIPAsset:(HYWIPAsset *)hywIPAsset toFilepath:(NSString *)filepath;
++ (BOOL)writeHYWIPAsset:(JNIPAsset *)hywIPAsset toFilepath:(NSString *)filepath;
 
 @end

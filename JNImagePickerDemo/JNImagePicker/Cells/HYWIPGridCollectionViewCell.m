@@ -7,7 +7,7 @@
 //
 
 #import "HYWIPGridCollectionViewCell.h"
-#import "HYWImagePickerHelper.h"
+#import "JNImagePickerHelper.h"
 #import "PhotoKitAccessor.h"
 
 @implementation HYWIPGridCollectionViewCell
@@ -20,7 +20,7 @@
     [_overlayButton addTarget:self action:@selector(overlayButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void)drawViewWithHYWIPAsset:(HYWIPAsset *)hywIPAsset
+- (void)drawViewWithHYWIPAsset:(JNIPAsset *)hywIPAsset
                    mediaType:(ImagePickerMediaType)mediaType {
     
     self.hywIPAsset = hywIPAsset;
@@ -54,7 +54,7 @@
     options.networkAccessAllowed = YES;
     options.synchronous = YES;
     
-    CGSize targetSize = [HYWImagePickerHelper assetGridThumbnailSize];
+    CGSize targetSize = [JNImagePickerHelper assetGridThumbnailSize];
     hywIPAsset.assetRequestID = [imageManager requestImageForAsset:hywIPAsset.phAsset targetSize:targetSize contentMode:PHImageContentModeAspectFit options:options resultHandler:^(UIImage *result, NSDictionary *info) {
         dispatch_async(dispatch_get_main_queue(), ^{
             if (result) {

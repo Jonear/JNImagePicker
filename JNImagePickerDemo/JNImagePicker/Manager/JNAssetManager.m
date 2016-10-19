@@ -6,17 +6,17 @@
 //  Copyright © 2016年 huangyaowu. All rights reserved.
 //
 
-#import "HYWAssetManager.h"
+#import "JNAssetManager.h"
 
 #define IOS8            ([[[UIDevice currentDevice] systemVersion] doubleValue] >= 8.0)
 
-@implementation HYWAssetManager
+@implementation JNAssetManager
 
 + (instancetype)sharedManager {
-    static HYWAssetManager *instance;
+    static JNAssetManager *instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [[HYWAssetManager alloc]init];
+        instance = [[JNAssetManager alloc]init];
     });
     return instance;
 }

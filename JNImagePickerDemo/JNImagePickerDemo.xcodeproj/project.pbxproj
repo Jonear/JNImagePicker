@@ -26,14 +26,14 @@
 		E6C41EA11DB7853A00B580B5 /* JNPageItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E731DB7853A00B580B5 /* JNPageItemView.m */; };
 		E6C41EA41DB7853A00B580B5 /* ALAssetsLibraryAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E7A1DB7853A00B580B5 /* ALAssetsLibraryAccessor.m */; };
 		E6C41EA51DB7853A00B580B5 /* AVAssetExportHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E7C1DB7853A00B580B5 /* AVAssetExportHelper.m */; };
-		E6C41EA61DB7853A00B580B5 /* HYWImagePickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E7E1DB7853A00B580B5 /* HYWImagePickerHelper.m */; };
-		E6C41EA71DB7853A00B580B5 /* HYWIPAssetHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E801DB7853A00B580B5 /* HYWIPAssetHelper.m */; };
+		E6C41EA61DB7853A00B580B5 /* JNImagePickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E7E1DB7853A00B580B5 /* JNImagePickerHelper.m */; };
+		E6C41EA71DB7853A00B580B5 /* JNIPAssetHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E801DB7853A00B580B5 /* JNIPAssetHelper.m */; };
 		E6C41EA81DB7853A00B580B5 /* PhotoKitAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E821DB7853A00B580B5 /* PhotoKitAccessor.m */; };
 		E6C41EA91DB7853A00B580B5 /* PrivacyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E841DB7853A00B580B5 /* PrivacyHelper.m */; };
-		E6C41EAA1DB7853A00B580B5 /* HYWAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E871DB7853A00B580B5 /* HYWAssetManager.m */; };
-		E6C41EAB1DB7853A00B580B5 /* HYWImagePickerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E891DB7853A00B580B5 /* HYWImagePickerConfig.m */; };
-		E6C41EAC1DB7853A00B580B5 /* HYWImagePickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E8B1DB7853A00B580B5 /* HYWImagePickerManager.m */; };
-		E6C41EAD1DB7853A00B580B5 /* HYWIPAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E8E1DB7853A00B580B5 /* HYWIPAsset.m */; };
+		E6C41EAA1DB7853A00B580B5 /* JNAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E871DB7853A00B580B5 /* JNAssetManager.m */; };
+		E6C41EAB1DB7853A00B580B5 /* JNImagePickerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E891DB7853A00B580B5 /* JNImagePickerConfig.m */; };
+		E6C41EAC1DB7853A00B580B5 /* JNImagePickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E8B1DB7853A00B580B5 /* JNImagePickerManager.m */; };
+		E6C41EAD1DB7853A00B580B5 /* JNIPAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E8E1DB7853A00B580B5 /* JNIPAsset.m */; };
 		E6C41EAE1DB7853A00B580B5 /* HYWPHGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E911DB7853A00B580B5 /* HYWPHGridViewController.m */; };
 		E6C41EAF1DB7853A00B580B5 /* HYWPHGridViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E921DB7853A00B580B5 /* HYWPHGridViewController.xib */; };
 		E6C41EB01DB7853A00B580B5 /* HYWPHImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E941DB7853A00B580B5 /* HYWPHImageViewController.m */; };
@@ -96,22 +96,22 @@
 		E6C41E7A1DB7853A00B580B5 /* ALAssetsLibraryAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAssetsLibraryAccessor.m; sourceTree = "<group>"; };
 		E6C41E7B1DB7853A00B580B5 /* AVAssetExportHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAssetExportHelper.h; sourceTree = "<group>"; };
 		E6C41E7C1DB7853A00B580B5 /* AVAssetExportHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAssetExportHelper.m; sourceTree = "<group>"; };
-		E6C41E7D1DB7853A00B580B5 /* HYWImagePickerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWImagePickerHelper.h; sourceTree = "<group>"; };
-		E6C41E7E1DB7853A00B580B5 /* HYWImagePickerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWImagePickerHelper.m; sourceTree = "<group>"; };
-		E6C41E7F1DB7853A00B580B5 /* HYWIPAssetHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWIPAssetHelper.h; sourceTree = "<group>"; };
-		E6C41E801DB7853A00B580B5 /* HYWIPAssetHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWIPAssetHelper.m; sourceTree = "<group>"; };
+		E6C41E7D1DB7853A00B580B5 /* JNImagePickerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNImagePickerHelper.h; sourceTree = "<group>"; };
+		E6C41E7E1DB7853A00B580B5 /* JNImagePickerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNImagePickerHelper.m; sourceTree = "<group>"; };
+		E6C41E7F1DB7853A00B580B5 /* JNIPAssetHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNIPAssetHelper.h; sourceTree = "<group>"; };
+		E6C41E801DB7853A00B580B5 /* JNIPAssetHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNIPAssetHelper.m; sourceTree = "<group>"; };
 		E6C41E811DB7853A00B580B5 /* PhotoKitAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoKitAccessor.h; sourceTree = "<group>"; };
 		E6C41E821DB7853A00B580B5 /* PhotoKitAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoKitAccessor.m; sourceTree = "<group>"; };
 		E6C41E831DB7853A00B580B5 /* PrivacyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivacyHelper.h; sourceTree = "<group>"; };
 		E6C41E841DB7853A00B580B5 /* PrivacyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacyHelper.m; sourceTree = "<group>"; };
-		E6C41E861DB7853A00B580B5 /* HYWAssetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWAssetManager.h; sourceTree = "<group>"; };
-		E6C41E871DB7853A00B580B5 /* HYWAssetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWAssetManager.m; sourceTree = "<group>"; };
-		E6C41E881DB7853A00B580B5 /* HYWImagePickerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWImagePickerConfig.h; sourceTree = "<group>"; };
-		E6C41E891DB7853A00B580B5 /* HYWImagePickerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWImagePickerConfig.m; sourceTree = "<group>"; };
-		E6C41E8A1DB7853A00B580B5 /* HYWImagePickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWImagePickerManager.h; sourceTree = "<group>"; };
-		E6C41E8B1DB7853A00B580B5 /* HYWImagePickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWImagePickerManager.m; sourceTree = "<group>"; };
-		E6C41E8D1DB7853A00B580B5 /* HYWIPAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWIPAsset.h; sourceTree = "<group>"; };
-		E6C41E8E1DB7853A00B580B5 /* HYWIPAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWIPAsset.m; sourceTree = "<group>"; };
+		E6C41E861DB7853A00B580B5 /* JNAssetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNAssetManager.h; sourceTree = "<group>"; };
+		E6C41E871DB7853A00B580B5 /* JNAssetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNAssetManager.m; sourceTree = "<group>"; };
+		E6C41E881DB7853A00B580B5 /* JNImagePickerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNImagePickerConfig.h; sourceTree = "<group>"; };
+		E6C41E891DB7853A00B580B5 /* JNImagePickerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNImagePickerConfig.m; sourceTree = "<group>"; };
+		E6C41E8A1DB7853A00B580B5 /* JNImagePickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNImagePickerManager.h; sourceTree = "<group>"; };
+		E6C41E8B1DB7853A00B580B5 /* JNImagePickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNImagePickerManager.m; sourceTree = "<group>"; };
+		E6C41E8D1DB7853A00B580B5 /* JNIPAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNIPAsset.h; sourceTree = "<group>"; };
+		E6C41E8E1DB7853A00B580B5 /* JNIPAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNIPAsset.m; sourceTree = "<group>"; };
 		E6C41E901DB7853A00B580B5 /* HYWPHGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWPHGridViewController.h; sourceTree = "<group>"; };
 		E6C41E911DB7853A00B580B5 /* HYWPHGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWPHGridViewController.m; sourceTree = "<group>"; };
 		E6C41E921DB7853A00B580B5 /* HYWPHGridViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYWPHGridViewController.xib; sourceTree = "<group>"; };
@@ -269,10 +269,10 @@
 				E6C41E7A1DB7853A00B580B5 /* ALAssetsLibraryAccessor.m */,
 				E6C41E7B1DB7853A00B580B5 /* AVAssetExportHelper.h */,
 				E6C41E7C1DB7853A00B580B5 /* AVAssetExportHelper.m */,
-				E6C41E7D1DB7853A00B580B5 /* HYWImagePickerHelper.h */,
-				E6C41E7E1DB7853A00B580B5 /* HYWImagePickerHelper.m */,
-				E6C41E7F1DB7853A00B580B5 /* HYWIPAssetHelper.h */,
-				E6C41E801DB7853A00B580B5 /* HYWIPAssetHelper.m */,
+				E6C41E7D1DB7853A00B580B5 /* JNImagePickerHelper.h */,
+				E6C41E7E1DB7853A00B580B5 /* JNImagePickerHelper.m */,
+				E6C41E7F1DB7853A00B580B5 /* JNIPAssetHelper.h */,
+				E6C41E801DB7853A00B580B5 /* JNIPAssetHelper.m */,
 				E6C41E811DB7853A00B580B5 /* PhotoKitAccessor.h */,
 				E6C41E821DB7853A00B580B5 /* PhotoKitAccessor.m */,
 				E6C41E831DB7853A00B580B5 /* PrivacyHelper.h */,
@@ -284,12 +284,12 @@
 		E6C41E851DB7853A00B580B5 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				E6C41E861DB7853A00B580B5 /* HYWAssetManager.h */,
-				E6C41E871DB7853A00B580B5 /* HYWAssetManager.m */,
-				E6C41E881DB7853A00B580B5 /* HYWImagePickerConfig.h */,
-				E6C41E891DB7853A00B580B5 /* HYWImagePickerConfig.m */,
-				E6C41E8A1DB7853A00B580B5 /* HYWImagePickerManager.h */,
-				E6C41E8B1DB7853A00B580B5 /* HYWImagePickerManager.m */,
+				E6C41E861DB7853A00B580B5 /* JNAssetManager.h */,
+				E6C41E871DB7853A00B580B5 /* JNAssetManager.m */,
+				E6C41E881DB7853A00B580B5 /* JNImagePickerConfig.h */,
+				E6C41E891DB7853A00B580B5 /* JNImagePickerConfig.m */,
+				E6C41E8A1DB7853A00B580B5 /* JNImagePickerManager.h */,
+				E6C41E8B1DB7853A00B580B5 /* JNImagePickerManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -297,8 +297,8 @@
 		E6C41E8C1DB7853A00B580B5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E6C41E8D1DB7853A00B580B5 /* HYWIPAsset.h */,
-				E6C41E8E1DB7853A00B580B5 /* HYWIPAsset.m */,
+				E6C41E8D1DB7853A00B580B5 /* JNIPAsset.h */,
+				E6C41E8E1DB7853A00B580B5 /* JNIPAsset.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -458,28 +458,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6C41EAD1DB7853A00B580B5 /* HYWIPAsset.m in Sources */,
+				E6C41EAD1DB7853A00B580B5 /* JNIPAsset.m in Sources */,
 				E6C41EA81DB7853A00B580B5 /* PhotoKitAccessor.m in Sources */,
 				E6C41EA01DB7853A00B580B5 /* iToast.m in Sources */,
 				E6C41EA51DB7853A00B580B5 /* AVAssetExportHelper.m in Sources */,
 				E6C41EA41DB7853A00B580B5 /* ALAssetsLibraryAccessor.m in Sources */,
-				E6C41EAB1DB7853A00B580B5 /* HYWImagePickerConfig.m in Sources */,
-				E6C41EAA1DB7853A00B580B5 /* HYWAssetManager.m in Sources */,
+				E6C41EAB1DB7853A00B580B5 /* JNImagePickerConfig.m in Sources */,
+				E6C41EAA1DB7853A00B580B5 /* JNAssetManager.m in Sources */,
 				E6C41E9A1DB7853A00B580B5 /* UIImagePickerController+DoModal.m in Sources */,
 				E6C41EAE1DB7853A00B580B5 /* HYWPHGridViewController.m in Sources */,
-				E6C41EAC1DB7853A00B580B5 /* HYWImagePickerManager.m in Sources */,
+				E6C41EAC1DB7853A00B580B5 /* JNImagePickerManager.m in Sources */,
 				E6C41DDF1DB77D6A00B580B5 /* ViewController.m in Sources */,
 				E6C41E9D1DB7853A00B580B5 /* HYWIPListTableViewCell.m in Sources */,
 				E6C41E9B1DB7853A00B580B5 /* HYWIPGridCollectionViewCell.m in Sources */,
 				E6C41EB21DB7853A00B580B5 /* HYWPHListViewController.m in Sources */,
-				E6C41EA61DB7853A00B580B5 /* HYWImagePickerHelper.m in Sources */,
+				E6C41EA61DB7853A00B580B5 /* JNImagePickerHelper.m in Sources */,
 				E6C41DDC1DB77D6A00B580B5 /* AppDelegate.m in Sources */,
 				E6C41EB01DB7853A00B580B5 /* HYWPHImageViewController.m in Sources */,
 				E6C41DD91DB77D6A00B580B5 /* main.m in Sources */,
 				E6C41E991DB7853A00B580B5 /* UIImagePickerController+Block.m in Sources */,
 				E6C41EA91DB7853A00B580B5 /* PrivacyHelper.m in Sources */,
 				E6C41E9F1DB7853A00B580B5 /* JNLargeImageView.m in Sources */,
-				E6C41EA71DB7853A00B580B5 /* HYWIPAssetHelper.m in Sources */,
+				E6C41EA71DB7853A00B580B5 /* JNIPAssetHelper.m in Sources */,
 				E6C41EA11DB7853A00B580B5 /* JNPageItemView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

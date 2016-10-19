@@ -8,9 +8,9 @@
 
 #import "ViewController.h"
 
-#import "HYWImagePickerManager.h"
-#import "HYWAssetManager.h"
-#import "HYWIPAssetHelper.h"
+#import "JNImagePickerManager.h"
+#import "JNAssetManager.h"
+#import "JNIPAssetHelper.h"
 #import "HYWPHListViewController.h"
 #import "HYWPHImageViewController.h"
 
@@ -37,19 +37,19 @@
 
 
 - (void)buttonClick:(id)sender {
-    [[HYWAssetManager sharedManager] clearData];
-    HYWImagePickerConfig *config = [[HYWImagePickerConfig alloc] init];
+    [[JNAssetManager sharedManager] clearData];
+    JNImagePickerConfig *config = [[JNImagePickerConfig alloc] init];
     config.imagePickerMediaType = kImagePickerMediaTypeAll;
     config.delegate = self;
     config.sendHDImage = YES;
     config.capacity = 1;
-    HYWImagePickerManager *manager = [[HYWImagePickerManager alloc] init];
+    JNImagePickerManager *manager = [[JNImagePickerManager alloc] init];
     [manager showImagePickerInViewController:self imagePickerConfig:config];
 }
 
 #pragma mark - PhotoKit HYWPHListViewControllerDelegate
 - (void)hywPHListViewController:(HYWPHListViewController *)picker didFinishPickingMediaWithInfo:(NSArray *)info {
-    BOOL isHDImage = [[HYWAssetManager sharedManager] isHDImage];
+    BOOL isHDImage = [[JNAssetManager sharedManager] isHDImage];
     [picker dismissViewControllerAnimated:YES completion:nil];
     
     [self sendImagesMessageWithAssetArray:info isHDImage:isHDImage];
@@ -64,8 +64,8 @@
 }
 
 - (void)sendImagesMessageWithAssetArray:(NSArray *)assets isHDImage:(BOOL)isHDImage {
-    [assets enumerateObjectsUsingBlock:^(HYWIPAsset *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        UIImage *image = [HYWIPAssetHelper imageWithHYWIPAsset:obj original:isHDImage];
+    [assets enumerateObjectsUsingBlock:^(JNIPAsset *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        UIImage *image = [JNIPAssetHelper imageWithHYWIPAsset:obj original:isHDImage];
         NSLog(@"%@", image);
     }];
     

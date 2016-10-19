@@ -1,5 +1,5 @@
 //
-//  HYWImagePickerConfig.h
+//  JNImagePickerConfig.h
 //  HYWImagePicker
 //
 //  Created by 黄耀武 on 16/3/11.
@@ -16,7 +16,7 @@ typedef enum : NSUInteger
 
 @protocol HYWPHListViewControllerDelegate;
 
-@interface HYWImagePickerConfig : NSObject
+@interface JNImagePickerConfig : NSObject
 
 @property (nonatomic, assign) ImagePickerMediaType  imagePickerMediaType;
 

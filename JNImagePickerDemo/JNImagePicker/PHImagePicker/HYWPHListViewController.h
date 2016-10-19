@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HYWImagePickerConfig.h"
+#import "JNImagePickerConfig.h"
 #include <Photos/Photos.h>
 @class HYWPHListViewController;
 
@@ -32,6 +32,6 @@
 
 @property (weak, nonatomic) id<HYWPHListViewControllerDelegate> plListDelegate;
 
-- (instancetype)initWithImagePickerConfig:(HYWImagePickerConfig *)imagePickerConfig;
+- (instancetype)initWithImagePickerConfig:(JNImagePickerConfig *)imagePickerConfig;
 
 @end

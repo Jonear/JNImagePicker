@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HYWIPAsset.h"
-#import "HYWImagePickerConfig.h"
+#import "JNIPAsset.h"
+#import "JNImagePickerConfig.h"
 
-@interface HYWImagePickerHelper : NSObject
+@interface JNImagePickerHelper : NSObject
 
-+ (HYWIPAsset *)selectedAsset:(HYWIPAsset *)hywIPAsset;
-+ (NSInteger)indexOfAsset:(HYWIPAsset *)hywIPAsset fromAssets:(NSArray *)assets;
++ (JNIPAsset *)selectedAsset:(JNIPAsset *)hywIPAsset;
++ (NSInteger)indexOfAsset:(JNIPAsset *)hywIPAsset fromAssets:(NSArray *)assets;
 + (void)clearAssetManager;
 + (CGSize)assetGridThumbnailSize;
 

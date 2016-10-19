@@ -12,12 +12,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HYWIPAsset.h"
-#import "HYWImagePickerConfig.h"
+#import "JNIPAsset.h"
+#import "JNImagePickerConfig.h"
 
 typedef void(^UIImagePickerControllerFinishBlock)(NSDictionary *info);
 
-@interface HYWImagePickerManager : NSObject
+@interface JNImagePickerManager : NSObject
 
 /// 调用系统相册和拍照功能的ActionSheet
 - (void)imagePickerActionSheetInController:(UIViewController *)viewController
@@ -30,6 +30,6 @@ typedef void(^UIImagePickerControllerFinishBlock)(NSDictionary *info);
                                finishBlock:(UIImagePickerControllerFinishBlock)finishBlock;
 
 - (void)showImagePickerInViewController:(UIViewController *)viewController
-                      imagePickerConfig:(HYWImagePickerConfig *)imagePickerConfig;
+                      imagePickerConfig:(JNImagePickerConfig *)imagePickerConfig;
 
 @end

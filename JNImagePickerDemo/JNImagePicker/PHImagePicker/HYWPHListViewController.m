@@ -9,9 +9,9 @@
 #import "HYWPHListViewController.h"
 #import "HYWIPListTableViewCell.h"
 #import "HYWPHGridViewController.h"
-#import "HYWAssetManager.h"
+#import "JNAssetManager.h"
 #import "PhotoKitAccessor.h"
-#import "HYWImagePickerHelper.h"
+#import "JNImagePickerHelper.h"
 
 static NSString * const HYWIPListTableViewCellReuseIdentifier = @"HYWIPListTableViewCellIdentifier";
 static CGSize const kAlbumThumbnailSize1 = {50.0f , 50.0f};
@@ -23,7 +23,7 @@ UITableViewDelegate,
 HYWPHGridViewControllerDelegate>
 {
     PHFetchOptions *onlyImagesOptions;
-    HYWAssetManager            *assetManager;
+    JNAssetManager            *assetManager;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -33,7 +33,7 @@ HYWPHGridViewControllerDelegate>
 
 @property (nonatomic, assign) NSInteger              maxCount;
 @property (nonatomic, assign) ImagePickerMediaType   mediaType;
-@property (nonatomic, strong) HYWImagePickerConfig   *imagePickerConfig;
+@property (nonatomic, strong) JNImagePickerConfig   *imagePickerConfig;
 @property (strong) PHCachingImageManager *imageManager;
 
 @end
@@ -45,7 +45,7 @@ HYWPHGridViewControllerDelegate>
     /**
      *  代理出去之前，我么清理一下Manager
      */
-    [HYWImagePickerHelper clearAssetManager];
+    [JNImagePickerHelper clearAssetManager];
     
     _tableView.dataSource = nil;
     _tableView.delegate = nil;
@@ -57,14 +57,14 @@ HYWPHGridViewControllerDelegate>
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        assetManager        = [HYWAssetManager sharedManager];
+        assetManager        = [JNAssetManager sharedManager];
         self.mediaType      = kImagePickerMediaTypePhoto;
         self.imageManager = [[PhotoKitAccessor sharedInstance] phCachingImageManager];
     }
     return self;
 }
 
-- (instancetype)initWithImagePickerConfig:(HYWImagePickerConfig *)imagePickerConfig {
+- (instancetype)initWithImagePickerConfig:(JNImagePickerConfig *)imagePickerConfig {
     self = [super init];
     if (self) {
         self.imagePickerConfig = imagePickerConfig;
@@ -116,7 +116,7 @@ HYWPHGridViewControllerDelegate>
     /**
      *  代理出去之前，我么清理一下Manager
      */
-    [HYWImagePickerHelper clearAssetManager];
+    [JNImagePickerHelper clearAssetManager];
     
     [self.imageManager stopCachingImagesForAllAssets];
     if (_plListDelegate) {
@@ -198,7 +198,7 @@ HYWPHGridViewControllerDelegate>
         assetGridViewController.assetsFetchResults = result;
         assetGridViewController.navigationItem.title = _collectionsFetchResultsTitles[index];
         
-        [HYWAssetManager sharedManager].assetsGroupID = _collectionsLocalIdentifier[index];
+        [JNAssetManager sharedManager].assetsGroupID = _collectionsLocalIdentifier[index];
         [self.navigationController pushViewController:assetGridViewController animated:YES];
     }
 }
@@ -214,7 +214,7 @@ HYWPHGridViewControllerDelegate>
             /**
              *  代理出去之后，我么清理一下Manager
              */
-            [HYWImagePickerHelper clearAssetManager];
+            [JNImagePickerHelper clearAssetManager];
         }
     }
 }
@@ -229,7 +229,7 @@ HYWPHGridViewControllerDelegate>
             /**
              *  代理出去之后，我么清理一下Manager
              */
-            [HYWImagePickerHelper clearAssetManager];
+            [JNImagePickerHelper clearAssetManager];
         }
     }
 }

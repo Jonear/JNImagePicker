@@ -7,12 +7,12 @@
 //
 
 #import "HYWPHImageViewController.h"
-#import "HYWAssetManager.h"
+#import "JNAssetManager.h"
 #import "iToast.h"
-#import "HYWImagePickerHelper.h"
+#import "JNImagePickerHelper.h"
 #import "PhotoKitAccessor.h"
-#import "HYWIPAssetHelper.h"
-#import "HYWImagePickerConfig.h"
+#import "JNIPAssetHelper.h"
+#import "JNImagePickerConfig.h"
 
 #define MAX_IMAGE_COUNT 9
 
@@ -24,7 +24,7 @@ static CGSize AssetGridThumbnailSize;
     NSInteger			_currentIndex;
     BOOL				_isFullScreen;
     BOOL                _isBeginTask;
-    HYWAssetManager		*assetManager;
+    JNAssetManager		*assetManager;
     BOOL                _isShowSingleImage;
     JNLargeImageView *_currentLargeImageViewCell;
 }
@@ -64,7 +64,7 @@ static CGSize AssetGridThumbnailSize;
     [self initUIComponent];
     [self reloadImageTableView];
     
-    AssetGridThumbnailSize = [HYWImagePickerHelper assetGridThumbnailSize];
+    AssetGridThumbnailSize = [JNImagePickerHelper assetGridThumbnailSize];
 }
 
 
@@ -94,7 +94,7 @@ static CGSize AssetGridThumbnailSize;
  // Pass the selected object to the new view controller.
  }
  */
-- (instancetype)initWithImagePickerConfig:(HYWImagePickerConfig *)imagePickerConfig
+- (instancetype)initWithImagePickerConfig:(JNImagePickerConfig *)imagePickerConfig
                               hywIPAssets:(NSArray *)hywIPAssets
                             objectAtIndex:(NSUInteger)index {
     self = [super init];
@@ -102,7 +102,7 @@ static CGSize AssetGridThumbnailSize;
         _hywIPAssets      = [NSArray arrayWithArray:hywIPAssets];
         _currentIndex   = index;
         
-        assetManager    = [HYWAssetManager sharedManager];
+        assetManager    = [JNAssetManager sharedManager];
         _photoAssets    = [NSArray array];
         _isShowSingleImage = NO;
         _imagePickerConfig = imagePickerConfig;
@@ -113,9 +113,9 @@ static CGSize AssetGridThumbnailSize;
 - (instancetype)initWithPHAsset:(PHAsset *)asset {
     self = [super init];
     if (self) {
-        HYWIPAsset *hywIPAsset = [[HYWIPAsset alloc] initWithPHAsset:asset];
+        JNIPAsset *hywIPAsset = [[JNIPAsset alloc] initWithPHAsset:asset];
         hywIPAsset.selected = YES;
-        assetManager    = [HYWAssetManager sharedManager];
+        assetManager    = [JNAssetManager sharedManager];
         assetManager.selectedAssets = [NSMutableArray arrayWithArray:_hywIPAssets];
         
         _hywIPAssets      = @[hywIPAsset];
@@ -123,7 +123,7 @@ static CGSize AssetGridThumbnailSize;
         
         _photoAssets    = [NSArray array];
         _isShowSingleImage  = YES;
-        HYWImagePickerConfig *config = [[HYWImagePickerConfig alloc] init];
+        JNImagePickerConfig *config = [[JNImagePickerConfig alloc] init];
         config.capacity = 1;
         _imagePickerConfig = config;
     }
@@ -131,7 +131,7 @@ static CGSize AssetGridThumbnailSize;
 }
 
 - (void)dealloc {
-    for (HYWIPAsset *hywIPAsset in _hywIPAssets) {
+    for (JNIPAsset *hywIPAsset in _hywIPAssets) {
         [self cancelAssetRequest:hywIPAsset];
     }
     
@@ -230,7 +230,7 @@ static CGSize AssetGridThumbnailSize;
         return;
     }
     
-    HYWIPAsset *hywIPAsset = [_hywIPAssets objectAtIndex:_currentIndex];
+    JNIPAsset *hywIPAsset = [_hywIPAssets objectAtIndex:_currentIndex];
     
     if (hywIPAsset.phAsset.mediaType == PHAssetMediaTypeVideo) {
         
@@ -267,7 +267,7 @@ static CGSize AssetGridThumbnailSize;
     
     assetManager.isHDImage = !assetManager.isHDImage;
     
-    HYWIPAsset *hywIPAsset = [_hywIPAssets objectAtIndex:_currentIndex];
+    JNIPAsset *hywIPAsset = [_hywIPAssets objectAtIndex:_currentIndex];
     if (!hywIPAsset.selected) {
         [self resetUIWhenSelected:assetManager.isHDImage];
     }
@@ -281,7 +281,7 @@ static CGSize AssetGridThumbnailSize;
     }
     
     if (!self.playerLayer) {
-        HYWIPAsset *hywIPAsset = [_hywIPAssets objectAtIndex:_currentIndex];
+        JNIPAsset *hywIPAsset = [_hywIPAssets objectAtIndex:_currentIndex];
         
         
         // 先停止上次的请求
@@ -382,7 +382,7 @@ static CGSize AssetGridThumbnailSize;
 
 - (void)resetUIWhenSelected:(BOOL)selected {
     if (selected) {
-        HYWIPAsset *hywIPAsset = [_hywIPAssets objectAtIndex:_currentIndex];
+        JNIPAsset *hywIPAsset = [_hywIPAssets objectAtIndex:_currentIndex];
         if (!hywIPAsset.selected) {
             if ([assetManager.selectedAssets count] >= _imagePickerConfig.capacity) {
                 [_hdImageIndicator stopAnimating];
@@ -403,7 +403,7 @@ static CGSize AssetGridThumbnailSize;
             hywIPAsset.selected = YES;
             [assetManager.selectedAssets addObject:hywIPAsset];
         } else {
-            HYWIPAsset *item = [HYWImagePickerHelper selectedAsset:hywIPAsset];
+            JNIPAsset *item = [JNImagePickerHelper selectedAsset:hywIPAsset];
             if (item) {
                 hywIPAsset.selected = NO;
                 [assetManager.selectedAssets removeObject:item];
@@ -436,7 +436,7 @@ static CGSize AssetGridThumbnailSize;
         return;
     }
     
-    HYWIPAsset *hywIPAsset = [self.hywIPAssets objectAtIndex:_currentIndex];
+    JNIPAsset *hywIPAsset = [self.hywIPAssets objectAtIndex:_currentIndex];
     
     [_hdImageButton setSelected:assetManager.isHDImage];
     if (assetManager.isHDImage) {
@@ -480,7 +480,7 @@ static CGSize AssetGridThumbnailSize;
     }
 }
 
-- (void)cancelAssetRequest:(HYWIPAsset *)hywIPAsset {
+- (void)cancelAssetRequest:(JNIPAsset *)hywIPAsset {
     if (!hywIPAsset) {
         return;
     }
@@ -500,7 +500,7 @@ static CGSize AssetGridThumbnailSize;
     largeImageViewCell.gapWidth = kHYWLargeImageGapWidth;
     largeImageViewCell.delegate = self;
     
-    HYWIPAsset *hywIPAsset = [_hywIPAssets objectAtIndex:index];
+    JNIPAsset *hywIPAsset = [_hywIPAssets objectAtIndex:index];
     
     if (hywIPAsset != nil) {
         [self loadBigImage:hywIPAsset imageView:largeImageViewCell];
@@ -528,7 +528,7 @@ static CGSize AssetGridThumbnailSize;
     
     
     
-    HYWIPAsset *hywIPAsset = [_hywIPAssets objectAtIndex:index];
+    JNIPAsset *hywIPAsset = [_hywIPAssets objectAtIndex:index];
     
     if (!hywIPAsset) {
         return;
@@ -582,7 +582,7 @@ static CGSize AssetGridThumbnailSize;
     
 }
 
-- (void)loadBigImage:(HYWIPAsset *)hywIPAsset imageView:(JNLargeImageView *)view {
+- (void)loadBigImage:(JNIPAsset *)hywIPAsset imageView:(JNLargeImageView *)view {
     if (!hywIPAsset) {
         return;
     }
@@ -591,7 +591,7 @@ static CGSize AssetGridThumbnailSize;
      *  先假装一个小图，这个小图在相片列表页请求过。
      *  这主要是为了解决加载同步到iCloud上的相片，需要下载大图，一般比较慢，比较模糊。
      */
-    UIImage *resultImage = [HYWIPAssetHelper thumbnailWithPHAsset:hywIPAsset.phAsset];
+    UIImage *resultImage = [JNIPAssetHelper thumbnailWithPHAsset:hywIPAsset.phAsset];
     if (resultImage) {
         view.imageView.image = resultImage;
     }
@@ -617,7 +617,7 @@ static CGSize AssetGridThumbnailSize;
 }
 
 - (void)pageView:(JNPageItemView *)pageView didEndDisplayingAtIndex:(NSInteger)index {
-    HYWIPAsset *hywIPAsset = [_hywIPAssets objectAtIndex:index];
+    JNIPAsset *hywIPAsset = [_hywIPAssets objectAtIndex:index];
     [self cancelAssetRequest:hywIPAsset];
 }
 

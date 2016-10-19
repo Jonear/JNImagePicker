@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HYWIPAsset.h"
+#import "JNIPAsset.h"
 
-@interface HYWAssetManager : NSObject
+@interface JNAssetManager : NSObject
 
 /**
  *  所有选择的Asset

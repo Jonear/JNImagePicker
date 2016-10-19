@@ -10,9 +10,9 @@
 #import "HYWIPGridCollectionViewCell.h"
 #import "HYWPHImageViewController.h"
 #import "iToast.h"
-#import "HYWImagePickerHelper.h"
+#import "JNImagePickerHelper.h"
 #import "HYWPHListViewController.h"
-#import "HYWAssetManager.h"
+#import "JNAssetManager.h"
 #import "PhotoKitAccessor.h"
 
 static NSString * const HYWIPGridCollectionViewCellReuseIdentifier = @"HYWIPGridCollectionViewCellIdentifier";
@@ -50,7 +50,7 @@ UICollectionViewDelegateFlowLayout,
 HYWIPGridCollectionViewCellDelegate,
 HYWPHImageViewControllerDelegate>
 {
-    HYWAssetManager *assetManager;
+    JNAssetManager *assetManager;
     BOOL _didAppear;
 }
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -61,7 +61,7 @@ HYWPHImageViewControllerDelegate>
 @property (strong) PHCachingImageManager *imageManager;
 @property CGRect previousPreheatRect;
 
-@property (nonatomic, strong) HYWImagePickerConfig   *imagePickerConfig;
+@property (nonatomic, strong) JNImagePickerConfig   *imagePickerConfig;
 @property (strong, nonatomic) ALAssetsGroup         *assetsGroup;
 
 @property (strong, nonatomic) NSMutableArray *photoAssets;
@@ -74,12 +74,12 @@ HYWPHImageViewControllerDelegate>
 
 @implementation HYWPHGridViewController
 
-- (instancetype)initWithImagePickerConfig:(HYWImagePickerConfig *)imagePickerConfig
+- (instancetype)initWithImagePickerConfig:(JNImagePickerConfig *)imagePickerConfig
 {
     self = [super init];
     if (self) {
         self.imagePickerConfig = imagePickerConfig;
-        AssetGridThumbnailSize = [HYWImagePickerHelper assetGridThumbnailSize];
+        AssetGridThumbnailSize = [JNImagePickerHelper assetGridThumbnailSize];
         
         _photoAssets = [NSMutableArray array];
         
@@ -90,7 +90,7 @@ HYWPHImageViewControllerDelegate>
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    assetManager = [HYWAssetManager sharedManager];
+    assetManager = [JNAssetManager sharedManager];
     
     self.imageManager = [[PhotoKitAccessor sharedInstance] phCachingImageManager];
     [self resetCachedAssets];
@@ -99,7 +99,7 @@ HYWPHImageViewControllerDelegate>
     
     for (NSInteger i = 0; i < self.assetsFetchResults.count; i++) {
         PHAsset *asset = self.assetsFetchResults[i];
-        HYWIPAsset *hywIPAsset = [[HYWIPAsset alloc] initWithPHAsset:asset];
+        JNIPAsset *hywIPAsset = [[JNIPAsset alloc] initWithPHAsset:asset];
         [_photoAssets addObject:hywIPAsset];
     }
     //    [[PHPhotoLibrary sharedPhotoLibrary] registerChangeObserver:self];
@@ -227,7 +227,7 @@ HYWPHImageViewControllerDelegate>
 }
 
 #pragma mark - Private Methods
-- (void)showICloudAlertWithHYWIPAsset:(HYWIPAsset *)hywIPAsset {
+- (void)showICloudAlertWithHYWIPAsset:(JNIPAsset *)hywIPAsset {
     if (hywIPAsset.phAsset.mediaType == PHAssetMediaTypeImage) {
 //        [YixinUtil showAlert:@"" content:@"正在从iCloud同步照片"];
     } else if (hywIPAsset.phAsset.mediaType == PHAssetMediaTypeVideo) {
@@ -259,7 +259,7 @@ HYWPHImageViewControllerDelegate>
 
 
 #pragma mark - Private Methods
-- (void)previewVideo:(HYWIPAsset *)hywIPAsset {
+- (void)previewVideo:(JNIPAsset *)hywIPAsset {
     if ([assetManager.selectedAssets count] > 0) {
         iToast *toast = [iToast makeToast:NSLocalizedString(@"选择相片时不能选择视频", nil)];
         [toast showAt:kToastPositionCenter duration:1.5];
@@ -275,18 +275,18 @@ HYWPHImageViewControllerDelegate>
     [self.navigationController pushViewController:imageViewController animated:YES];
 }
 
-- (void)previewPhoto:(HYWIPAsset *)hywIPAsset {
+- (void)previewPhoto:(JNIPAsset *)hywIPAsset {
     // 过滤视频
     NSMutableArray *filterVideoAssets = [NSMutableArray array];
     [filterVideoAssets addObjectsFromArray:_photoAssets];
     
-    [filterVideoAssets enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(HYWIPAsset *hywIPAsset, NSUInteger idx, BOOL * _Nonnull stop) {
+    [filterVideoAssets enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(JNIPAsset *hywIPAsset, NSUInteger idx, BOOL * _Nonnull stop) {
         if (hywIPAsset.phAsset.mediaType == PHAssetMediaTypeVideo) {
             [filterVideoAssets removeObject:hywIPAsset];
         }
     }];
     
-    NSUInteger _currentIndex = [HYWImagePickerHelper indexOfAsset:hywIPAsset fromAssets:filterVideoAssets];
+    NSUInteger _currentIndex = [JNImagePickerHelper indexOfAsset:hywIPAsset fromAssets:filterVideoAssets];
     
     HYWPHImageViewController *imageViewController = [[HYWPHImageViewController alloc]
                                                          initWithImagePickerConfig:_imagePickerConfig
@@ -456,8 +456,8 @@ HYWPHImageViewControllerDelegate>
     NSInteger currentTag = cell.tag + 1;
     cell.tag = currentTag;
     
-    HYWIPAsset *hywIPAsset = _photoAssets[indexPath.item];
-    for (HYWIPAsset *item in assetManager.selectedAssets) {
+    JNIPAsset *hywIPAsset = _photoAssets[indexPath.item];
+    for (JNIPAsset *item in assetManager.selectedAssets) {
         if ([item.phAsset.localIdentifier isEqualToString:hywIPAsset.phAsset.localIdentifier]) {
             hywIPAsset.selected = YES;
         }
@@ -480,7 +480,7 @@ HYWPHImageViewControllerDelegate>
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     // 重新计算当前index
-    HYWIPAsset *currentHYWIPAsset = _photoAssets[indexPath.item];
+    JNIPAsset *currentHYWIPAsset = _photoAssets[indexPath.item];
     if (currentHYWIPAsset.isInTheCloud) {
         [self showICloudAlertWithHYWIPAsset:currentHYWIPAsset];
         return;
@@ -516,7 +516,7 @@ HYWPHImageViewControllerDelegate>
     }
 }
 #pragma mark - HYWIPGridCollectionViewCellDelegate
-- (void)overlayButtonPressed:(UIButton *)button withHYWIPAsset:(HYWIPAsset *)hywIPAsset {
+- (void)overlayButtonPressed:(UIButton *)button withHYWIPAsset:(JNIPAsset *)hywIPAsset {
     if (hywIPAsset.isInTheCloud) {
         [self showICloudAlertWithHYWIPAsset:hywIPAsset];
         return;
@@ -541,7 +541,7 @@ HYWPHImageViewControllerDelegate>
         hywIPAsset.selected = YES;
         [assetManager.selectedAssets addObject:hywIPAsset];
     } else {
-        HYWIPAsset *item = [HYWImagePickerHelper selectedAsset:hywIPAsset];
+        JNIPAsset *item = [JNImagePickerHelper selectedAsset:hywIPAsset];
         if (item) {
             hywIPAsset.selected = NO;
             [assetManager.selectedAssets removeObject:item];

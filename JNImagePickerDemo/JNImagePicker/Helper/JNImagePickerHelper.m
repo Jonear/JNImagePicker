@@ -6,21 +6,21 @@
 //  Copyright © 2016年 huangyaowu. All rights reserved.
 //
 
-#import "HYWImagePickerHelper.h"
-#import "HYWAssetManager.h"
+#import "JNImagePickerHelper.h"
+#import "JNAssetManager.h"
 
-@implementation HYWImagePickerHelper
+@implementation JNImagePickerHelper
 
 
-+ (HYWIPAsset *)selectedAsset:(HYWIPAsset *)hywIPAsset {
-    HYWIPAsset *item = nil;
-    HYWAssetManager *assetManager = [HYWAssetManager sharedManager];
++ (JNIPAsset *)selectedAsset:(JNIPAsset *)hywIPAsset {
+    JNIPAsset *item = nil;
+    JNAssetManager *assetManager = [JNAssetManager sharedManager];
     if ([assetManager.selectedAssets count] == 0) {
         return item;
     }
     
     NSString *identifier = hywIPAsset.phAsset.localIdentifier;
-    for (HYWIPAsset *asset in assetManager.selectedAssets) {
+    for (JNIPAsset *asset in assetManager.selectedAssets) {
         if ([asset.phAsset.localIdentifier isEqualToString:identifier]) {
             item = asset;
             break;
@@ -30,11 +30,11 @@
     return item;
 }
 
-+ (NSInteger)indexOfAsset:(HYWIPAsset *)hywIPAsset fromAssets:(NSArray *)assets {
-    HYWIPAsset *item = nil;
++ (NSInteger)indexOfAsset:(JNIPAsset *)hywIPAsset fromAssets:(NSArray *)assets {
+    JNIPAsset *item = nil;
     
     NSString *identifier = hywIPAsset.phAsset.localIdentifier;
-    for (HYWIPAsset *asset in assets) {
+    for (JNIPAsset *asset in assets) {
         if ([asset.phAsset.localIdentifier isEqualToString:identifier]) {
             item = asset;
             break;
@@ -45,7 +45,7 @@
 }
 
 + (void)clearAssetManager {
-    [[HYWAssetManager sharedManager] clearData];
+    [[JNAssetManager sharedManager] clearData];
 }
 
 static NSUInteger const MINIMUM_SPACING     = 2.0f;

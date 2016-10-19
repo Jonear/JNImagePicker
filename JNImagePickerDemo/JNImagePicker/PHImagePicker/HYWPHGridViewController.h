@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HYWIPAsset.h"
-#import "HYWImagePickerConfig.h"
+#import "JNIPAsset.h"
+#import "JNImagePickerConfig.h"
 #include <Photos/Photos.h>
 
 @class HYWPHGridViewController;
@@ -28,6 +28,6 @@
 @property (nonatomic, assign) BOOL                           isScrollToBottom;  // 这个属性在willAppear需要用到（左滑），不要优化掉 hyw
 @property (weak, nonatomic) id<HYWPHGridViewControllerDelegate>       plGridDelegate;
 
-- (instancetype)initWithImagePickerConfig:(HYWImagePickerConfig *)imagePickerConfig;
+- (instancetype)initWithImagePickerConfig:(JNImagePickerConfig *)imagePickerConfig;
 
 @end

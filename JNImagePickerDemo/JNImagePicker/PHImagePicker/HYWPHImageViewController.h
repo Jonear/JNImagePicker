@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "JNPageItemView.h"
 #import "JNLargeImageView.h"
-#import "HYWIPAsset.h"
+#import "JNIPAsset.h"
 
-@class HYWImagePickerConfig;
+@class JNImagePickerConfig;
 
 #include <Photos/Photos.h>
 
@@ -27,10 +27,10 @@
 
 @interface HYWPHImageViewController : UIViewController
 
-@property (nonatomic, strong) HYWImagePickerConfig               *imagePickerConfig;
+@property (nonatomic, strong) JNImagePickerConfig               *imagePickerConfig;
 @property (weak, nonatomic) id<HYWPHImageViewControllerDelegate> plImageDelegate;
 
-- (instancetype)initWithImagePickerConfig:(HYWImagePickerConfig *)imagePickerConfig
+- (instancetype)initWithImagePickerConfig:(JNImagePickerConfig *)imagePickerConfig
                               hywIPAssets:(NSArray *)hywIPAssets
                             objectAtIndex:(NSUInteger)index;
 

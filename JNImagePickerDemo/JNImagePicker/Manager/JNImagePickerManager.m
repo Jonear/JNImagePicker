@@ -6,17 +6,17 @@
 //  Copyright © 2016年 huangyaowu. All rights reserved.
 //
 
-#import "HYWImagePickerManager.h"
+#import "JNImagePickerManager.h"
 #import "UIImagePickerController+Block.h"
 #import "HYWPHListViewController.h"
-#import "HYWAssetManager.h"
+#import "JNAssetManager.h"
 #import "HYWPHGridViewController.h"
-#import "HYWImagePickerHelper.h"
+#import "JNImagePickerHelper.h"
 #import "PrivacyHelper.h"
 
-@interface HYWImagePickerManager() <UIActionSheetDelegate>
+@interface JNImagePickerManager() <UIActionSheetDelegate>
 
-@property (nonatomic, strong) HYWImagePickerConfig *imagePickerConfig;
+@property (nonatomic, strong) JNImagePickerConfig *imagePickerConfig;
 
 @property (strong) NSArray *collectionsFetchResults;
 @property (strong) NSArray *collectionsLocalizedTitles;
@@ -29,7 +29,7 @@
 
 @end
 
-@implementation HYWImagePickerManager
+@implementation JNImagePickerManager
 
 - (void)imagePickerActionSheetInController:(UIViewController *)viewController
                           actionSheetTitle:(NSString *)actionSheetTitle
@@ -62,12 +62,12 @@
     NSString *buttonTitle = [actionSheet buttonTitleAtIndex:buttonIndex];
     if ([buttonTitle isEqualToString:@"从相册选取"]) {
         
-        [HYWImagePickerManager selectImageWithSourceType:UIImagePickerControllerSourceTypePhotoLibrary
+        [JNImagePickerManager selectImageWithSourceType:UIImagePickerControllerSourceTypePhotoLibrary
                                            allowsEditing:self.allowsEditing
                                              finishBlock:self.finishBlock];
     } else if ([buttonTitle isEqualToString:@"拍照"]) {
         
-        [HYWImagePickerManager selectImageWithSourceType:UIImagePickerControllerSourceTypeCamera
+        [JNImagePickerManager selectImageWithSourceType:UIImagePickerControllerSourceTypeCamera
                                            allowsEditing:self.allowsEditing
                                              finishBlock:self.finishBlock];
     }
@@ -89,7 +89,7 @@
 
 #pragma mark - 调用自定义相片选择器
 - (void)showImagePickerInViewController:(UIViewController *)viewController
-                      imagePickerConfig:(HYWImagePickerConfig *)imagePickerConfig {
+                      imagePickerConfig:(JNImagePickerConfig *)imagePickerConfig {
     [PrivacyHelper checkAlbumPrivacy:YES onComplete:^(BOOL haveAuthorization) {
         if (haveAuthorization) {
             [self showPHAssetListInViewController:viewController imagePickerConfig:imagePickerConfig];
@@ -178,7 +178,7 @@
     [self.collectionsLocalIdentifier addObjectsFromArray:allFetchLocalIdentifier];
 }
 
-- (void)showPHAssetListInViewController:(UIViewController *)viewController imagePickerConfig:(HYWImagePickerConfig *)imagePickerConfig {
+- (void)showPHAssetListInViewController:(UIViewController *)viewController imagePickerConfig:(JNImagePickerConfig *)imagePickerConfig {
     PHFetchOptions *onlyImagesOptions;
     if (imagePickerConfig.imagePickerMediaType == kImagePickerMediaTypePhoto) {
         onlyImagesOptions = [PHFetchOptions new];
@@ -231,7 +231,7 @@
             gridController.assetsFetchResults = selectedResult;
             gridController.navigationItem.title = resultTitle;
         
-            [HYWAssetManager sharedManager].assetsGroupID = _collectionsLocalIdentifier[atIndex];
+            [JNAssetManager sharedManager].assetsGroupID = _collectionsLocalIdentifier[atIndex];
             
             [nc pushViewController:gridController animated:NO];
         }

@@ -1,5 +1,5 @@
 //
-//  HYWIPAsset.h
+//  JNIPAsset.h
 //  HYWImagePicker
 //
 //  Created by 黄耀武 on 16/3/11.
@@ -12,7 +12,7 @@
 /**
  *  HYW Image Picker Asset
  */
-@interface HYWIPAsset : NSObject
+@interface JNIPAsset : NSObject
 
 /**
  *  PhotoKit PHAsset

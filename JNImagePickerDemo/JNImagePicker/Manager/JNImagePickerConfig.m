@@ -1,14 +1,14 @@
 //
-//  HYWImagePickerConfig.m
+//  JNImagePickerConfig.m
 //  HYWImagePicker
 //
 //  Created by 黄耀武 on 16/3/11.
 //  Copyright © 2016年 huangyaowu. All rights reserved.
 //
 
-#import "HYWImagePickerConfig.h"
+#import "JNImagePickerConfig.h"
 
-@implementation HYWImagePickerConfig
+@implementation JNImagePickerConfig
 
 - (instancetype)init {
     self = [super init];

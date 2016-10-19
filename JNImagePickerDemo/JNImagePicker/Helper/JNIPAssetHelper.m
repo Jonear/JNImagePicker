@@ -6,18 +6,18 @@
 //  Copyright (c) 2013年 Netease. All rights reserved.
 //
 
-#import "HYWIPAssetHelper.h"
+#import "JNIPAssetHelper.h"
 #import "PhotoKitAccessor.h"
-#import "HYWImagePickerHelper.h"
+#import "JNImagePickerHelper.h"
 
-@implementation HYWIPAssetHelper
+@implementation JNIPAssetHelper
 
 #pragma mark - 获取图片
-+ (UIImage *)imageWithHYWIPAsset:(HYWIPAsset *)hywIPAsset original:(BOOL)original {
++ (UIImage *)imageWithHYWIPAsset:(JNIPAsset *)hywIPAsset original:(BOOL)original {
     return [self imageWithPHAsset:hywIPAsset.phAsset original:original];
 }
 
-+ (NSData *)imageOriginalDataWithHYWIPAsset:(HYWIPAsset *)hywIPAsset {
++ (NSData *)imageOriginalDataWithHYWIPAsset:(JNIPAsset *)hywIPAsset {
     __block NSData *data = nil;
     PHImageRequestOptions *options = [PHImageRequestOptions new];
     options.synchronous = YES;
@@ -32,17 +32,17 @@
     __block UIImage *resultImage;
     // 取原图，大图，缩略图
     if (original) {
-        resultImage = [HYWIPAssetHelper getOriginImageFromPHAsset:asset];
+        resultImage = [JNIPAssetHelper getOriginImageFromPHAsset:asset];
         if (!resultImage) {
-            resultImage = [HYWIPAssetHelper getLargeImageFromPHAsset:asset];
+            resultImage = [JNIPAssetHelper getLargeImageFromPHAsset:asset];
         }
     } else {
-        resultImage = [HYWIPAssetHelper getLargeImageFromPHAsset:asset];
+        resultImage = [JNIPAssetHelper getLargeImageFromPHAsset:asset];
     }
     
     // 原图取不到的时候，获取一张缩略图。
     if (!resultImage) {
-        resultImage = [HYWIPAssetHelper thumbnailWithPHAsset:asset];
+        resultImage = [JNIPAssetHelper thumbnailWithPHAsset:asset];
     }
     
     return resultImage;
@@ -93,7 +93,7 @@
     __block UIImage *resultImage;
     PHImageRequestOptions *options = [PHImageRequestOptions new];
     options.synchronous = YES;
-    CGSize thumbnailSize = [HYWImagePickerHelper assetGridThumbnailSize];
+    CGSize thumbnailSize = [JNImagePickerHelper assetGridThumbnailSize];
     [[[PhotoKitAccessor sharedInstance] phCachingImageManager] requestImageForAsset:asset targetSize:thumbnailSize contentMode:PHImageContentModeAspectFill options:options resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
         resultImage = result;
     }];
@@ -114,7 +114,7 @@
 
 
 #pragma mark - ALAsset保存到本地
-+ (BOOL)writeHYWIPAsset:(HYWIPAsset *)hywIPAsset toFilepath:(NSString *)filepath {
++ (BOOL)writeHYWIPAsset:(JNIPAsset *)hywIPAsset toFilepath:(NSString *)filepath {
     __block NSData *dest_data;
     
     PHImageRequestOptions *options = [PHImageRequestOptions new];

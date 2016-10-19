@@ -1,0 +1,758 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E6C41DD91DB77D6A00B580B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41DD81DB77D6A00B580B5 /* main.m */; };
+		E6C41DDC1DB77D6A00B580B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41DDB1DB77D6A00B580B5 /* AppDelegate.m */; };
+		E6C41DDF1DB77D6A00B580B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41DDE1DB77D6A00B580B5 /* ViewController.m */; };
+		E6C41DE21DB77D6A00B580B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6C41DE01DB77D6A00B580B5 /* Main.storyboard */; };
+		E6C41DE41DB77D6A00B580B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6C41DE31DB77D6A00B580B5 /* Assets.xcassets */; };
+		E6C41DE71DB77D6A00B580B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6C41DE51DB77D6A00B580B5 /* LaunchScreen.storyboard */; };
+		E6C41DF21DB77D6B00B580B5 /* JNImagePickerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41DF11DB77D6B00B580B5 /* JNImagePickerDemoTests.m */; };
+		E6C41DFD1DB77D6B00B580B5 /* JNImagePickerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41DFC1DB77D6B00B580B5 /* JNImagePickerDemoUITests.m */; };
+		E6C41E451DB77D7A00B580B5 /* UIImagePickerController+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E0E1DB77D7A00B580B5 /* UIImagePickerController+Block.m */; };
+		E6C41E461DB77D7A00B580B5 /* UIImagePickerController+DoModal.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E101DB77D7A00B580B5 /* UIImagePickerController+DoModal.m */; };
+		E6C41E471DB77D7A00B580B5 /* HYWIPGridCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E131DB77D7A00B580B5 /* HYWIPGridCollectionViewCell.m */; };
+		E6C41E481DB77D7A00B580B5 /* HYWIPGridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E141DB77D7A00B580B5 /* HYWIPGridCollectionViewCell.xib */; };
+		E6C41E491DB77D7A00B580B5 /* HYWIPListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E161DB77D7A00B580B5 /* HYWIPListTableViewCell.m */; };
+		E6C41E4A1DB77D7A00B580B5 /* HYWIPListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E171DB77D7A00B580B5 /* HYWIPListTableViewCell.xib */; };
+		E6C41E4B1DB77D7A00B580B5 /* HYWLargeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E1A1DB77D7A00B580B5 /* HYWLargeImageView.m */; };
+		E6C41E4C1DB77D7A00B580B5 /* iToast.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E1C1DB77D7A00B580B5 /* iToast.m */; };
+		E6C41E4D1DB77D7A00B580B5 /* PageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E1E1DB77D7A00B580B5 /* PageView.m */; };
+		E6C41E4E1DB77D7A00B580B5 /* PSTAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E201DB77D7A00B580B5 /* PSTAlertController.m */; };
+		E6C41E4F1DB77D7A00B580B5 /* UIImage+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E221DB77D7A00B580B5 /* UIImage+Utilities.m */; };
+		E6C41E501DB77D7A00B580B5 /* ALAssetsLibraryAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E251DB77D7A00B580B5 /* ALAssetsLibraryAccessor.m */; };
+		E6C41E511DB77D7A00B580B5 /* AVAssetExportHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E271DB77D7A00B580B5 /* AVAssetExportHelper.m */; };
+		E6C41E521DB77D7A00B580B5 /* HYWImagePickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E291DB77D7A00B580B5 /* HYWImagePickerHelper.m */; };
+		E6C41E531DB77D7A00B580B5 /* HYWIPAssetHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E2B1DB77D7A00B580B5 /* HYWIPAssetHelper.m */; };
+		E6C41E541DB77D7A00B580B5 /* PhotoKitAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E2D1DB77D7A00B580B5 /* PhotoKitAccessor.m */; };
+		E6C41E551DB77D7A00B580B5 /* PrivacyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E2F1DB77D7A00B580B5 /* PrivacyHelper.m */; };
+		E6C41E561DB77D7A00B580B5 /* HYWAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E331DB77D7A00B580B5 /* HYWAssetManager.m */; };
+		E6C41E571DB77D7A00B580B5 /* HYWImagePickerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E351DB77D7A00B580B5 /* HYWImagePickerConfig.m */; };
+		E6C41E581DB77D7A00B580B5 /* HYWImagePickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E371DB77D7A00B580B5 /* HYWImagePickerManager.m */; };
+		E6C41E591DB77D7A00B580B5 /* HYWIPAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E3A1DB77D7A00B580B5 /* HYWIPAsset.m */; };
+		E6C41E5A1DB77D7A00B580B5 /* HYWPHGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E3D1DB77D7A00B580B5 /* HYWPHGridViewController.m */; };
+		E6C41E5B1DB77D7A00B580B5 /* HYWPHGridViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E3E1DB77D7A00B580B5 /* HYWPHGridViewController.xib */; };
+		E6C41E5C1DB77D7A00B580B5 /* HYWPHImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E401DB77D7A00B580B5 /* HYWPHImageViewController.m */; };
+		E6C41E5D1DB77D7A00B580B5 /* HYWPHImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E411DB77D7A00B580B5 /* HYWPHImageViewController.xib */; };
+		E6C41E5E1DB77D7A00B580B5 /* HYWPHListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E431DB77D7A00B580B5 /* HYWPHListViewController.m */; };
+		E6C41E5F1DB77D7A00B580B5 /* HYWPHListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E441DB77D7A00B580B5 /* HYWPHListViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E6C41DEE1DB77D6B00B580B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6C41DCC1DB77D6A00B580B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6C41DD31DB77D6A00B580B5;
+			remoteInfo = JNImagePickerDemo;
+		};
+		E6C41DF91DB77D6B00B580B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6C41DCC1DB77D6A00B580B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6C41DD31DB77D6A00B580B5;
+			remoteInfo = JNImagePickerDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E6C41DD41DB77D6A00B580B5 /* JNImagePickerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JNImagePickerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6C41DD81DB77D6A00B580B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E6C41DDA1DB77D6A00B580B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E6C41DDB1DB77D6A00B580B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E6C41DDD1DB77D6A00B580B5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E6C41DDE1DB77D6A00B580B5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E6C41DE11DB77D6A00B580B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E6C41DE31DB77D6A00B580B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E6C41DE61DB77D6A00B580B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E6C41DE81DB77D6A00B580B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6C41DED1DB77D6B00B580B5 /* JNImagePickerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JNImagePickerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6C41DF11DB77D6B00B580B5 /* JNImagePickerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JNImagePickerDemoTests.m; sourceTree = "<group>"; };
+		E6C41DF31DB77D6B00B580B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6C41DF81DB77D6B00B580B5 /* JNImagePickerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JNImagePickerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6C41DFC1DB77D6B00B580B5 /* JNImagePickerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JNImagePickerDemoUITests.m; sourceTree = "<group>"; };
+		E6C41DFE1DB77D6B00B580B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6C41E0D1DB77D7A00B580B5 /* UIImagePickerController+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+Block.h"; sourceTree = "<group>"; };
+		E6C41E0E1DB77D7A00B580B5 /* UIImagePickerController+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+Block.m"; sourceTree = "<group>"; };
+		E6C41E0F1DB77D7A00B580B5 /* UIImagePickerController+DoModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+DoModal.h"; sourceTree = "<group>"; };
+		E6C41E101DB77D7A00B580B5 /* UIImagePickerController+DoModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+DoModal.m"; sourceTree = "<group>"; };
+		E6C41E121DB77D7A00B580B5 /* HYWIPGridCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWIPGridCollectionViewCell.h; sourceTree = "<group>"; };
+		E6C41E131DB77D7A00B580B5 /* HYWIPGridCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWIPGridCollectionViewCell.m; sourceTree = "<group>"; };
+		E6C41E141DB77D7A00B580B5 /* HYWIPGridCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYWIPGridCollectionViewCell.xib; sourceTree = "<group>"; };
+		E6C41E151DB77D7A00B580B5 /* HYWIPListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWIPListTableViewCell.h; sourceTree = "<group>"; };
+		E6C41E161DB77D7A00B580B5 /* HYWIPListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWIPListTableViewCell.m; sourceTree = "<group>"; };
+		E6C41E171DB77D7A00B580B5 /* HYWIPListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYWIPListTableViewCell.xib; sourceTree = "<group>"; };
+		E6C41E191DB77D7A00B580B5 /* HYWLargeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWLargeImageView.h; sourceTree = "<group>"; };
+		E6C41E1A1DB77D7A00B580B5 /* HYWLargeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWLargeImageView.m; sourceTree = "<group>"; };
+		E6C41E1B1DB77D7A00B580B5 /* iToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iToast.h; sourceTree = "<group>"; };
+		E6C41E1C1DB77D7A00B580B5 /* iToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iToast.m; sourceTree = "<group>"; };
+		E6C41E1D1DB77D7A00B580B5 /* PageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageView.h; sourceTree = "<group>"; };
+		E6C41E1E1DB77D7A00B580B5 /* PageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageView.m; sourceTree = "<group>"; };
+		E6C41E1F1DB77D7A00B580B5 /* PSTAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTAlertController.h; sourceTree = "<group>"; };
+		E6C41E201DB77D7A00B580B5 /* PSTAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTAlertController.m; sourceTree = "<group>"; };
+		E6C41E211DB77D7A00B580B5 /* UIImage+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utilities.h"; sourceTree = "<group>"; };
+		E6C41E221DB77D7A00B580B5 /* UIImage+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utilities.m"; sourceTree = "<group>"; };
+		E6C41E241DB77D7A00B580B5 /* ALAssetsLibraryAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAssetsLibraryAccessor.h; sourceTree = "<group>"; };
+		E6C41E251DB77D7A00B580B5 /* ALAssetsLibraryAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAssetsLibraryAccessor.m; sourceTree = "<group>"; };
+		E6C41E261DB77D7A00B580B5 /* AVAssetExportHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAssetExportHelper.h; sourceTree = "<group>"; };
+		E6C41E271DB77D7A00B580B5 /* AVAssetExportHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAssetExportHelper.m; sourceTree = "<group>"; };
+		E6C41E281DB77D7A00B580B5 /* HYWImagePickerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWImagePickerHelper.h; sourceTree = "<group>"; };
+		E6C41E291DB77D7A00B580B5 /* HYWImagePickerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWImagePickerHelper.m; sourceTree = "<group>"; };
+		E6C41E2A1DB77D7A00B580B5 /* HYWIPAssetHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWIPAssetHelper.h; sourceTree = "<group>"; };
+		E6C41E2B1DB77D7A00B580B5 /* HYWIPAssetHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWIPAssetHelper.m; sourceTree = "<group>"; };
+		E6C41E2C1DB77D7A00B580B5 /* PhotoKitAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoKitAccessor.h; sourceTree = "<group>"; };
+		E6C41E2D1DB77D7A00B580B5 /* PhotoKitAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoKitAccessor.m; sourceTree = "<group>"; };
+		E6C41E2E1DB77D7A00B580B5 /* PrivacyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivacyHelper.h; sourceTree = "<group>"; };
+		E6C41E2F1DB77D7A00B580B5 /* PrivacyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacyHelper.m; sourceTree = "<group>"; };
+		E6C41E301DB77D7A00B580B5 /* HYWMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWMacro.h; sourceTree = "<group>"; };
+		E6C41E321DB77D7A00B580B5 /* HYWAssetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWAssetManager.h; sourceTree = "<group>"; };
+		E6C41E331DB77D7A00B580B5 /* HYWAssetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWAssetManager.m; sourceTree = "<group>"; };
+		E6C41E341DB77D7A00B580B5 /* HYWImagePickerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWImagePickerConfig.h; sourceTree = "<group>"; };
+		E6C41E351DB77D7A00B580B5 /* HYWImagePickerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWImagePickerConfig.m; sourceTree = "<group>"; };
+		E6C41E361DB77D7A00B580B5 /* HYWImagePickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWImagePickerManager.h; sourceTree = "<group>"; };
+		E6C41E371DB77D7A00B580B5 /* HYWImagePickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWImagePickerManager.m; sourceTree = "<group>"; };
+		E6C41E391DB77D7A00B580B5 /* HYWIPAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWIPAsset.h; sourceTree = "<group>"; };
+		E6C41E3A1DB77D7A00B580B5 /* HYWIPAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWIPAsset.m; sourceTree = "<group>"; };
+		E6C41E3C1DB77D7A00B580B5 /* HYWPHGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWPHGridViewController.h; sourceTree = "<group>"; };
+		E6C41E3D1DB77D7A00B580B5 /* HYWPHGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWPHGridViewController.m; sourceTree = "<group>"; };
+		E6C41E3E1DB77D7A00B580B5 /* HYWPHGridViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYWPHGridViewController.xib; sourceTree = "<group>"; };
+		E6C41E3F1DB77D7A00B580B5 /* HYWPHImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWPHImageViewController.h; sourceTree = "<group>"; };
+		E6C41E401DB77D7A00B580B5 /* HYWPHImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWPHImageViewController.m; sourceTree = "<group>"; };
+		E6C41E411DB77D7A00B580B5 /* HYWPHImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYWPHImageViewController.xib; sourceTree = "<group>"; };
+		E6C41E421DB77D7A00B580B5 /* HYWPHListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWPHListViewController.h; sourceTree = "<group>"; };
+		E6C41E431DB77D7A00B580B5 /* HYWPHListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWPHListViewController.m; sourceTree = "<group>"; };
+		E6C41E441DB77D7A00B580B5 /* HYWPHListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYWPHListViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E6C41DD11DB77D6A00B580B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6C41DEA1DB77D6A00B580B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6C41DF51DB77D6B00B580B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E6C41DCB1DB77D6A00B580B5 = {
+			isa = PBXGroup;
+			children = (
+				E6C41E0A1DB77D7A00B580B5 /* HYWImagePicker */,
+				E6C41DD61DB77D6A00B580B5 /* JNImagePickerDemo */,
+				E6C41DF01DB77D6B00B580B5 /* JNImagePickerDemoTests */,
+				E6C41DFB1DB77D6B00B580B5 /* JNImagePickerDemoUITests */,
+				E6C41DD51DB77D6A00B580B5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E6C41DD51DB77D6A00B580B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6C41DD41DB77D6A00B580B5 /* JNImagePickerDemo.app */,
+				E6C41DED1DB77D6B00B580B5 /* JNImagePickerDemoTests.xctest */,
+				E6C41DF81DB77D6B00B580B5 /* JNImagePickerDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E6C41DD61DB77D6A00B580B5 /* JNImagePickerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E6C41DDA1DB77D6A00B580B5 /* AppDelegate.h */,
+				E6C41DDB1DB77D6A00B580B5 /* AppDelegate.m */,
+				E6C41DDD1DB77D6A00B580B5 /* ViewController.h */,
+				E6C41DDE1DB77D6A00B580B5 /* ViewController.m */,
+				E6C41DE01DB77D6A00B580B5 /* Main.storyboard */,
+				E6C41DE31DB77D6A00B580B5 /* Assets.xcassets */,
+				E6C41DE51DB77D6A00B580B5 /* LaunchScreen.storyboard */,
+				E6C41DE81DB77D6A00B580B5 /* Info.plist */,
+				E6C41DD71DB77D6A00B580B5 /* Supporting Files */,
+			);
+			path = JNImagePickerDemo;
+			sourceTree = "<group>";
+		};
+		E6C41DD71DB77D6A00B580B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E6C41DD81DB77D6A00B580B5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E6C41DF01DB77D6B00B580B5 /* JNImagePickerDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				E6C41DF11DB77D6B00B580B5 /* JNImagePickerDemoTests.m */,
+				E6C41DF31DB77D6B00B580B5 /* Info.plist */,
+			);
+			path = JNImagePickerDemoTests;
+			sourceTree = "<group>";
+		};
+		E6C41DFB1DB77D6B00B580B5 /* JNImagePickerDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E6C41DFC1DB77D6B00B580B5 /* JNImagePickerDemoUITests.m */,
+				E6C41DFE1DB77D6B00B580B5 /* Info.plist */,
+			);
+			path = JNImagePickerDemoUITests;
+			sourceTree = "<group>";
+		};
+		E6C41E0A1DB77D7A00B580B5 /* HYWImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				E6C41E0B1DB77D7A00B580B5 /* ALImagePicker */,
+				E6C41E0C1DB77D7A00B580B5 /* Categories */,
+				E6C41E111DB77D7A00B580B5 /* Cells */,
+				E6C41E181DB77D7A00B580B5 /* CustomUI */,
+				E6C41E231DB77D7A00B580B5 /* Helper */,
+				E6C41E301DB77D7A00B580B5 /* HYWMacro.h */,
+				E6C41E311DB77D7A00B580B5 /* Manager */,
+				E6C41E381DB77D7A00B580B5 /* Model */,
+				E6C41E3B1DB77D7A00B580B5 /* PHImagePicker */,
+			);
+			path = HYWImagePicker;
+			sourceTree = "<group>";
+		};
+		E6C41E0B1DB77D7A00B580B5 /* ALImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ALImagePicker;
+			sourceTree = "<group>";
+		};
+		E6C41E0C1DB77D7A00B580B5 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				E6C41E0D1DB77D7A00B580B5 /* UIImagePickerController+Block.h */,
+				E6C41E0E1DB77D7A00B580B5 /* UIImagePickerController+Block.m */,
+				E6C41E0F1DB77D7A00B580B5 /* UIImagePickerController+DoModal.h */,
+				E6C41E101DB77D7A00B580B5 /* UIImagePickerController+DoModal.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		E6C41E111DB77D7A00B580B5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E6C41E121DB77D7A00B580B5 /* HYWIPGridCollectionViewCell.h */,
+				E6C41E131DB77D7A00B580B5 /* HYWIPGridCollectionViewCell.m */,
+				E6C41E141DB77D7A00B580B5 /* HYWIPGridCollectionViewCell.xib */,
+				E6C41E151DB77D7A00B580B5 /* HYWIPListTableViewCell.h */,
+				E6C41E161DB77D7A00B580B5 /* HYWIPListTableViewCell.m */,
+				E6C41E171DB77D7A00B580B5 /* HYWIPListTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E6C41E181DB77D7A00B580B5 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				E6C41E191DB77D7A00B580B5 /* HYWLargeImageView.h */,
+				E6C41E1A1DB77D7A00B580B5 /* HYWLargeImageView.m */,
+				E6C41E1B1DB77D7A00B580B5 /* iToast.h */,
+				E6C41E1C1DB77D7A00B580B5 /* iToast.m */,
+				E6C41E1D1DB77D7A00B580B5 /* PageView.h */,
+				E6C41E1E1DB77D7A00B580B5 /* PageView.m */,
+				E6C41E1F1DB77D7A00B580B5 /* PSTAlertController.h */,
+				E6C41E201DB77D7A00B580B5 /* PSTAlertController.m */,
+				E6C41E211DB77D7A00B580B5 /* UIImage+Utilities.h */,
+				E6C41E221DB77D7A00B580B5 /* UIImage+Utilities.m */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		E6C41E231DB77D7A00B580B5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E6C41E241DB77D7A00B580B5 /* ALAssetsLibraryAccessor.h */,
+				E6C41E251DB77D7A00B580B5 /* ALAssetsLibraryAccessor.m */,
+				E6C41E261DB77D7A00B580B5 /* AVAssetExportHelper.h */,
+				E6C41E271DB77D7A00B580B5 /* AVAssetExportHelper.m */,
+				E6C41E281DB77D7A00B580B5 /* HYWImagePickerHelper.h */,
+				E6C41E291DB77D7A00B580B5 /* HYWImagePickerHelper.m */,
+				E6C41E2A1DB77D7A00B580B5 /* HYWIPAssetHelper.h */,
+				E6C41E2B1DB77D7A00B580B5 /* HYWIPAssetHelper.m */,
+				E6C41E2C1DB77D7A00B580B5 /* PhotoKitAccessor.h */,
+				E6C41E2D1DB77D7A00B580B5 /* PhotoKitAccessor.m */,
+				E6C41E2E1DB77D7A00B580B5 /* PrivacyHelper.h */,
+				E6C41E2F1DB77D7A00B580B5 /* PrivacyHelper.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		E6C41E311DB77D7A00B580B5 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E6C41E321DB77D7A00B580B5 /* HYWAssetManager.h */,
+				E6C41E331DB77D7A00B580B5 /* HYWAssetManager.m */,
+				E6C41E341DB77D7A00B580B5 /* HYWImagePickerConfig.h */,
+				E6C41E351DB77D7A00B580B5 /* HYWImagePickerConfig.m */,
+				E6C41E361DB77D7A00B580B5 /* HYWImagePickerManager.h */,
+				E6C41E371DB77D7A00B580B5 /* HYWImagePickerManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		E6C41E381DB77D7A00B580B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E6C41E391DB77D7A00B580B5 /* HYWIPAsset.h */,
+				E6C41E3A1DB77D7A00B580B5 /* HYWIPAsset.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E6C41E3B1DB77D7A00B580B5 /* PHImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				E6C41E3C1DB77D7A00B580B5 /* HYWPHGridViewController.h */,
+				E6C41E3D1DB77D7A00B580B5 /* HYWPHGridViewController.m */,
+				E6C41E3E1DB77D7A00B580B5 /* HYWPHGridViewController.xib */,
+				E6C41E3F1DB77D7A00B580B5 /* HYWPHImageViewController.h */,
+				E6C41E401DB77D7A00B580B5 /* HYWPHImageViewController.m */,
+				E6C41E411DB77D7A00B580B5 /* HYWPHImageViewController.xib */,
+				E6C41E421DB77D7A00B580B5 /* HYWPHListViewController.h */,
+				E6C41E431DB77D7A00B580B5 /* HYWPHListViewController.m */,
+				E6C41E441DB77D7A00B580B5 /* HYWPHListViewController.xib */,
+			);
+			path = PHImagePicker;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E6C41DD31DB77D6A00B580B5 /* JNImagePickerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6C41E011DB77D6B00B580B5 /* Build configuration list for PBXNativeTarget "JNImagePickerDemo" */;
+			buildPhases = (
+				E6C41DD01DB77D6A00B580B5 /* Sources */,
+				E6C41DD11DB77D6A00B580B5 /* Frameworks */,
+				E6C41DD21DB77D6A00B580B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JNImagePickerDemo;
+			productName = JNImagePickerDemo;
+			productReference = E6C41DD41DB77D6A00B580B5 /* JNImagePickerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E6C41DEC1DB77D6A00B580B5 /* JNImagePickerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6C41E041DB77D6B00B580B5 /* Build configuration list for PBXNativeTarget "JNImagePickerDemoTests" */;
+			buildPhases = (
+				E6C41DE91DB77D6A00B580B5 /* Sources */,
+				E6C41DEA1DB77D6A00B580B5 /* Frameworks */,
+				E6C41DEB1DB77D6A00B580B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6C41DEF1DB77D6B00B580B5 /* PBXTargetDependency */,
+			);
+			name = JNImagePickerDemoTests;
+			productName = JNImagePickerDemoTests;
+			productReference = E6C41DED1DB77D6B00B580B5 /* JNImagePickerDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E6C41DF71DB77D6B00B580B5 /* JNImagePickerDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6C41E071DB77D6B00B580B5 /* Build configuration list for PBXNativeTarget "JNImagePickerDemoUITests" */;
+			buildPhases = (
+				E6C41DF41DB77D6B00B580B5 /* Sources */,
+				E6C41DF51DB77D6B00B580B5 /* Frameworks */,
+				E6C41DF61DB77D6B00B580B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6C41DFA1DB77D6B00B580B5 /* PBXTargetDependency */,
+			);
+			name = JNImagePickerDemoUITests;
+			productName = JNImagePickerDemoUITests;
+			productReference = E6C41DF81DB77D6B00B580B5 /* JNImagePickerDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E6C41DCC1DB77D6A00B580B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = NetEase;
+				TargetAttributes = {
+					E6C41DD31DB77D6A00B580B5 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					E6C41DEC1DB77D6A00B580B5 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E6C41DD31DB77D6A00B580B5;
+					};
+					E6C41DF71DB77D6B00B580B5 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E6C41DD31DB77D6A00B580B5;
+					};
+				};
+			};
+			buildConfigurationList = E6C41DCF1DB77D6A00B580B5 /* Build configuration list for PBXProject "JNImagePickerDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E6C41DCB1DB77D6A00B580B5;
+			productRefGroup = E6C41DD51DB77D6A00B580B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E6C41DD31DB77D6A00B580B5 /* JNImagePickerDemo */,
+				E6C41DEC1DB77D6A00B580B5 /* JNImagePickerDemoTests */,
+				E6C41DF71DB77D6B00B580B5 /* JNImagePickerDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E6C41DD21DB77D6A00B580B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6C41DE71DB77D6A00B580B5 /* LaunchScreen.storyboard in Resources */,
+				E6C41E4A1DB77D7A00B580B5 /* HYWIPListTableViewCell.xib in Resources */,
+				E6C41E5D1DB77D7A00B580B5 /* HYWPHImageViewController.xib in Resources */,
+				E6C41DE41DB77D6A00B580B5 /* Assets.xcassets in Resources */,
+				E6C41E481DB77D7A00B580B5 /* HYWIPGridCollectionViewCell.xib in Resources */,
+				E6C41DE21DB77D6A00B580B5 /* Main.storyboard in Resources */,
+				E6C41E5B1DB77D7A00B580B5 /* HYWPHGridViewController.xib in Resources */,
+				E6C41E5F1DB77D7A00B580B5 /* HYWPHListViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6C41DEB1DB77D6A00B580B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6C41DF61DB77D6B00B580B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E6C41DD01DB77D6A00B580B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6C41E591DB77D7A00B580B5 /* HYWIPAsset.m in Sources */,
+				E6C41E541DB77D7A00B580B5 /* PhotoKitAccessor.m in Sources */,
+				E6C41E4C1DB77D7A00B580B5 /* iToast.m in Sources */,
+				E6C41E511DB77D7A00B580B5 /* AVAssetExportHelper.m in Sources */,
+				E6C41E501DB77D7A00B580B5 /* ALAssetsLibraryAccessor.m in Sources */,
+				E6C41E571DB77D7A00B580B5 /* HYWImagePickerConfig.m in Sources */,
+				E6C41E561DB77D7A00B580B5 /* HYWAssetManager.m in Sources */,
+				E6C41E461DB77D7A00B580B5 /* UIImagePickerController+DoModal.m in Sources */,
+				E6C41E5A1DB77D7A00B580B5 /* HYWPHGridViewController.m in Sources */,
+				E6C41E581DB77D7A00B580B5 /* HYWImagePickerManager.m in Sources */,
+				E6C41DDF1DB77D6A00B580B5 /* ViewController.m in Sources */,
+				E6C41E491DB77D7A00B580B5 /* HYWIPListTableViewCell.m in Sources */,
+				E6C41E471DB77D7A00B580B5 /* HYWIPGridCollectionViewCell.m in Sources */,
+				E6C41E5E1DB77D7A00B580B5 /* HYWPHListViewController.m in Sources */,
+				E6C41E521DB77D7A00B580B5 /* HYWImagePickerHelper.m in Sources */,
+				E6C41DDC1DB77D6A00B580B5 /* AppDelegate.m in Sources */,
+				E6C41E5C1DB77D7A00B580B5 /* HYWPHImageViewController.m in Sources */,
+				E6C41DD91DB77D6A00B580B5 /* main.m in Sources */,
+				E6C41E451DB77D7A00B580B5 /* UIImagePickerController+Block.m in Sources */,
+				E6C41E551DB77D7A00B580B5 /* PrivacyHelper.m in Sources */,
+				E6C41E4B1DB77D7A00B580B5 /* HYWLargeImageView.m in Sources */,
+				E6C41E4E1DB77D7A00B580B5 /* PSTAlertController.m in Sources */,
+				E6C41E4F1DB77D7A00B580B5 /* UIImage+Utilities.m in Sources */,
+				E6C41E531DB77D7A00B580B5 /* HYWIPAssetHelper.m in Sources */,
+				E6C41E4D1DB77D7A00B580B5 /* PageView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6C41DE91DB77D6A00B580B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6C41DF21DB77D6B00B580B5 /* JNImagePickerDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6C41DF41DB77D6B00B580B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6C41DFD1DB77D6B00B580B5 /* JNImagePickerDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E6C41DEF1DB77D6B00B580B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6C41DD31DB77D6A00B580B5 /* JNImagePickerDemo */;
+			targetProxy = E6C41DEE1DB77D6B00B580B5 /* PBXContainerItemProxy */;
+		};
+		E6C41DFA1DB77D6B00B580B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6C41DD31DB77D6A00B580B5 /* JNImagePickerDemo */;
+			targetProxy = E6C41DF91DB77D6B00B580B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E6C41DE01DB77D6A00B580B5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6C41DE11DB77D6A00B580B5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E6C41DE51DB77D6A00B580B5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6C41DE61DB77D6A00B580B5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E6C41DFF1DB77D6B00B580B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E6C41E001DB77D6B00B580B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E6C41E021DB77D6B00B580B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JNImagePickerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = t.JNImagePickerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E6C41E031DB77D6B00B580B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JNImagePickerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = t.JNImagePickerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E6C41E051DB77D6B00B580B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JNImagePickerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = t.JNImagePickerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JNImagePickerDemo.app/JNImagePickerDemo";
+			};
+			name = Debug;
+		};
+		E6C41E061DB77D6B00B580B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JNImagePickerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = t.JNImagePickerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JNImagePickerDemo.app/JNImagePickerDemo";
+			};
+			name = Release;
+		};
+		E6C41E081DB77D6B00B580B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JNImagePickerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = t.JNImagePickerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JNImagePickerDemo;
+			};
+			name = Debug;
+		};
+		E6C41E091DB77D6B00B580B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JNImagePickerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = t.JNImagePickerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JNImagePickerDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E6C41DCF1DB77D6A00B580B5 /* Build configuration list for PBXProject "JNImagePickerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6C41DFF1DB77D6B00B580B5 /* Debug */,
+				E6C41E001DB77D6B00B580B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6C41E011DB77D6B00B580B5 /* Build configuration list for PBXNativeTarget "JNImagePickerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6C41E021DB77D6B00B580B5 /* Debug */,
+				E6C41E031DB77D6B00B580B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E6C41E041DB77D6B00B580B5 /* Build configuration list for PBXNativeTarget "JNImagePickerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6C41E051DB77D6B00B580B5 /* Debug */,
+				E6C41E061DB77D6B00B580B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E6C41E071DB77D6B00B580B5 /* Build configuration list for PBXNativeTarget "JNImagePickerDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6C41E081DB77D6B00B580B5 /* Debug */,
+				E6C41E091DB77D6B00B580B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E6C41DCC1DB77D6A00B580B5 /* Project object */;
+}

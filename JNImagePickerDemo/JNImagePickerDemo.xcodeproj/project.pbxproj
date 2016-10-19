@@ -15,33 +15,33 @@
 		E6C41DE71DB77D6A00B580B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6C41DE51DB77D6A00B580B5 /* LaunchScreen.storyboard */; };
 		E6C41DF21DB77D6B00B580B5 /* JNImagePickerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41DF11DB77D6B00B580B5 /* JNImagePickerDemoTests.m */; };
 		E6C41DFD1DB77D6B00B580B5 /* JNImagePickerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41DFC1DB77D6B00B580B5 /* JNImagePickerDemoUITests.m */; };
-		E6C41E451DB77D7A00B580B5 /* UIImagePickerController+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E0E1DB77D7A00B580B5 /* UIImagePickerController+Block.m */; };
-		E6C41E461DB77D7A00B580B5 /* UIImagePickerController+DoModal.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E101DB77D7A00B580B5 /* UIImagePickerController+DoModal.m */; };
-		E6C41E471DB77D7A00B580B5 /* HYWIPGridCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E131DB77D7A00B580B5 /* HYWIPGridCollectionViewCell.m */; };
-		E6C41E481DB77D7A00B580B5 /* HYWIPGridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E141DB77D7A00B580B5 /* HYWIPGridCollectionViewCell.xib */; };
-		E6C41E491DB77D7A00B580B5 /* HYWIPListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E161DB77D7A00B580B5 /* HYWIPListTableViewCell.m */; };
-		E6C41E4A1DB77D7A00B580B5 /* HYWIPListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E171DB77D7A00B580B5 /* HYWIPListTableViewCell.xib */; };
-		E6C41E4B1DB77D7A00B580B5 /* HYWLargeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E1A1DB77D7A00B580B5 /* HYWLargeImageView.m */; };
-		E6C41E4C1DB77D7A00B580B5 /* iToast.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E1C1DB77D7A00B580B5 /* iToast.m */; };
-		E6C41E4D1DB77D7A00B580B5 /* PageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E1E1DB77D7A00B580B5 /* PageView.m */; };
-		E6C41E4E1DB77D7A00B580B5 /* PSTAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E201DB77D7A00B580B5 /* PSTAlertController.m */; };
-		E6C41E4F1DB77D7A00B580B5 /* UIImage+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E221DB77D7A00B580B5 /* UIImage+Utilities.m */; };
-		E6C41E501DB77D7A00B580B5 /* ALAssetsLibraryAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E251DB77D7A00B580B5 /* ALAssetsLibraryAccessor.m */; };
-		E6C41E511DB77D7A00B580B5 /* AVAssetExportHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E271DB77D7A00B580B5 /* AVAssetExportHelper.m */; };
-		E6C41E521DB77D7A00B580B5 /* HYWImagePickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E291DB77D7A00B580B5 /* HYWImagePickerHelper.m */; };
-		E6C41E531DB77D7A00B580B5 /* HYWIPAssetHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E2B1DB77D7A00B580B5 /* HYWIPAssetHelper.m */; };
-		E6C41E541DB77D7A00B580B5 /* PhotoKitAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E2D1DB77D7A00B580B5 /* PhotoKitAccessor.m */; };
-		E6C41E551DB77D7A00B580B5 /* PrivacyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E2F1DB77D7A00B580B5 /* PrivacyHelper.m */; };
-		E6C41E561DB77D7A00B580B5 /* HYWAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E331DB77D7A00B580B5 /* HYWAssetManager.m */; };
-		E6C41E571DB77D7A00B580B5 /* HYWImagePickerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E351DB77D7A00B580B5 /* HYWImagePickerConfig.m */; };
-		E6C41E581DB77D7A00B580B5 /* HYWImagePickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E371DB77D7A00B580B5 /* HYWImagePickerManager.m */; };
-		E6C41E591DB77D7A00B580B5 /* HYWIPAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E3A1DB77D7A00B580B5 /* HYWIPAsset.m */; };
-		E6C41E5A1DB77D7A00B580B5 /* HYWPHGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E3D1DB77D7A00B580B5 /* HYWPHGridViewController.m */; };
-		E6C41E5B1DB77D7A00B580B5 /* HYWPHGridViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E3E1DB77D7A00B580B5 /* HYWPHGridViewController.xib */; };
-		E6C41E5C1DB77D7A00B580B5 /* HYWPHImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E401DB77D7A00B580B5 /* HYWPHImageViewController.m */; };
-		E6C41E5D1DB77D7A00B580B5 /* HYWPHImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E411DB77D7A00B580B5 /* HYWPHImageViewController.xib */; };
-		E6C41E5E1DB77D7A00B580B5 /* HYWPHListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E431DB77D7A00B580B5 /* HYWPHListViewController.m */; };
-		E6C41E5F1DB77D7A00B580B5 /* HYWPHListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E441DB77D7A00B580B5 /* HYWPHListViewController.xib */; };
+		E6C41E991DB7853A00B580B5 /* UIImagePickerController+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E631DB7853A00B580B5 /* UIImagePickerController+Block.m */; };
+		E6C41E9A1DB7853A00B580B5 /* UIImagePickerController+DoModal.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E651DB7853A00B580B5 /* UIImagePickerController+DoModal.m */; };
+		E6C41E9B1DB7853A00B580B5 /* HYWIPGridCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E681DB7853A00B580B5 /* HYWIPGridCollectionViewCell.m */; };
+		E6C41E9C1DB7853A00B580B5 /* HYWIPGridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E691DB7853A00B580B5 /* HYWIPGridCollectionViewCell.xib */; };
+		E6C41E9D1DB7853A00B580B5 /* HYWIPListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E6B1DB7853A00B580B5 /* HYWIPListTableViewCell.m */; };
+		E6C41E9E1DB7853A00B580B5 /* HYWIPListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E6C1DB7853A00B580B5 /* HYWIPListTableViewCell.xib */; };
+		E6C41E9F1DB7853A00B580B5 /* HYWLargeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E6F1DB7853A00B580B5 /* HYWLargeImageView.m */; };
+		E6C41EA01DB7853A00B580B5 /* iToast.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E711DB7853A00B580B5 /* iToast.m */; };
+		E6C41EA11DB7853A00B580B5 /* PageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E731DB7853A00B580B5 /* PageView.m */; };
+		E6C41EA21DB7853A00B580B5 /* PSTAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E751DB7853A00B580B5 /* PSTAlertController.m */; };
+		E6C41EA31DB7853A00B580B5 /* UIImage+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E771DB7853A00B580B5 /* UIImage+Utilities.m */; };
+		E6C41EA41DB7853A00B580B5 /* ALAssetsLibraryAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E7A1DB7853A00B580B5 /* ALAssetsLibraryAccessor.m */; };
+		E6C41EA51DB7853A00B580B5 /* AVAssetExportHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E7C1DB7853A00B580B5 /* AVAssetExportHelper.m */; };
+		E6C41EA61DB7853A00B580B5 /* HYWImagePickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E7E1DB7853A00B580B5 /* HYWImagePickerHelper.m */; };
+		E6C41EA71DB7853A00B580B5 /* HYWIPAssetHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E801DB7853A00B580B5 /* HYWIPAssetHelper.m */; };
+		E6C41EA81DB7853A00B580B5 /* PhotoKitAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E821DB7853A00B580B5 /* PhotoKitAccessor.m */; };
+		E6C41EA91DB7853A00B580B5 /* PrivacyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E841DB7853A00B580B5 /* PrivacyHelper.m */; };
+		E6C41EAA1DB7853A00B580B5 /* HYWAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E871DB7853A00B580B5 /* HYWAssetManager.m */; };
+		E6C41EAB1DB7853A00B580B5 /* HYWImagePickerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E891DB7853A00B580B5 /* HYWImagePickerConfig.m */; };
+		E6C41EAC1DB7853A00B580B5 /* HYWImagePickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E8B1DB7853A00B580B5 /* HYWImagePickerManager.m */; };
+		E6C41EAD1DB7853A00B580B5 /* HYWIPAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E8E1DB7853A00B580B5 /* HYWIPAsset.m */; };
+		E6C41EAE1DB7853A00B580B5 /* HYWPHGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E911DB7853A00B580B5 /* HYWPHGridViewController.m */; };
+		E6C41EAF1DB7853A00B580B5 /* HYWPHGridViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E921DB7853A00B580B5 /* HYWPHGridViewController.xib */; };
+		E6C41EB01DB7853A00B580B5 /* HYWPHImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E941DB7853A00B580B5 /* HYWPHImageViewController.m */; };
+		E6C41EB11DB7853A00B580B5 /* HYWPHImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E951DB7853A00B580B5 /* HYWPHImageViewController.xib */; };
+		E6C41EB21DB7853A00B580B5 /* HYWPHListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E971DB7853A00B580B5 /* HYWPHListViewController.m */; };
+		E6C41EB31DB7853A00B580B5 /* HYWPHListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E981DB7853A00B580B5 /* HYWPHListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,56 +78,55 @@
 		E6C41DF81DB77D6B00B580B5 /* JNImagePickerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JNImagePickerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6C41DFC1DB77D6B00B580B5 /* JNImagePickerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JNImagePickerDemoUITests.m; sourceTree = "<group>"; };
 		E6C41DFE1DB77D6B00B580B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E6C41E0D1DB77D7A00B580B5 /* UIImagePickerController+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+Block.h"; sourceTree = "<group>"; };
-		E6C41E0E1DB77D7A00B580B5 /* UIImagePickerController+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+Block.m"; sourceTree = "<group>"; };
-		E6C41E0F1DB77D7A00B580B5 /* UIImagePickerController+DoModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+DoModal.h"; sourceTree = "<group>"; };
-		E6C41E101DB77D7A00B580B5 /* UIImagePickerController+DoModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+DoModal.m"; sourceTree = "<group>"; };
-		E6C41E121DB77D7A00B580B5 /* HYWIPGridCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWIPGridCollectionViewCell.h; sourceTree = "<group>"; };
-		E6C41E131DB77D7A00B580B5 /* HYWIPGridCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWIPGridCollectionViewCell.m; sourceTree = "<group>"; };
-		E6C41E141DB77D7A00B580B5 /* HYWIPGridCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYWIPGridCollectionViewCell.xib; sourceTree = "<group>"; };
-		E6C41E151DB77D7A00B580B5 /* HYWIPListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWIPListTableViewCell.h; sourceTree = "<group>"; };
-		E6C41E161DB77D7A00B580B5 /* HYWIPListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWIPListTableViewCell.m; sourceTree = "<group>"; };
-		E6C41E171DB77D7A00B580B5 /* HYWIPListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYWIPListTableViewCell.xib; sourceTree = "<group>"; };
-		E6C41E191DB77D7A00B580B5 /* HYWLargeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWLargeImageView.h; sourceTree = "<group>"; };
-		E6C41E1A1DB77D7A00B580B5 /* HYWLargeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWLargeImageView.m; sourceTree = "<group>"; };
-		E6C41E1B1DB77D7A00B580B5 /* iToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iToast.h; sourceTree = "<group>"; };
-		E6C41E1C1DB77D7A00B580B5 /* iToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iToast.m; sourceTree = "<group>"; };
-		E6C41E1D1DB77D7A00B580B5 /* PageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageView.h; sourceTree = "<group>"; };
-		E6C41E1E1DB77D7A00B580B5 /* PageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageView.m; sourceTree = "<group>"; };
-		E6C41E1F1DB77D7A00B580B5 /* PSTAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTAlertController.h; sourceTree = "<group>"; };
-		E6C41E201DB77D7A00B580B5 /* PSTAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTAlertController.m; sourceTree = "<group>"; };
-		E6C41E211DB77D7A00B580B5 /* UIImage+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utilities.h"; sourceTree = "<group>"; };
-		E6C41E221DB77D7A00B580B5 /* UIImage+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utilities.m"; sourceTree = "<group>"; };
-		E6C41E241DB77D7A00B580B5 /* ALAssetsLibraryAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAssetsLibraryAccessor.h; sourceTree = "<group>"; };
-		E6C41E251DB77D7A00B580B5 /* ALAssetsLibraryAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAssetsLibraryAccessor.m; sourceTree = "<group>"; };
-		E6C41E261DB77D7A00B580B5 /* AVAssetExportHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAssetExportHelper.h; sourceTree = "<group>"; };
-		E6C41E271DB77D7A00B580B5 /* AVAssetExportHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAssetExportHelper.m; sourceTree = "<group>"; };
-		E6C41E281DB77D7A00B580B5 /* HYWImagePickerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWImagePickerHelper.h; sourceTree = "<group>"; };
-		E6C41E291DB77D7A00B580B5 /* HYWImagePickerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWImagePickerHelper.m; sourceTree = "<group>"; };
-		E6C41E2A1DB77D7A00B580B5 /* HYWIPAssetHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWIPAssetHelper.h; sourceTree = "<group>"; };
-		E6C41E2B1DB77D7A00B580B5 /* HYWIPAssetHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWIPAssetHelper.m; sourceTree = "<group>"; };
-		E6C41E2C1DB77D7A00B580B5 /* PhotoKitAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoKitAccessor.h; sourceTree = "<group>"; };
-		E6C41E2D1DB77D7A00B580B5 /* PhotoKitAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoKitAccessor.m; sourceTree = "<group>"; };
-		E6C41E2E1DB77D7A00B580B5 /* PrivacyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivacyHelper.h; sourceTree = "<group>"; };
-		E6C41E2F1DB77D7A00B580B5 /* PrivacyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacyHelper.m; sourceTree = "<group>"; };
-		E6C41E301DB77D7A00B580B5 /* HYWMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWMacro.h; sourceTree = "<group>"; };
-		E6C41E321DB77D7A00B580B5 /* HYWAssetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWAssetManager.h; sourceTree = "<group>"; };
-		E6C41E331DB77D7A00B580B5 /* HYWAssetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWAssetManager.m; sourceTree = "<group>"; };
-		E6C41E341DB77D7A00B580B5 /* HYWImagePickerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWImagePickerConfig.h; sourceTree = "<group>"; };
-		E6C41E351DB77D7A00B580B5 /* HYWImagePickerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWImagePickerConfig.m; sourceTree = "<group>"; };
-		E6C41E361DB77D7A00B580B5 /* HYWImagePickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWImagePickerManager.h; sourceTree = "<group>"; };
-		E6C41E371DB77D7A00B580B5 /* HYWImagePickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWImagePickerManager.m; sourceTree = "<group>"; };
-		E6C41E391DB77D7A00B580B5 /* HYWIPAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWIPAsset.h; sourceTree = "<group>"; };
-		E6C41E3A1DB77D7A00B580B5 /* HYWIPAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWIPAsset.m; sourceTree = "<group>"; };
-		E6C41E3C1DB77D7A00B580B5 /* HYWPHGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWPHGridViewController.h; sourceTree = "<group>"; };
-		E6C41E3D1DB77D7A00B580B5 /* HYWPHGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWPHGridViewController.m; sourceTree = "<group>"; };
-		E6C41E3E1DB77D7A00B580B5 /* HYWPHGridViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYWPHGridViewController.xib; sourceTree = "<group>"; };
-		E6C41E3F1DB77D7A00B580B5 /* HYWPHImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWPHImageViewController.h; sourceTree = "<group>"; };
-		E6C41E401DB77D7A00B580B5 /* HYWPHImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWPHImageViewController.m; sourceTree = "<group>"; };
-		E6C41E411DB77D7A00B580B5 /* HYWPHImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYWPHImageViewController.xib; sourceTree = "<group>"; };
-		E6C41E421DB77D7A00B580B5 /* HYWPHListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWPHListViewController.h; sourceTree = "<group>"; };
-		E6C41E431DB77D7A00B580B5 /* HYWPHListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWPHListViewController.m; sourceTree = "<group>"; };
-		E6C41E441DB77D7A00B580B5 /* HYWPHListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYWPHListViewController.xib; sourceTree = "<group>"; };
+		E6C41E621DB7853A00B580B5 /* UIImagePickerController+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+Block.h"; sourceTree = "<group>"; };
+		E6C41E631DB7853A00B580B5 /* UIImagePickerController+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+Block.m"; sourceTree = "<group>"; };
+		E6C41E641DB7853A00B580B5 /* UIImagePickerController+DoModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+DoModal.h"; sourceTree = "<group>"; };
+		E6C41E651DB7853A00B580B5 /* UIImagePickerController+DoModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+DoModal.m"; sourceTree = "<group>"; };
+		E6C41E671DB7853A00B580B5 /* HYWIPGridCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWIPGridCollectionViewCell.h; sourceTree = "<group>"; };
+		E6C41E681DB7853A00B580B5 /* HYWIPGridCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWIPGridCollectionViewCell.m; sourceTree = "<group>"; };
+		E6C41E691DB7853A00B580B5 /* HYWIPGridCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYWIPGridCollectionViewCell.xib; sourceTree = "<group>"; };
+		E6C41E6A1DB7853A00B580B5 /* HYWIPListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWIPListTableViewCell.h; sourceTree = "<group>"; };
+		E6C41E6B1DB7853A00B580B5 /* HYWIPListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWIPListTableViewCell.m; sourceTree = "<group>"; };
+		E6C41E6C1DB7853A00B580B5 /* HYWIPListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYWIPListTableViewCell.xib; sourceTree = "<group>"; };
+		E6C41E6E1DB7853A00B580B5 /* HYWLargeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWLargeImageView.h; sourceTree = "<group>"; };
+		E6C41E6F1DB7853A00B580B5 /* HYWLargeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWLargeImageView.m; sourceTree = "<group>"; };
+		E6C41E701DB7853A00B580B5 /* iToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iToast.h; sourceTree = "<group>"; };
+		E6C41E711DB7853A00B580B5 /* iToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iToast.m; sourceTree = "<group>"; };
+		E6C41E721DB7853A00B580B5 /* PageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageView.h; sourceTree = "<group>"; };
+		E6C41E731DB7853A00B580B5 /* PageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageView.m; sourceTree = "<group>"; };
+		E6C41E741DB7853A00B580B5 /* PSTAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTAlertController.h; sourceTree = "<group>"; };
+		E6C41E751DB7853A00B580B5 /* PSTAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTAlertController.m; sourceTree = "<group>"; };
+		E6C41E761DB7853A00B580B5 /* UIImage+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utilities.h"; sourceTree = "<group>"; };
+		E6C41E771DB7853A00B580B5 /* UIImage+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utilities.m"; sourceTree = "<group>"; };
+		E6C41E791DB7853A00B580B5 /* ALAssetsLibraryAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAssetsLibraryAccessor.h; sourceTree = "<group>"; };
+		E6C41E7A1DB7853A00B580B5 /* ALAssetsLibraryAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAssetsLibraryAccessor.m; sourceTree = "<group>"; };
+		E6C41E7B1DB7853A00B580B5 /* AVAssetExportHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAssetExportHelper.h; sourceTree = "<group>"; };
+		E6C41E7C1DB7853A00B580B5 /* AVAssetExportHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAssetExportHelper.m; sourceTree = "<group>"; };
+		E6C41E7D1DB7853A00B580B5 /* HYWImagePickerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWImagePickerHelper.h; sourceTree = "<group>"; };
+		E6C41E7E1DB7853A00B580B5 /* HYWImagePickerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWImagePickerHelper.m; sourceTree = "<group>"; };
+		E6C41E7F1DB7853A00B580B5 /* HYWIPAssetHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWIPAssetHelper.h; sourceTree = "<group>"; };
+		E6C41E801DB7853A00B580B5 /* HYWIPAssetHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWIPAssetHelper.m; sourceTree = "<group>"; };
+		E6C41E811DB7853A00B580B5 /* PhotoKitAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoKitAccessor.h; sourceTree = "<group>"; };
+		E6C41E821DB7853A00B580B5 /* PhotoKitAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoKitAccessor.m; sourceTree = "<group>"; };
+		E6C41E831DB7853A00B580B5 /* PrivacyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivacyHelper.h; sourceTree = "<group>"; };
+		E6C41E841DB7853A00B580B5 /* PrivacyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivacyHelper.m; sourceTree = "<group>"; };
+		E6C41E861DB7853A00B580B5 /* HYWAssetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWAssetManager.h; sourceTree = "<group>"; };
+		E6C41E871DB7853A00B580B5 /* HYWAssetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWAssetManager.m; sourceTree = "<group>"; };
+		E6C41E881DB7853A00B580B5 /* HYWImagePickerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWImagePickerConfig.h; sourceTree = "<group>"; };
+		E6C41E891DB7853A00B580B5 /* HYWImagePickerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWImagePickerConfig.m; sourceTree = "<group>"; };
+		E6C41E8A1DB7853A00B580B5 /* HYWImagePickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWImagePickerManager.h; sourceTree = "<group>"; };
+		E6C41E8B1DB7853A00B580B5 /* HYWImagePickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWImagePickerManager.m; sourceTree = "<group>"; };
+		E6C41E8D1DB7853A00B580B5 /* HYWIPAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWIPAsset.h; sourceTree = "<group>"; };
+		E6C41E8E1DB7853A00B580B5 /* HYWIPAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWIPAsset.m; sourceTree = "<group>"; };
+		E6C41E901DB7853A00B580B5 /* HYWPHGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWPHGridViewController.h; sourceTree = "<group>"; };
+		E6C41E911DB7853A00B580B5 /* HYWPHGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWPHGridViewController.m; sourceTree = "<group>"; };
+		E6C41E921DB7853A00B580B5 /* HYWPHGridViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYWPHGridViewController.xib; sourceTree = "<group>"; };
+		E6C41E931DB7853A00B580B5 /* HYWPHImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWPHImageViewController.h; sourceTree = "<group>"; };
+		E6C41E941DB7853A00B580B5 /* HYWPHImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWPHImageViewController.m; sourceTree = "<group>"; };
+		E6C41E951DB7853A00B580B5 /* HYWPHImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYWPHImageViewController.xib; sourceTree = "<group>"; };
+		E6C41E961DB7853A00B580B5 /* HYWPHListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWPHListViewController.h; sourceTree = "<group>"; };
+		E6C41E971DB7853A00B580B5 /* HYWPHListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWPHListViewController.m; sourceTree = "<group>"; };
+		E6C41E981DB7853A00B580B5 /* HYWPHListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYWPHListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +157,7 @@
 		E6C41DCB1DB77D6A00B580B5 = {
 			isa = PBXGroup;
 			children = (
-				E6C41E0A1DB77D7A00B580B5 /* HYWImagePicker */,
+				E6C41E601DB7853A00B580B5 /* JNImagePicker */,
 				E6C41DD61DB77D6A00B580B5 /* JNImagePickerDemo */,
 				E6C41DF01DB77D6B00B580B5 /* JNImagePickerDemoTests */,
 				E6C41DFB1DB77D6B00B580B5 /* JNImagePickerDemoUITests */,
@@ -218,123 +217,114 @@
 			path = JNImagePickerDemoUITests;
 			sourceTree = "<group>";
 		};
-		E6C41E0A1DB77D7A00B580B5 /* HYWImagePicker */ = {
+		E6C41E601DB7853A00B580B5 /* JNImagePicker */ = {
 			isa = PBXGroup;
 			children = (
-				E6C41E0B1DB77D7A00B580B5 /* ALImagePicker */,
-				E6C41E0C1DB77D7A00B580B5 /* Categories */,
-				E6C41E111DB77D7A00B580B5 /* Cells */,
-				E6C41E181DB77D7A00B580B5 /* CustomUI */,
-				E6C41E231DB77D7A00B580B5 /* Helper */,
-				E6C41E301DB77D7A00B580B5 /* HYWMacro.h */,
-				E6C41E311DB77D7A00B580B5 /* Manager */,
-				E6C41E381DB77D7A00B580B5 /* Model */,
-				E6C41E3B1DB77D7A00B580B5 /* PHImagePicker */,
+				E6C41E611DB7853A00B580B5 /* Categories */,
+				E6C41E661DB7853A00B580B5 /* Cells */,
+				E6C41E6D1DB7853A00B580B5 /* CustomUI */,
+				E6C41E781DB7853A00B580B5 /* Helper */,
+				E6C41E851DB7853A00B580B5 /* Manager */,
+				E6C41E8C1DB7853A00B580B5 /* Model */,
+				E6C41E8F1DB7853A00B580B5 /* PHImagePicker */,
 			);
-			path = HYWImagePicker;
+			path = JNImagePicker;
 			sourceTree = "<group>";
 		};
-		E6C41E0B1DB77D7A00B580B5 /* ALImagePicker */ = {
+		E6C41E611DB7853A00B580B5 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = ALImagePicker;
-			sourceTree = "<group>";
-		};
-		E6C41E0C1DB77D7A00B580B5 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				E6C41E0D1DB77D7A00B580B5 /* UIImagePickerController+Block.h */,
-				E6C41E0E1DB77D7A00B580B5 /* UIImagePickerController+Block.m */,
-				E6C41E0F1DB77D7A00B580B5 /* UIImagePickerController+DoModal.h */,
-				E6C41E101DB77D7A00B580B5 /* UIImagePickerController+DoModal.m */,
+				E6C41E621DB7853A00B580B5 /* UIImagePickerController+Block.h */,
+				E6C41E631DB7853A00B580B5 /* UIImagePickerController+Block.m */,
+				E6C41E641DB7853A00B580B5 /* UIImagePickerController+DoModal.h */,
+				E6C41E651DB7853A00B580B5 /* UIImagePickerController+DoModal.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
 		};
-		E6C41E111DB77D7A00B580B5 /* Cells */ = {
+		E6C41E661DB7853A00B580B5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				E6C41E121DB77D7A00B580B5 /* HYWIPGridCollectionViewCell.h */,
-				E6C41E131DB77D7A00B580B5 /* HYWIPGridCollectionViewCell.m */,
-				E6C41E141DB77D7A00B580B5 /* HYWIPGridCollectionViewCell.xib */,
-				E6C41E151DB77D7A00B580B5 /* HYWIPListTableViewCell.h */,
-				E6C41E161DB77D7A00B580B5 /* HYWIPListTableViewCell.m */,
-				E6C41E171DB77D7A00B580B5 /* HYWIPListTableViewCell.xib */,
+				E6C41E671DB7853A00B580B5 /* HYWIPGridCollectionViewCell.h */,
+				E6C41E681DB7853A00B580B5 /* HYWIPGridCollectionViewCell.m */,
+				E6C41E691DB7853A00B580B5 /* HYWIPGridCollectionViewCell.xib */,
+				E6C41E6A1DB7853A00B580B5 /* HYWIPListTableViewCell.h */,
+				E6C41E6B1DB7853A00B580B5 /* HYWIPListTableViewCell.m */,
+				E6C41E6C1DB7853A00B580B5 /* HYWIPListTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		E6C41E181DB77D7A00B580B5 /* CustomUI */ = {
+		E6C41E6D1DB7853A00B580B5 /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
-				E6C41E191DB77D7A00B580B5 /* HYWLargeImageView.h */,
-				E6C41E1A1DB77D7A00B580B5 /* HYWLargeImageView.m */,
-				E6C41E1B1DB77D7A00B580B5 /* iToast.h */,
-				E6C41E1C1DB77D7A00B580B5 /* iToast.m */,
-				E6C41E1D1DB77D7A00B580B5 /* PageView.h */,
-				E6C41E1E1DB77D7A00B580B5 /* PageView.m */,
-				E6C41E1F1DB77D7A00B580B5 /* PSTAlertController.h */,
-				E6C41E201DB77D7A00B580B5 /* PSTAlertController.m */,
-				E6C41E211DB77D7A00B580B5 /* UIImage+Utilities.h */,
-				E6C41E221DB77D7A00B580B5 /* UIImage+Utilities.m */,
+				E6C41E6E1DB7853A00B580B5 /* HYWLargeImageView.h */,
+				E6C41E6F1DB7853A00B580B5 /* HYWLargeImageView.m */,
+				E6C41E701DB7853A00B580B5 /* iToast.h */,
+				E6C41E711DB7853A00B580B5 /* iToast.m */,
+				E6C41E721DB7853A00B580B5 /* PageView.h */,
+				E6C41E731DB7853A00B580B5 /* PageView.m */,
+				E6C41E741DB7853A00B580B5 /* PSTAlertController.h */,
+				E6C41E751DB7853A00B580B5 /* PSTAlertController.m */,
+				E6C41E761DB7853A00B580B5 /* UIImage+Utilities.h */,
+				E6C41E771DB7853A00B580B5 /* UIImage+Utilities.m */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
 		};
-		E6C41E231DB77D7A00B580B5 /* Helper */ = {
+		E6C41E781DB7853A00B580B5 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				E6C41E241DB77D7A00B580B5 /* ALAssetsLibraryAccessor.h */,
-				E6C41E251DB77D7A00B580B5 /* ALAssetsLibraryAccessor.m */,
-				E6C41E261DB77D7A00B580B5 /* AVAssetExportHelper.h */,
-				E6C41E271DB77D7A00B580B5 /* AVAssetExportHelper.m */,
-				E6C41E281DB77D7A00B580B5 /* HYWImagePickerHelper.h */,
-				E6C41E291DB77D7A00B580B5 /* HYWImagePickerHelper.m */,
-				E6C41E2A1DB77D7A00B580B5 /* HYWIPAssetHelper.h */,
-				E6C41E2B1DB77D7A00B580B5 /* HYWIPAssetHelper.m */,
-				E6C41E2C1DB77D7A00B580B5 /* PhotoKitAccessor.h */,
-				E6C41E2D1DB77D7A00B580B5 /* PhotoKitAccessor.m */,
-				E6C41E2E1DB77D7A00B580B5 /* PrivacyHelper.h */,
-				E6C41E2F1DB77D7A00B580B5 /* PrivacyHelper.m */,
+				E6C41E791DB7853A00B580B5 /* ALAssetsLibraryAccessor.h */,
+				E6C41E7A1DB7853A00B580B5 /* ALAssetsLibraryAccessor.m */,
+				E6C41E7B1DB7853A00B580B5 /* AVAssetExportHelper.h */,
+				E6C41E7C1DB7853A00B580B5 /* AVAssetExportHelper.m */,
+				E6C41E7D1DB7853A00B580B5 /* HYWImagePickerHelper.h */,
+				E6C41E7E1DB7853A00B580B5 /* HYWImagePickerHelper.m */,
+				E6C41E7F1DB7853A00B580B5 /* HYWIPAssetHelper.h */,
+				E6C41E801DB7853A00B580B5 /* HYWIPAssetHelper.m */,
+				E6C41E811DB7853A00B580B5 /* PhotoKitAccessor.h */,
+				E6C41E821DB7853A00B580B5 /* PhotoKitAccessor.m */,
+				E6C41E831DB7853A00B580B5 /* PrivacyHelper.h */,
+				E6C41E841DB7853A00B580B5 /* PrivacyHelper.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		E6C41E311DB77D7A00B580B5 /* Manager */ = {
+		E6C41E851DB7853A00B580B5 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				E6C41E321DB77D7A00B580B5 /* HYWAssetManager.h */,
-				E6C41E331DB77D7A00B580B5 /* HYWAssetManager.m */,
-				E6C41E341DB77D7A00B580B5 /* HYWImagePickerConfig.h */,
-				E6C41E351DB77D7A00B580B5 /* HYWImagePickerConfig.m */,
-				E6C41E361DB77D7A00B580B5 /* HYWImagePickerManager.h */,
-				E6C41E371DB77D7A00B580B5 /* HYWImagePickerManager.m */,
+				E6C41E861DB7853A00B580B5 /* HYWAssetManager.h */,
+				E6C41E871DB7853A00B580B5 /* HYWAssetManager.m */,
+				E6C41E881DB7853A00B580B5 /* HYWImagePickerConfig.h */,
+				E6C41E891DB7853A00B580B5 /* HYWImagePickerConfig.m */,
+				E6C41E8A1DB7853A00B580B5 /* HYWImagePickerManager.h */,
+				E6C41E8B1DB7853A00B580B5 /* HYWImagePickerManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
 		};
-		E6C41E381DB77D7A00B580B5 /* Model */ = {
+		E6C41E8C1DB7853A00B580B5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E6C41E391DB77D7A00B580B5 /* HYWIPAsset.h */,
-				E6C41E3A1DB77D7A00B580B5 /* HYWIPAsset.m */,
+				E6C41E8D1DB7853A00B580B5 /* HYWIPAsset.h */,
+				E6C41E8E1DB7853A00B580B5 /* HYWIPAsset.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		E6C41E3B1DB77D7A00B580B5 /* PHImagePicker */ = {
+		E6C41E8F1DB7853A00B580B5 /* PHImagePicker */ = {
 			isa = PBXGroup;
 			children = (
-				E6C41E3C1DB77D7A00B580B5 /* HYWPHGridViewController.h */,
-				E6C41E3D1DB77D7A00B580B5 /* HYWPHGridViewController.m */,
-				E6C41E3E1DB77D7A00B580B5 /* HYWPHGridViewController.xib */,
-				E6C41E3F1DB77D7A00B580B5 /* HYWPHImageViewController.h */,
-				E6C41E401DB77D7A00B580B5 /* HYWPHImageViewController.m */,
-				E6C41E411DB77D7A00B580B5 /* HYWPHImageViewController.xib */,
-				E6C41E421DB77D7A00B580B5 /* HYWPHListViewController.h */,
-				E6C41E431DB77D7A00B580B5 /* HYWPHListViewController.m */,
-				E6C41E441DB77D7A00B580B5 /* HYWPHListViewController.xib */,
+				E6C41E901DB7853A00B580B5 /* HYWPHGridViewController.h */,
+				E6C41E911DB7853A00B580B5 /* HYWPHGridViewController.m */,
+				E6C41E921DB7853A00B580B5 /* HYWPHGridViewController.xib */,
+				E6C41E931DB7853A00B580B5 /* HYWPHImageViewController.h */,
+				E6C41E941DB7853A00B580B5 /* HYWPHImageViewController.m */,
+				E6C41E951DB7853A00B580B5 /* HYWPHImageViewController.xib */,
+				E6C41E961DB7853A00B580B5 /* HYWPHListViewController.h */,
+				E6C41E971DB7853A00B580B5 /* HYWPHListViewController.m */,
+				E6C41E981DB7853A00B580B5 /* HYWPHListViewController.xib */,
 			);
 			path = PHImagePicker;
 			sourceTree = "<group>";
@@ -446,13 +436,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6C41DE71DB77D6A00B580B5 /* LaunchScreen.storyboard in Resources */,
-				E6C41E4A1DB77D7A00B580B5 /* HYWIPListTableViewCell.xib in Resources */,
-				E6C41E5D1DB77D7A00B580B5 /* HYWPHImageViewController.xib in Resources */,
+				E6C41E9E1DB7853A00B580B5 /* HYWIPListTableViewCell.xib in Resources */,
+				E6C41EB11DB7853A00B580B5 /* HYWPHImageViewController.xib in Resources */,
 				E6C41DE41DB77D6A00B580B5 /* Assets.xcassets in Resources */,
-				E6C41E481DB77D7A00B580B5 /* HYWIPGridCollectionViewCell.xib in Resources */,
+				E6C41E9C1DB7853A00B580B5 /* HYWIPGridCollectionViewCell.xib in Resources */,
 				E6C41DE21DB77D6A00B580B5 /* Main.storyboard in Resources */,
-				E6C41E5B1DB77D7A00B580B5 /* HYWPHGridViewController.xib in Resources */,
-				E6C41E5F1DB77D7A00B580B5 /* HYWPHListViewController.xib in Resources */,
+				E6C41EAF1DB7853A00B580B5 /* HYWPHGridViewController.xib in Resources */,
+				E6C41EB31DB7853A00B580B5 /* HYWPHListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,31 +467,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6C41E591DB77D7A00B580B5 /* HYWIPAsset.m in Sources */,
-				E6C41E541DB77D7A00B580B5 /* PhotoKitAccessor.m in Sources */,
-				E6C41E4C1DB77D7A00B580B5 /* iToast.m in Sources */,
-				E6C41E511DB77D7A00B580B5 /* AVAssetExportHelper.m in Sources */,
-				E6C41E501DB77D7A00B580B5 /* ALAssetsLibraryAccessor.m in Sources */,
-				E6C41E571DB77D7A00B580B5 /* HYWImagePickerConfig.m in Sources */,
-				E6C41E561DB77D7A00B580B5 /* HYWAssetManager.m in Sources */,
-				E6C41E461DB77D7A00B580B5 /* UIImagePickerController+DoModal.m in Sources */,
-				E6C41E5A1DB77D7A00B580B5 /* HYWPHGridViewController.m in Sources */,
-				E6C41E581DB77D7A00B580B5 /* HYWImagePickerManager.m in Sources */,
+				E6C41EAD1DB7853A00B580B5 /* HYWIPAsset.m in Sources */,
+				E6C41EA81DB7853A00B580B5 /* PhotoKitAccessor.m in Sources */,
+				E6C41EA01DB7853A00B580B5 /* iToast.m in Sources */,
+				E6C41EA51DB7853A00B580B5 /* AVAssetExportHelper.m in Sources */,
+				E6C41EA41DB7853A00B580B5 /* ALAssetsLibraryAccessor.m in Sources */,
+				E6C41EAB1DB7853A00B580B5 /* HYWImagePickerConfig.m in Sources */,
+				E6C41EAA1DB7853A00B580B5 /* HYWAssetManager.m in Sources */,
+				E6C41E9A1DB7853A00B580B5 /* UIImagePickerController+DoModal.m in Sources */,
+				E6C41EAE1DB7853A00B580B5 /* HYWPHGridViewController.m in Sources */,
+				E6C41EAC1DB7853A00B580B5 /* HYWImagePickerManager.m in Sources */,
 				E6C41DDF1DB77D6A00B580B5 /* ViewController.m in Sources */,
-				E6C41E491DB77D7A00B580B5 /* HYWIPListTableViewCell.m in Sources */,
-				E6C41E471DB77D7A00B580B5 /* HYWIPGridCollectionViewCell.m in Sources */,
-				E6C41E5E1DB77D7A00B580B5 /* HYWPHListViewController.m in Sources */,
-				E6C41E521DB77D7A00B580B5 /* HYWImagePickerHelper.m in Sources */,
+				E6C41E9D1DB7853A00B580B5 /* HYWIPListTableViewCell.m in Sources */,
+				E6C41E9B1DB7853A00B580B5 /* HYWIPGridCollectionViewCell.m in Sources */,
+				E6C41EB21DB7853A00B580B5 /* HYWPHListViewController.m in Sources */,
+				E6C41EA61DB7853A00B580B5 /* HYWImagePickerHelper.m in Sources */,
 				E6C41DDC1DB77D6A00B580B5 /* AppDelegate.m in Sources */,
-				E6C41E5C1DB77D7A00B580B5 /* HYWPHImageViewController.m in Sources */,
+				E6C41EB01DB7853A00B580B5 /* HYWPHImageViewController.m in Sources */,
 				E6C41DD91DB77D6A00B580B5 /* main.m in Sources */,
-				E6C41E451DB77D7A00B580B5 /* UIImagePickerController+Block.m in Sources */,
-				E6C41E551DB77D7A00B580B5 /* PrivacyHelper.m in Sources */,
-				E6C41E4B1DB77D7A00B580B5 /* HYWLargeImageView.m in Sources */,
-				E6C41E4E1DB77D7A00B580B5 /* PSTAlertController.m in Sources */,
-				E6C41E4F1DB77D7A00B580B5 /* UIImage+Utilities.m in Sources */,
-				E6C41E531DB77D7A00B580B5 /* HYWIPAssetHelper.m in Sources */,
-				E6C41E4D1DB77D7A00B580B5 /* PageView.m in Sources */,
+				E6C41E991DB7853A00B580B5 /* UIImagePickerController+Block.m in Sources */,
+				E6C41EA91DB7853A00B580B5 /* PrivacyHelper.m in Sources */,
+				E6C41E9F1DB7853A00B580B5 /* HYWLargeImageView.m in Sources */,
+				E6C41EA21DB7853A00B580B5 /* PSTAlertController.m in Sources */,
+				E6C41EA31DB7853A00B580B5 /* UIImage+Utilities.m in Sources */,
+				E6C41EA71DB7853A00B580B5 /* HYWIPAssetHelper.m in Sources */,
+				E6C41EA11DB7853A00B580B5 /* PageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,8 +14,6 @@
 
 + (HYWIPAsset *)selectedAsset:(HYWIPAsset *)hywIPAsset;
 + (NSInteger)indexOfAsset:(HYWIPAsset *)hywIPAsset fromAssets:(NSArray *)assets;
-+ (NSString *)cachedAssetsGroupID;
-+ (NSArray *)sortedAssets;
 + (void)clearAssetManager;
 + (CGSize)assetGridThumbnailSize;
 

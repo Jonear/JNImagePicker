@@ -44,36 +44,8 @@
     return item ? [assets indexOfObject:item] : 0;
 }
 
-// 过滤掉视频，排好序的Assets
-+ (NSArray *)sortedAssets {
-    NSString *assetKey = [HYWImagePickerHelper cachedAssetsGroupID];
-    NSMutableDictionary *cachedAssetsDic = [HYWAssetManager sharedManager].cachedAssets[assetKey];
-    
-    // 对cachedAssets排一下序
-    NSArray *myKeys = [cachedAssetsDic allKeys];
-    NSArray *sortedKeys = [myKeys sortedArrayUsingSelector:@selector(compare:)];
-    NSMutableArray *cachedAssets = [NSMutableArray arrayWithCapacity:0];
-    
-    for(id key in sortedKeys) {
-        id object = [cachedAssetsDic objectForKey:key];
-        [cachedAssets addObject:object];
-    }
-
-    return cachedAssets;
-}
-
-+ (NSString *)cachedAssetsGroupID {
-    NSString *sGroupPropertyID = (NSString *)[[HYWAssetManager sharedManager].assetsGroup valueForProperty:ALAssetsGroupPropertyPersistentID];
-    return sGroupPropertyID;
-}
-
 + (void)clearAssetManager {
-    HYWAssetManager *assetManager = [HYWAssetManager sharedManager];
-    [assetManager.selectedAssets removeAllObjects];
-    [assetManager.assetsGroups removeAllObjects];
-    [assetManager.cachedAssets removeAllObjects];
-    assetManager.assetsGroup = nil;
-    assetManager.isHDImage = NO;
+    [[HYWAssetManager sharedManager] clearData];
 }
 
 static NSUInteger const MINIMUM_SPACING     = 2.0f;

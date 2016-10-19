@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PageView.h"
-#import "HYWLargeImageView.h"
+#import "JNPageItemView.h"
+#import "JNLargeImageView.h"
 #import "HYWIPAsset.h"
 
 @class HYWImagePickerConfig;

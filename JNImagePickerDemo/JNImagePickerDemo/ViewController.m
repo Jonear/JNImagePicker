@@ -14,7 +14,7 @@
 #import "HYWPHListViewController.h"
 #import "HYWPHImageViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <HYWPHListViewControllerDelegate>
 
 @end
 
@@ -37,31 +37,15 @@
 
 
 - (void)buttonClick:(id)sender {
-    [[HYWAssetManager sharedManager].selectedAssets removeAllObjects];
-    [[HYWAssetManager sharedManager] setIsHDImage:NO];
-    
+    [[HYWAssetManager sharedManager] clearData];
     HYWImagePickerConfig *config = [[HYWImagePickerConfig alloc] init];
-    config.imagePickerMediaType = kImagePickerMediaTypePhoto;
+    config.imagePickerMediaType = kImagePickerMediaTypeAll;
     config.delegate = self;
     config.sendHDImage = YES;
     config.capacity = 1;
     HYWImagePickerManager *manager = [[HYWImagePickerManager alloc] init];
     [manager showImagePickerInViewController:self imagePickerConfig:config];
 }
-
-#pragma mark - 图片选择器
-- (void)hywPHImageViewController:(HYWPHImageViewController *)picker didFinishPickingImages:(NSArray *)images {
-    BOOL isHDImage = [[HYWAssetManager sharedManager] isHDImage];
-    picker.plImageDelegate = nil;
-    [picker dismissViewControllerAnimated:YES completion:nil];
-    
-    [self sendImagesMessageWithAssetArray:images isHDImage:isHDImage];
-}
-
-- (void)hywPHImageViewController:(HYWPHImageViewController *)picker didFinishPickingVideo:(PHAsset *)asset {
-    [picker dismissViewControllerAnimated:YES completion:nil];
-}
-
 
 #pragma mark - PhotoKit HYWPHListViewControllerDelegate
 - (void)hywPHListViewController:(HYWPHListViewController *)picker didFinishPickingMediaWithInfo:(NSArray *)info {
@@ -72,6 +56,10 @@
 }
 - (void)hywPHListViewControllerDidCancel:(HYWPHListViewController *)picker {
     picker.plListDelegate = nil;
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)hywPHListViewController:(HYWPHListViewController *)picker didFinishPickingVideo:(PHAsset *)asset {
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 

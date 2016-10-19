@@ -8,12 +8,26 @@
 
 #import "PrivacyHelper.h"
 #import <AVFoundation/AVFoundation.h>
-#import "PSTAlertController.h"
 #import <AssetsLibrary/ALAssetsLibrary.h>
 #import "ALAssetsLibraryAccessor.h"
+#import <UIKit/UIKit.h>
+
+#define PROPERTY(property) NSStringFromSelector(@selector(property))
 
 /// 各种系统隐私设置和访问限制的检查（iOS6开始有，iOS7以后追加了一部分）
 @implementation PrivacyHelper
++ (UIViewController *)rootController {
+    UIApplication *sharedApplication = [UIApplication performSelector:NSSelectorFromString(PROPERTY(sharedApplication))];
+    UIViewController* controller = sharedApplication.keyWindow.rootViewController;
+    
+    // Use the frontmost viewController for presentation.
+    while (controller.presentedViewController) {
+        controller = controller.presentedViewController;
+    }
+    
+    return controller;
+}
+
 + (BOOL)checkCameraPrivacy:(BOOL)showTip
 {
     // 默认为YES
@@ -43,9 +57,10 @@
                                    }
                                    else if (showTip)
                                    {
-                                       PSTAlertController *alert = [PSTAlertController alertWithTitle:@"" message:@"请在iPhone的“设置-隐私-相机”选项中，允许易信访问你的相机。"];
-                                       [alert addAction:[PSTAlertAction actionWithTitle:@"确定" handler:nil]];
-                                       [alert showWithSender:nil controller:nil animated:YES completion:nil];
+                                       UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"请在iPhone的“设置-隐私-相机”选项中，允许易信访问你的相机。" preferredStyle:UIAlertControllerStyleAlert];
+                                       [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
+                                       [[self rootController] presentViewController:alert animated:YES completion:nil];
+                                       
                                    }
                                });
              }];
@@ -58,9 +73,9 @@
             
             if (showTip)
             {
-                PSTAlertController *alert = [PSTAlertController alertWithTitle:@"" message:@"请在iPhone的“设置-通用-访问限制-相机”选项中，关闭相机的限制。"];
-                [alert addAction:[PSTAlertAction actionWithTitle:@"确定" handler:nil]];
-                [alert showWithSender:nil controller:nil animated:YES completion:nil];
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"请在iPhone的“设置-通用-访问限制-相机”选项中，关闭相机的限制。" preferredStyle:UIAlertControllerStyleAlert];
+                [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
+                [[self rootController] presentViewController:alert animated:YES completion:nil];
             }
         }
             break;
@@ -70,10 +85,9 @@
             
             if (showTip)
             {
-                PSTAlertController *alert = [PSTAlertController alertWithTitle:@"" message:@"请在iPhone的“设置-隐私-相机”选项中，允许易信访问你的相机。"];
-                [alert addAction:[PSTAlertAction actionWithTitle:@"确定" handler:nil]];
-                [alert showWithSender:nil controller:nil animated:YES completion:nil];
-                
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"请在iPhone的“设置-隐私-相机”选项中，允许易信访问你的相机。" preferredStyle:UIAlertControllerStyleAlert];
+                [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
+                [[self rootController] presentViewController:alert animated:YES completion:nil];
             }
             
         }
@@ -92,10 +106,9 @@
         case ALAuthorizationStatusRestricted:
         case ALAuthorizationStatusDenied: {
             if (showTip) {
-                
-                PSTAlertController *alert = [PSTAlertController alertWithTitle:@"" message:@"请在iPhone的“设置-隐私-照片”选项中，允许易信访问你的相册。"];
-                [alert addAction:[PSTAlertAction actionWithTitle:@"确定" handler:nil]];
-                [alert showWithSender:nil controller:nil animated:YES completion:nil];
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"请在iPhone的“设置-隐私-照片”选项中，允许易信访问你的相册。" preferredStyle:UIAlertControllerStyleAlert];
+                [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
+                [[self rootController] presentViewController:alert animated:YES completion:nil];
             }
             if(complete) complete(NO);
             
@@ -113,10 +126,9 @@
                 }
             } failureBlock:^(NSError *error) {
                 if (error.code == ALAssetsLibraryAccessUserDeniedError || error.code == ALAssetsLibraryAccessGloballyDeniedError) {
-                    
-                    PSTAlertController *alert = [PSTAlertController alertWithTitle:@"" message:@"请在iPhone的“设置-隐私-照片”选项中，允许易信访问你的相册。"];
-                    [alert addAction:[PSTAlertAction actionWithTitle:@"确定" handler:nil]];
-                    [alert showWithSender:nil controller:nil animated:YES completion:nil];
+                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"请在iPhone的“设置-隐私-照片”选项中，允许易信访问你的相册。" preferredStyle:UIAlertControllerStyleAlert];
+                    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
+                    [[self rootController] presentViewController:alert animated:YES completion:nil];
                     
                     if(complete) complete(NO);
                 }

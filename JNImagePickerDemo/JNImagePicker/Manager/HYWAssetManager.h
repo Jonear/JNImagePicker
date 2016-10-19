@@ -11,8 +11,6 @@
 
 @interface HYWAssetManager : NSObject
 
-@property (nonatomic, strong) ALAssetsGroup     *assetsGroup;   //其中一个Group
-@property (nonatomic, strong) NSMutableArray    *assetsGroups;  // 所有Group
 /**
  *  所有选择的Asset
  */
@@ -22,16 +20,19 @@
  */
 @property (nonatomic, strong) NSString          *assetsGroupID;
 /**
- *  是否发布原图
+ *  是否发布原图模式
  */
 @property (nonatomic, assign) BOOL              isHDImage;
 
-// cachedAssets, Key:groupID, Val:groupAssets
-// groupAssets也是个Dic, Key:index, Val:hywIPAsset
-@property (nonatomic, strong) NSMutableDictionary *cachedAssets;
 
 + (instancetype)sharedManager;
 
-- (void)getLastImageAssetFromLibrary:(void (^)(id))block;
++ (void)getLastImagePHAssetFromLibrary:(void (^)(PHAsset *))block;
+
+
+/**
+ *  清理数据
+ */
+- (void)clearData;
 
 @end

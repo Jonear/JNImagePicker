@@ -9,7 +9,6 @@
 #import "HYWImagePickerManager.h"
 #import "UIImagePickerController+Block.h"
 #import "HYWPHListViewController.h"
-#import "ALAssetsLibraryAccessor.h"
 #import "HYWAssetManager.h"
 #import "HYWPHGridViewController.h"
 #import "HYWImagePickerHelper.h"

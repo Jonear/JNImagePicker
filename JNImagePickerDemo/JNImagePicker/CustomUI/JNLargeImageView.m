@@ -6,12 +6,12 @@
 //  Copyright (c) 2014年 Netease. All rights reserved.
 //
 
-#import "HYWLargeImageView.h"
+#import "JNLargeImageView.h"
 
 #define kScrollDefaultSize  100.0   // 阀值
 #define kZoomScale          3.0     // 默认放大倍数
 
-@interface HYWLargeImageView () {
+@interface JNLargeImageView () {
     CGFloat _maxScaleFactor;
     CGPoint _contentOffset;
     BOOL _isPresented;
@@ -23,7 +23,7 @@
 @property (strong, nonatomic) UIPanGestureRecognizer *panGesture;
 @end
 
-@implementation HYWLargeImageView {
+@implementation JNLargeImageView {
     CGSize _oldAnimationViewSize;
     UIImageView *_animationViewShadowView;
 }

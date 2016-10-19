@@ -6,9 +6,9 @@
 //  Copyright (c) 2013年 Netease. All rights reserved.
 //
 
-#import "PageView.h"
+#import "JNPageItemView.h"
 
-@interface PageView ()
+@interface JNPageItemView ()
 {
     NSInteger   _currentPage;
     NSInteger   _currentPageForRotation;
@@ -24,7 +24,7 @@
 - (void)raisePageIndexChangedDelegate;
 @end
 
-@implementation PageView
+@implementation JNPageItemView
 
 - (id)initWithFrame:(CGRect)frame
 {

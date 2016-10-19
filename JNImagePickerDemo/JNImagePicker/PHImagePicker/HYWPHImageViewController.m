@@ -18,12 +18,7 @@
 
 static CGSize AssetGridThumbnailSize;
 
-@interface HYWPHImageViewController ()
-<PageViewDataSource,
-PageViewDelegate,
-UIGestureRecognizerDelegate,
-UIActionSheetDelegate,
-HYWLargeImageViewDelegate>
+@interface HYWPHImageViewController () <PageViewDataSource, PageViewDelegate, UIGestureRecognizerDelegate, UIActionSheetDelegate, JNLargeImageViewDelegate>
 {
     UIButton			*rightButton;
     NSInteger			_currentIndex;
@@ -31,7 +26,7 @@ HYWLargeImageViewDelegate>
     BOOL                _isBeginTask;
     HYWAssetManager		*assetManager;
     BOOL                _isShowSingleImage;
-    HYWLargeImageView *_currentLargeImageViewCell;
+    JNLargeImageView *_currentLargeImageViewCell;
 }
 
 @property (strong, nonatomic) NSArray               *hywIPAssets;
@@ -39,7 +34,7 @@ HYWLargeImageViewDelegate>
 @property (nonatomic, assign) BOOL                  isNavigationBarTranslucent;
 @property (nonatomic, strong) NSArray               *photoAssets;   // 用来缓存要更新的Assets
 
-@property (strong, nonatomic) IBOutlet PageView                 *largeHorizontalTableView;
+@property (strong, nonatomic) IBOutlet JNPageItemView                 *largeHorizontalTableView;
 @property (strong, nonatomic) IBOutlet UIView                   *footerView;
 @property (strong, nonatomic) IBOutlet UIButton                 *hdImageButton;
 @property (strong, nonatomic) IBOutlet UIButton                 *sendButton;
@@ -325,8 +320,8 @@ HYWLargeImageViewDelegate>
                         
                         UIView *view = [self.largeHorizontalTableView viewAtIndex:_currentIndex];
                         
-                        if ([view isKindOfClass:[HYWLargeImageView class]]) {
-                            HYWLargeImageView *largeImageViewCell = (HYWLargeImageView *)view;
+                        if ([view isKindOfClass:[JNLargeImageView class]]) {
+                            JNLargeImageView *largeImageViewCell = (JNLargeImageView *)view;
                             [largeImageViewCell.imageView.layer addSublayer:playerLayer];
                             
                             CALayer *layer = largeImageViewCell.imageView.layer;
@@ -496,12 +491,12 @@ HYWLargeImageViewDelegate>
 }
 
 #pragma mark - PageViewDatasource
-- (NSInteger)numberOfPages: (PageView *)pageView {
+- (NSInteger)numberOfPages: (JNPageItemView *)pageView {
     return [_hywIPAssets count];
 }
 
-- (UIView *)pageView:(PageView *)pageView viewInPage:(NSInteger)index {
-    HYWLargeImageView *largeImageViewCell = [[HYWLargeImageView alloc] initWithFrame:pageView.bounds];
+- (UIView *)pageView:(JNPageItemView *)pageView viewInPage:(NSInteger)index {
+    JNLargeImageView *largeImageViewCell = [[JNLargeImageView alloc] initWithFrame:pageView.bounds];
     largeImageViewCell.gapWidth = kHYWLargeImageGapWidth;
     largeImageViewCell.delegate = self;
     
@@ -515,7 +510,7 @@ HYWLargeImageViewDelegate>
 }
 
 #pragma mark - PageViewDelegate
-- (void)pageViewScrollEnd:(PageView *)pageView
+- (void)pageViewScrollEnd:(JNPageItemView *)pageView
              currentIndex:(NSInteger)index
                totolPages:(NSInteger)pages {
     if (_hywIPAssets.count <= 0) {
@@ -567,8 +562,8 @@ HYWLargeImageViewDelegate>
         
         
         UIView *view = [pageView viewAtIndex:index];
-        if ([view isKindOfClass:[HYWLargeImageView class]]) {
-            HYWLargeImageView *cell = (HYWLargeImageView *)view;
+        if ([view isKindOfClass:[JNLargeImageView class]]) {
+            JNLargeImageView *cell = (JNLargeImageView *)view;
             if (cell.imageView.image) {
                 rightButton.hidden = NO;
                 _hdImageButton.hidden = !_imagePickerConfig.sendHDImage;
@@ -587,7 +582,7 @@ HYWLargeImageViewDelegate>
     
 }
 
-- (void)loadBigImage:(HYWIPAsset *)hywIPAsset imageView:(HYWLargeImageView *)view {
+- (void)loadBigImage:(HYWIPAsset *)hywIPAsset imageView:(JNLargeImageView *)view {
     if (!hywIPAsset) {
         return;
     }
@@ -621,14 +616,14 @@ HYWLargeImageViewDelegate>
     }];
 }
 
-- (void)pageView:(PageView *)pageView didEndDisplayingAtIndex:(NSInteger)index {
+- (void)pageView:(JNPageItemView *)pageView didEndDisplayingAtIndex:(NSInteger)index {
     HYWIPAsset *hywIPAsset = [_hywIPAssets objectAtIndex:index];
     [self cancelAssetRequest:hywIPAsset];
 }
 
 
 #pragma mark - LargeImageViewDelegate
-- (void)onTouch:(HYWLargeImageView *)cell {
+- (void)onTouch:(JNLargeImageView *)cell {
     _isFullScreen = !_isFullScreen;
     [self showAndHideBar:_isFullScreen];
 }

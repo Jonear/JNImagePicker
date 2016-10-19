@@ -9,7 +9,6 @@
 #import "HYWPHListViewController.h"
 #import "HYWIPListTableViewCell.h"
 #import "HYWPHGridViewController.h"
-#import "ALAssetsLibraryAccessor.h"
 #import "HYWAssetManager.h"
 #import "PhotoKitAccessor.h"
 #import "HYWImagePickerHelper.h"
@@ -32,7 +31,6 @@ HYWPHGridViewControllerDelegate>
 @property (nonatomic, strong) NSArray *collectionsFetchResults;
 
 
-@property (nonatomic, strong) NSMutableArray        *assetGroups;
 @property (nonatomic, assign) NSInteger              maxCount;
 @property (nonatomic, assign) ImagePickerMediaType   mediaType;
 @property (nonatomic, strong) HYWImagePickerConfig   *imagePickerConfig;
@@ -60,7 +58,6 @@ HYWPHGridViewControllerDelegate>
     if (self) {
         // Custom initialization
         assetManager        = [HYWAssetManager sharedManager];
-        self.assetGroups    = assetManager.assetsGroups;
         self.mediaType      = kImagePickerMediaTypePhoto;
         self.imageManager = [[PhotoKitAccessor sharedInstance] phCachingImageManager];
     }

@@ -1,5 +1,5 @@
 //
-//  PageView.h
+//  JNPageItemView.h
 //  yixin_iphone
 //  按页展示的UIView，只载入当前页和前后页，保证内存的低占用 (目前只支持横向)
 //  Created by amao on 13-5-14.
@@ -8,28 +8,28 @@
 
 #import <UIKit/UIKit.h>
 
-@class PageView;
+@class JNPageItemView;
 
 @protocol PageViewDataSource <NSObject>
-- (NSInteger)numberOfPages: (PageView *)pageView;
-- (UIView *)pageView: (PageView *)pageView viewInPage: (NSInteger)index;
+- (NSInteger)numberOfPages: (JNPageItemView *)pageView;
+- (UIView *)pageView: (JNPageItemView *)pageView viewInPage: (NSInteger)index;
 @end
 
 @protocol PageViewDelegate <NSObject>
 @optional
-- (void)pageViewScrollEnd: (PageView *)pageView
+- (void)pageViewScrollEnd: (JNPageItemView *)pageView
              currentIndex: (NSInteger)index
                totolPages: (NSInteger)pages;
 
-- (void)pageViewDidScroll: (PageView *)pageView;
+- (void)pageViewDidScroll: (JNPageItemView *)pageView;
 - (BOOL)needScrollAnimation;
 
-- (void)pageView:(PageView *)pageView didEndDisplayingAtIndex:(NSInteger)index;
+- (void)pageView:(JNPageItemView *)pageView didEndDisplayingAtIndex:(NSInteger)index;
 
 @end
 
 
-@interface PageView : UIView<UIScrollViewDelegate>
+@interface JNPageItemView : UIView<UIScrollViewDelegate>
 @property (nonatomic,strong)    UIScrollView   *scrollView;
 @property (nonatomic,weak)    id<PageViewDataSource>  dataSource;
 @property (nonatomic,weak)    id<PageViewDelegate>    pageViewDelegate;

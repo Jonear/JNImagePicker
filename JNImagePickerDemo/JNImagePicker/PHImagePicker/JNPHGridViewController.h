@@ -26,7 +26,7 @@
 
 @property (strong) PHFetchResult *assetsFetchResults;
 
-@property (nonatomic, assign) BOOL                           isScrollToBottom;  // 这个属性在willAppear需要用到（左滑），不要优化掉 hyw
+@property (nonatomic, assign) BOOL                           isScrollToBottom;  // 这个属性在willAppear需要用到（左滑），不要优化掉 
 @property (weak, nonatomic) id<JNPHGridViewControllerDelegate>       plGridDelegate;
 
 

@@ -1,5 +1,5 @@
 //
-//  HYWAssetManager.m
+//  JNAssetManager.m
 //  JNImagePicker
 //
 //  Created by Jonear on 16/3/11.

@@ -38,6 +38,7 @@
 
 - (void)buttonClick:(id)sender {
     [[JNAssetManager sharedManager] clearData];
+    
     JNImagePickerConfig *config = [[JNImagePickerConfig alloc] init];
     config.imagePickerMediaType = kImagePickerMediaTypeAll;
     config.delegate = self;
@@ -65,7 +66,7 @@
 
 - (void)sendImagesMessageWithAssetArray:(NSArray *)assets isHDImage:(BOOL)isHDImage {
     [assets enumerateObjectsUsingBlock:^(JNIPAsset *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        UIImage *image = [JNIPAssetHelper imageWithHYWIPAsset:obj original:isHDImage];
+        UIImage *image = [JNIPAssetHelper imageWithIPAsset:obj original:isHDImage];
         NSLog(@"%@", image);
     }];
     

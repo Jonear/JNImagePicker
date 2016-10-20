@@ -13,7 +13,7 @@
 
 @protocol JNIPGridCollectionViewCellDelegate <NSObject>
 
-- (void)overlayButtonPressed:(UIButton *)button withHYWIPAsset:(JNIPAsset *)hywIPAsset;
+- (void)overlayButtonPressed:(UIButton *)button withIPAsset:(JNIPAsset *)IPAsset;
 
 @end
 
@@ -23,12 +23,12 @@
 @property (strong, nonatomic) IBOutlet UIView *videoMetaView;
 @property (strong, nonatomic) IBOutlet UILabel *durationLabel;
 
-@property (strong, nonatomic) JNIPAsset              *hywIPAsset;
+@property (strong, nonatomic) JNIPAsset              *IPAsset;
 @property (weak, nonatomic) id<JNIPGridCollectionViewCellDelegate> cellDelegate;
 
 @property (strong) PHCachingImageManager *imageManager;
 
-- (void)drawViewWithHYWIPAsset:(JNIPAsset *)hywIPAsset
-                   mediaType:(ImagePickerMediaType)mediaType;
+- (void)drawViewWithIPAsset:(JNIPAsset *)IPAsset
+                   mediaType:(JNImagePickerMediaType)mediaType;
 
 @end

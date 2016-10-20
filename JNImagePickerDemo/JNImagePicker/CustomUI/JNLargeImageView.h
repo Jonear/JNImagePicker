@@ -1,5 +1,5 @@
 //
-//  HYWLargeImageView.h
+//  LargeImageView.h
 //  JNImagePicker
 //
 //  Created by Jonear on 14/12/24.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class JNLargeImageView;
 
-static CGFloat kHYWLargeImageGapWidth = 16.0f;
+static CGFloat kLargeImageGapWidth = 16.0f;
 
 @protocol JNLargeImageViewDelegate <NSObject>
 - (void)onTouch:(JNLargeImageView *)cell;

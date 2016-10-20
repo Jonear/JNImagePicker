@@ -31,7 +31,7 @@
 @property (weak, nonatomic) id<JNPHImageViewControllerDelegate> plImageDelegate;
 
 - (instancetype)initWithImagePickerConfig:(JNImagePickerConfig *)imagePickerConfig
-                              hywIPAssets:(NSArray *)hywIPAssets
+                              IPAssets:(NSArray *)IPAssets
                             objectAtIndex:(NSUInteger)index;
 
 #pragma mark - PhotoKit

@@ -13,7 +13,7 @@
 
 @interface JNIPAssetHelper : NSObject
 
-+ (UIImage *)imageWithHYWIPAsset:(JNIPAsset *)hywIPAsset original:(BOOL)original;
++ (UIImage *)imageWithIPAsset:(JNIPAsset *)IPAsset original:(BOOL)original;
 
 
 /**
@@ -25,7 +25,7 @@
 /**
  *  获得原图的数据
  */
-+ (NSData *)imageOriginalDataWithHYWIPAsset:(JNIPAsset *)hywIPAsset;
++ (NSData *)imageOriginalDataWithIPAsset:(JNIPAsset *)IPAsset;
 
 /**
  *  缩略图
@@ -41,11 +41,11 @@
 /**
  *  保存asset到本地
  *
- *  @param hywIPAsset HYWIPAsset
+ *  @param IPAsset IPAsset
  *  @param filepath 本地路径
  *
  *  @return BOOL
  */
-+ (BOOL)writeHYWIPAsset:(JNIPAsset *)hywIPAsset toFilepath:(NSString *)filepath;
++ (BOOL)writeIPAsset:(JNIPAsset *)IPAsset toFilepath:(NSString *)filepath;
 
 @end

@@ -29,7 +29,7 @@ static CGSize AssetGridThumbnailSize;
     JNLargeImageView *_currentLargeImageViewCell;
 }
 
-@property (strong, nonatomic) NSArray               *hywIPAssets;
+@property (strong, nonatomic) NSArray               *IPAssets;
 @property (nonatomic, assign) UIStatusBarStyle      statusBarStyle;
 @property (nonatomic, assign) BOOL                  isNavigationBarTranslucent;
 @property (nonatomic, strong) NSArray               *photoAssets;   // 用来缓存要更新的Assets
@@ -95,11 +95,11 @@ static CGSize AssetGridThumbnailSize;
  }
  */
 - (instancetype)initWithImagePickerConfig:(JNImagePickerConfig *)imagePickerConfig
-                              hywIPAssets:(NSArray *)hywIPAssets
+                              IPAssets:(NSArray *)IPAssets
                             objectAtIndex:(NSUInteger)index {
     self = [super init];
     if (self) {
-        _hywIPAssets      = [NSArray arrayWithArray:hywIPAssets];
+        _IPAssets      = [NSArray arrayWithArray:IPAssets];
         _currentIndex   = index;
         
         assetManager    = [JNAssetManager sharedManager];
@@ -113,12 +113,12 @@ static CGSize AssetGridThumbnailSize;
 - (instancetype)initWithPHAsset:(PHAsset *)asset {
     self = [super init];
     if (self) {
-        JNIPAsset *hywIPAsset = [[JNIPAsset alloc] initWithPHAsset:asset];
-        hywIPAsset.selected = YES;
+        JNIPAsset *IPAsset = [[JNIPAsset alloc] initWithPHAsset:asset];
+        IPAsset.selected = YES;
         assetManager    = [JNAssetManager sharedManager];
-        assetManager.selectedAssets = [NSMutableArray arrayWithArray:_hywIPAssets];
+        assetManager.selectedAssets = [NSMutableArray arrayWithArray:_IPAssets];
         
-        _hywIPAssets      = @[hywIPAsset];
+        _IPAssets      = @[IPAsset];
         _currentIndex   = 0;
         
         _photoAssets    = [NSArray array];
@@ -131,8 +131,8 @@ static CGSize AssetGridThumbnailSize;
 }
 
 - (void)dealloc {
-    for (JNIPAsset *hywIPAsset in _hywIPAssets) {
-        [self cancelAssetRequest:hywIPAsset];
+    for (JNIPAsset *IPAsset in _IPAssets) {
+        [self cancelAssetRequest:IPAsset];
     }
     
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -192,7 +192,7 @@ static CGSize AssetGridThumbnailSize;
     // 这个页面是图片预览，设置不要自动加入ViewInsets
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    if (_hywIPAssets.count <= 0) {
+    if (_IPAssets.count <= 0) {
         return;
     }
     
@@ -226,13 +226,13 @@ static CGSize AssetGridThumbnailSize;
         return;
     }
     
-    if (_hywIPAssets.count <= 0) {
+    if (_IPAssets.count <= 0) {
         return;
     }
     
-    JNIPAsset *hywIPAsset = [_hywIPAssets objectAtIndex:_currentIndex];
+    JNIPAsset *IPAsset = [_IPAssets objectAtIndex:_currentIndex];
     
-    if (hywIPAsset.phAsset.mediaType == PHAssetMediaTypeVideo) {
+    if (IPAsset.phAsset.mediaType == PHAssetMediaTypeVideo) {
         
         if (self.playerLayer) {
             [self.playerLayer.player pause];
@@ -243,11 +243,11 @@ static CGSize AssetGridThumbnailSize;
         [self saveAssetGroupID];
         
         if (_plImageDelegate && [_plImageDelegate respondsToSelector:@selector(JNPHImageViewController:didFinishPickingImages:)]) {
-            [_plImageDelegate JNPHImageViewController:self didFinishPickingVideo:hywIPAsset.phAsset];
+            [_plImageDelegate JNPHImageViewController:self didFinishPickingVideo:IPAsset.phAsset];
         }
         
         
-    } else if (hywIPAsset.phAsset.mediaType == PHAssetMediaTypeImage) {
+    } else if (IPAsset.phAsset.mediaType == PHAssetMediaTypeImage) {
         if ([assetManager.selectedAssets count] <= 0) { // 一张不选直接发送，发送当前图片
             [self resetUIWhenSelected:YES];
         }
@@ -267,8 +267,8 @@ static CGSize AssetGridThumbnailSize;
     
     assetManager.isHDImage = !assetManager.isHDImage;
     
-    JNIPAsset *hywIPAsset = [_hywIPAssets objectAtIndex:_currentIndex];
-    if (!hywIPAsset.selected) {
+    JNIPAsset *IPAsset = [_IPAssets objectAtIndex:_currentIndex];
+    if (!IPAsset.selected) {
         [self resetUIWhenSelected:assetManager.isHDImage];
     }
     [self freshHDImageButtonTitle];
@@ -281,11 +281,11 @@ static CGSize AssetGridThumbnailSize;
     }
     
     if (!self.playerLayer) {
-        JNIPAsset *hywIPAsset = [_hywIPAssets objectAtIndex:_currentIndex];
+        JNIPAsset *IPAsset = [_IPAssets objectAtIndex:_currentIndex];
         
         
         // 先停止上次的请求
-        [self cancelAssetRequest:hywIPAsset];
+        [self cancelAssetRequest:IPAsset];
         
         
         PHVideoRequestOptions *options = [PHVideoRequestOptions new];
@@ -298,7 +298,7 @@ static CGSize AssetGridThumbnailSize;
         };
         
         
-        hywIPAsset.assetRequestID = [[[PhotoKitAccessor sharedInstance] phCachingImageManager] requestAVAssetForVideo:hywIPAsset.phAsset options:options resultHandler:^(AVAsset *avAsset, AVAudioMix *audioMix, NSDictionary *info) {
+        IPAsset.assetRequestID = [[[PhotoKitAccessor sharedInstance] phCachingImageManager] requestAVAssetForVideo:IPAsset.phAsset options:options resultHandler:^(AVAsset *avAsset, AVAudioMix *audioMix, NSDictionary *info) {
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 
@@ -382,8 +382,8 @@ static CGSize AssetGridThumbnailSize;
 
 - (void)resetUIWhenSelected:(BOOL)selected {
     if (selected) {
-        JNIPAsset *hywIPAsset = [_hywIPAssets objectAtIndex:_currentIndex];
-        if (!hywIPAsset.selected) {
+        JNIPAsset *IPAsset = [_IPAssets objectAtIndex:_currentIndex];
+        if (!IPAsset.selected) {
             if ([assetManager.selectedAssets count] >= _imagePickerConfig.capacity) {
                 [_hdImageIndicator stopAnimating];
                 NSString *tip = nil;
@@ -400,20 +400,20 @@ static CGSize AssetGridThumbnailSize;
         }
         
         if ([assetManager.selectedAssets count] == 0) {
-            hywIPAsset.selected = YES;
-            [assetManager.selectedAssets addObject:hywIPAsset];
+            IPAsset.selected = YES;
+            [assetManager.selectedAssets addObject:IPAsset];
         } else {
-            JNIPAsset *item = [JNImagePickerHelper selectedAsset:hywIPAsset];
+            JNIPAsset *item = [JNImagePickerHelper selectedAsset:IPAsset];
             if (item) {
-                hywIPAsset.selected = NO;
+                IPAsset.selected = NO;
                 [assetManager.selectedAssets removeObject:item];
             } else {
-                hywIPAsset.selected = YES;
-                [assetManager.selectedAssets addObject:hywIPAsset];
+                IPAsset.selected = YES;
+                [assetManager.selectedAssets addObject:IPAsset];
             }
         }
         
-        [rightButton setSelected:hywIPAsset.selected];
+        [rightButton setSelected:IPAsset.selected];
         
         
         [self freshSendButtonTitle];
@@ -431,18 +431,18 @@ static CGSize AssetGridThumbnailSize;
 - (void)freshHDImageButtonTitle {
     [_hdImageIndicator stopAnimating];
     
-    if (_currentIndex >= [self.hywIPAssets count]) {
+    if (_currentIndex >= [self.IPAssets count]) {
         _hdImageButton.hidden = YES;
         return;
     }
     
-    JNIPAsset *hywIPAsset = [self.hywIPAssets objectAtIndex:_currentIndex];
+    JNIPAsset *IPAsset = [self.IPAssets objectAtIndex:_currentIndex];
     
     [_hdImageButton setSelected:assetManager.isHDImage];
     if (assetManager.isHDImage) {
-        if (hywIPAsset.dataSize.length > 0) {
-            [_hdImageButton setTitle:hywIPAsset.dataSize forState:UIControlStateNormal];
-            [_hdImageButton setTitle:hywIPAsset.dataSize forState:UIControlStateSelected];
+        if (IPAsset.dataSize.length > 0) {
+            [_hdImageButton setTitle:IPAsset.dataSize forState:UIControlStateNormal];
+            [_hdImageButton setTitle:IPAsset.dataSize forState:UIControlStateSelected];
         }
         else {
             [_hdImageButton setTitle:@" 原图" forState:UIControlStateNormal];
@@ -451,7 +451,7 @@ static CGSize AssetGridThumbnailSize;
             [_hdImageIndicator startAnimating];
             
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
-                [[[PhotoKitAccessor sharedInstance] phCachingImageManager] requestImageDataForAsset:hywIPAsset.phAsset options:nil resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
+                [[[PhotoKitAccessor sharedInstance] phCachingImageManager] requestImageDataForAsset:IPAsset.phAsset options:nil resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
                     //Get bytes size of image
                     long long imageSize = imageData.length;
                     
@@ -463,7 +463,7 @@ static CGSize AssetGridThumbnailSize;
                     else {
                         title = [NSString stringWithFormat:@" 原图(%.fKB)", totalSize];
                     }
-                    hywIPAsset.dataSize = title;
+                    IPAsset.dataSize = title;
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [_hdImageButton setTitle:title forState:UIControlStateNormal];
                         [_hdImageButton setTitle:title forState:UIControlStateSelected];
@@ -480,30 +480,30 @@ static CGSize AssetGridThumbnailSize;
     }
 }
 
-- (void)cancelAssetRequest:(JNIPAsset *)hywIPAsset {
-    if (!hywIPAsset) {
+- (void)cancelAssetRequest:(JNIPAsset *)IPAsset {
+    if (!IPAsset) {
         return;
     }
-    if (hywIPAsset.assetRequestID != PHInvalidImageRequestID) {
-        [[[PhotoKitAccessor sharedInstance] phCachingImageManager] cancelImageRequest:hywIPAsset.assetRequestID];
-        hywIPAsset.assetRequestID = PHInvalidImageRequestID;
+    if (IPAsset.assetRequestID != PHInvalidImageRequestID) {
+        [[[PhotoKitAccessor sharedInstance] phCachingImageManager] cancelImageRequest:IPAsset.assetRequestID];
+        IPAsset.assetRequestID = PHInvalidImageRequestID;
     }
 }
 
 #pragma mark - PageViewDatasource
 - (NSInteger)numberOfPages: (JNPageItemView *)pageView {
-    return [_hywIPAssets count];
+    return [_IPAssets count];
 }
 
 - (UIView *)pageView:(JNPageItemView *)pageView viewInPage:(NSInteger)index {
     JNLargeImageView *largeImageViewCell = [[JNLargeImageView alloc] initWithFrame:pageView.bounds];
-    largeImageViewCell.gapWidth = kHYWLargeImageGapWidth;
+    largeImageViewCell.gapWidth = kLargeImageGapWidth;
     largeImageViewCell.delegate = self;
     
-    JNIPAsset *hywIPAsset = [_hywIPAssets objectAtIndex:index];
+    JNIPAsset *IPAsset = [_IPAssets objectAtIndex:index];
     
-    if (hywIPAsset != nil) {
-        [self loadBigImage:hywIPAsset imageView:largeImageViewCell];
+    if (IPAsset != nil) {
+        [self loadBigImage:IPAsset imageView:largeImageViewCell];
     }
     
     return largeImageViewCell;
@@ -513,7 +513,7 @@ static CGSize AssetGridThumbnailSize;
 - (void)pageViewScrollEnd:(JNPageItemView *)pageView
              currentIndex:(NSInteger)index
                totolPages:(NSInteger)pages {
-    if (_hywIPAssets.count <= 0) {
+    if (_IPAssets.count <= 0) {
         return;
     }
     
@@ -528,16 +528,16 @@ static CGSize AssetGridThumbnailSize;
     
     
     
-    JNIPAsset *hywIPAsset = [_hywIPAssets objectAtIndex:index];
+    JNIPAsset *IPAsset = [_IPAssets objectAtIndex:index];
     
-    if (!hywIPAsset) {
+    if (!IPAsset) {
         return;
     }
     
-    [rightButton setSelected:hywIPAsset.selected];
+    [rightButton setSelected:IPAsset.selected];
     
     
-    if (hywIPAsset.phAsset.mediaType == PHAssetMediaTypeVideo) {
+    if (IPAsset.phAsset.mediaType == PHAssetMediaTypeVideo) {
         _hdImageButton.hidden = YES;
         
         rightButton.hidden = YES;
@@ -548,14 +548,14 @@ static CGSize AssetGridThumbnailSize;
         
         _sendView.hidden = NO;
         
-        [[[PhotoKitAccessor sharedInstance] phCachingImageManager] requestAVAssetForVideo:hywIPAsset.phAsset options:nil resultHandler:^(AVAsset *avAsset, AVAudioMix *audioMix, NSDictionary *info) {
+        [[[PhotoKitAccessor sharedInstance] phCachingImageManager] requestAVAssetForVideo:IPAsset.phAsset options:nil resultHandler:^(AVAsset *avAsset, AVAudioMix *audioMix, NSDictionary *info) {
             if (!avAsset) {
                 _sendView.hidden = YES;
             }
         }];
         
         
-    } else if (hywIPAsset.phAsset.mediaType == PHAssetMediaTypeImage) {
+    } else if (IPAsset.phAsset.mediaType == PHAssetMediaTypeImage) {
         
         _playButton.hidden = YES;
         self.navigationItem.title = @"";
@@ -582,8 +582,8 @@ static CGSize AssetGridThumbnailSize;
     
 }
 
-- (void)loadBigImage:(JNIPAsset *)hywIPAsset imageView:(JNLargeImageView *)view {
-    if (!hywIPAsset) {
+- (void)loadBigImage:(JNIPAsset *)IPAsset imageView:(JNLargeImageView *)view {
+    if (!IPAsset) {
         return;
     }
     
@@ -591,7 +591,7 @@ static CGSize AssetGridThumbnailSize;
      *  先假装一个小图，这个小图在相片列表页请求过。
      *  这主要是为了解决加载同步到iCloud上的相片，需要下载大图，一般比较慢，比较模糊。
      */
-    UIImage *resultImage = [JNIPAssetHelper thumbnailWithPHAsset:hywIPAsset.phAsset];
+    UIImage *resultImage = [JNIPAssetHelper thumbnailWithPHAsset:IPAsset.phAsset];
     if (resultImage) {
         view.imageView.image = resultImage;
     }
@@ -605,20 +605,20 @@ static CGSize AssetGridThumbnailSize;
     options.resizeMode = PHImageRequestOptionsResizeModeFast;
     options.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
     
-    hywIPAsset.assetRequestID = [[[PhotoKitAccessor sharedInstance] phCachingImageManager] requestImageForAsset:hywIPAsset.phAsset targetSize:CGSizeMake(([UIScreen mainScreen].bounds.size.width), ([UIScreen mainScreen].bounds.size.height)) contentMode:PHImageContentModeAspectFill options:options resultHandler:^(UIImage *result, NSDictionary *info) {
+    IPAsset.assetRequestID = [[[PhotoKitAccessor sharedInstance] phCachingImageManager] requestImageForAsset:IPAsset.phAsset targetSize:CGSizeMake(([UIScreen mainScreen].bounds.size.width), ([UIScreen mainScreen].bounds.size.height)) contentMode:PHImageContentModeAspectFill options:options resultHandler:^(UIImage *result, NSDictionary *info) {
         if (result && ![info[PHImageResultIsDegradedKey] boolValue]) {
             view.imageView.image = result;
             /**
              *  大图加载到的时候取消改图的请求
              */
-            [self cancelAssetRequest:hywIPAsset];
+            [self cancelAssetRequest:IPAsset];
         }
     }];
 }
 
 - (void)pageView:(JNPageItemView *)pageView didEndDisplayingAtIndex:(NSInteger)index {
-    JNIPAsset *hywIPAsset = [_hywIPAssets objectAtIndex:index];
-    [self cancelAssetRequest:hywIPAsset];
+    JNIPAsset *IPAsset = [_IPAssets objectAtIndex:index];
+    [self cancelAssetRequest:IPAsset];
 }
 
 

@@ -10,7 +10,7 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #include <Photos/Photos.h>
 /**
- *  HYW Image Picker Asset
+ *   Image Picker Asset
  */
 @interface JNIPAsset : NSObject
 

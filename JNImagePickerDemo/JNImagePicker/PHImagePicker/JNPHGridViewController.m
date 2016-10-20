@@ -99,8 +99,8 @@ JNPHImageViewControllerDelegate>
     
     for (NSInteger i = 0; i < self.assetsFetchResults.count; i++) {
         PHAsset *asset = self.assetsFetchResults[i];
-        JNIPAsset *hywIPAsset = [[JNIPAsset alloc] initWithPHAsset:asset];
-        [_photoAssets addObject:hywIPAsset];
+        JNIPAsset *IPAsset = [[JNIPAsset alloc] initWithPHAsset:asset];
+        [_photoAssets addObject:IPAsset];
     }
     //    [[PHPhotoLibrary sharedPhotoLibrary] registerChangeObserver:self];
 }
@@ -216,7 +216,7 @@ JNPHImageViewControllerDelegate>
         return;
     }
     
-    JNPHImageViewController *imageViewController = [[JNPHImageViewController alloc] initWithImagePickerConfig:_imagePickerConfig hywIPAssets:assetManager.selectedAssets objectAtIndex:0];
+    JNPHImageViewController *imageViewController = [[JNPHImageViewController alloc] initWithImagePickerConfig:_imagePickerConfig IPAssets:assetManager.selectedAssets objectAtIndex:0];
     imageViewController.plImageDelegate = self;
     
     [self.navigationController pushViewController:imageViewController animated:YES];
@@ -227,10 +227,10 @@ JNPHImageViewControllerDelegate>
 }
 
 #pragma mark - Private Methods
-- (void)showICloudAlertWithHYWIPAsset:(JNIPAsset *)hywIPAsset {
-    if (hywIPAsset.phAsset.mediaType == PHAssetMediaTypeImage) {
+- (void)showICloudAlertWithIPAsset:(JNIPAsset *)IPAsset {
+    if (IPAsset.phAsset.mediaType == PHAssetMediaTypeImage) {
 //        [YixinUtil showAlert:@"" content:@"正在从iCloud同步照片"];
-    } else if (hywIPAsset.phAsset.mediaType == PHAssetMediaTypeVideo) {
+    } else if (IPAsset.phAsset.mediaType == PHAssetMediaTypeVideo) {
 //        [YixinUtil showAlert:@"" content:@"正在从iCloud同步视频"];
     } else {
 //        [YixinUtil showAlert:@"" content:@"正在从iCloud同步"];
@@ -259,7 +259,7 @@ JNPHImageViewControllerDelegate>
 
 
 #pragma mark - Private Methods
-- (void)previewVideo:(JNIPAsset *)hywIPAsset {
+- (void)previewVideo:(JNIPAsset *)IPAsset {
     if ([assetManager.selectedAssets count] > 0) {
         iToast *toast = [iToast makeToast:NSLocalizedString(@"选择相片时不能选择视频", nil)];
         [toast showAt:kToastPositionCenter duration:1.5];
@@ -268,29 +268,29 @@ JNPHImageViewControllerDelegate>
     
     JNPHImageViewController *imageViewController = [[JNPHImageViewController alloc]
                                                          initWithImagePickerConfig:_imagePickerConfig
-                                                         hywIPAssets:@[hywIPAsset]
+                                                         IPAssets:@[IPAsset]
                                                          objectAtIndex:0];
     imageViewController.plImageDelegate = self;
     
     [self.navigationController pushViewController:imageViewController animated:YES];
 }
 
-- (void)previewPhoto:(JNIPAsset *)hywIPAsset {
+- (void)previewPhoto:(JNIPAsset *)IPAsset {
     // 过滤视频
     NSMutableArray *filterVideoAssets = [NSMutableArray array];
     [filterVideoAssets addObjectsFromArray:_photoAssets];
     
-    [filterVideoAssets enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(JNIPAsset *hywIPAsset, NSUInteger idx, BOOL * _Nonnull stop) {
-        if (hywIPAsset.phAsset.mediaType == PHAssetMediaTypeVideo) {
-            [filterVideoAssets removeObject:hywIPAsset];
+    [filterVideoAssets enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(JNIPAsset *IPAsset, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (IPAsset.phAsset.mediaType == PHAssetMediaTypeVideo) {
+            [filterVideoAssets removeObject:IPAsset];
         }
     }];
     
-    NSUInteger _currentIndex = [JNImagePickerHelper indexOfAsset:hywIPAsset fromAssets:filterVideoAssets];
+    NSUInteger _currentIndex = [JNImagePickerHelper indexOfAsset:IPAsset fromAssets:filterVideoAssets];
     
     JNPHImageViewController *imageViewController = [[JNPHImageViewController alloc]
                                                          initWithImagePickerConfig:_imagePickerConfig
-                                                         hywIPAssets:filterVideoAssets
+                                                         IPAssets:filterVideoAssets
                                                          objectAtIndex:_currentIndex];
     imageViewController.plImageDelegate = self;
     
@@ -456,41 +456,41 @@ JNPHImageViewControllerDelegate>
     NSInteger currentTag = cell.tag + 1;
     cell.tag = currentTag;
     
-    JNIPAsset *hywIPAsset = _photoAssets[indexPath.item];
+    JNIPAsset *IPAsset = _photoAssets[indexPath.item];
     for (JNIPAsset *item in assetManager.selectedAssets) {
-        if ([item.phAsset.localIdentifier isEqualToString:hywIPAsset.phAsset.localIdentifier]) {
-            hywIPAsset.selected = YES;
+        if ([item.phAsset.localIdentifier isEqualToString:IPAsset.phAsset.localIdentifier]) {
+            IPAsset.selected = YES;
         }
     }
     
     if (cell.tag == currentTag) {
         cell.cellDelegate = self;
         
-        [cell drawViewWithHYWIPAsset:hywIPAsset mediaType:kImagePickerMediaTypeAll];
+        [cell drawViewWithIPAsset:IPAsset mediaType:kImagePickerMediaTypeAll];
     }
     
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
-    [((JNIPGridCollectionViewCell *)cell).hywIPAsset cancelAnyLoading];
+    [((JNIPGridCollectionViewCell *)cell).IPAsset cancelAnyLoading];
 }
 
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     // 重新计算当前index
-    JNIPAsset *currentHYWIPAsset = _photoAssets[indexPath.item];
-    if (currentHYWIPAsset.isInTheCloud) {
-        [self showICloudAlertWithHYWIPAsset:currentHYWIPAsset];
+    JNIPAsset *currentIPAsset = _photoAssets[indexPath.item];
+    if (currentIPAsset.isInTheCloud) {
+        [self showICloudAlertWithIPAsset:currentIPAsset];
         return;
     }
     
-    if (currentHYWIPAsset.phAsset.mediaType == PHAssetMediaTypeVideo) {
-        [self previewVideo:currentHYWIPAsset];
+    if (currentIPAsset.phAsset.mediaType == PHAssetMediaTypeVideo) {
+        [self previewVideo:currentIPAsset];
     }
     else {
-        [self previewPhoto:currentHYWIPAsset];
+        [self previewPhoto:currentIPAsset];
     }
 }
 
@@ -516,12 +516,12 @@ JNPHImageViewControllerDelegate>
     }
 }
 #pragma mark - JNIPGridCollectionViewCellDelegate
-- (void)overlayButtonPressed:(UIButton *)button withHYWIPAsset:(JNIPAsset *)hywIPAsset {
-    if (hywIPAsset.isInTheCloud) {
-        [self showICloudAlertWithHYWIPAsset:hywIPAsset];
+- (void)overlayButtonPressed:(UIButton *)button withIPAsset:(JNIPAsset *)IPAsset {
+    if (IPAsset.isInTheCloud) {
+        [self showICloudAlertWithIPAsset:IPAsset];
         return;
     }
-    if (!hywIPAsset.selected) {
+    if (!IPAsset.selected) {
         if ([assetManager.selectedAssets count] >= _imagePickerConfig.capacity) {
             NSString *tip = nil;
             if (self.imagePickerConfig.tip.length > 0) {
@@ -538,20 +538,20 @@ JNPHImageViewControllerDelegate>
     
     
     if ([assetManager.selectedAssets count] == 0) {
-        hywIPAsset.selected = YES;
-        [assetManager.selectedAssets addObject:hywIPAsset];
+        IPAsset.selected = YES;
+        [assetManager.selectedAssets addObject:IPAsset];
     } else {
-        JNIPAsset *item = [JNImagePickerHelper selectedAsset:hywIPAsset];
+        JNIPAsset *item = [JNImagePickerHelper selectedAsset:IPAsset];
         if (item) {
-            hywIPAsset.selected = NO;
+            IPAsset.selected = NO;
             [assetManager.selectedAssets removeObject:item];
         } else {
-            hywIPAsset.selected = YES;
-            [assetManager.selectedAssets addObject:hywIPAsset];
+            IPAsset.selected = YES;
+            [assetManager.selectedAssets addObject:IPAsset];
         }
     }
     
-    [button setSelected:hywIPAsset.selected];
+    [button setSelected:IPAsset.selected];
     
     [self freshSendButtonTitle];
 }

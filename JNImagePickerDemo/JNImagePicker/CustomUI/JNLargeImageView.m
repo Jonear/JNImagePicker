@@ -1,5 +1,5 @@
 //
-//  HYWLargeImageView.m
+//  LargeImageView.m
 //  JNImagePicker
 //
 //  Created by Jonear on 14/12/24.

@@ -12,14 +12,14 @@
 @implementation JNImagePickerHelper
 
 
-+ (JNIPAsset *)selectedAsset:(JNIPAsset *)hywIPAsset {
++ (JNIPAsset *)selectedAsset:(JNIPAsset *)IPAsset {
     JNIPAsset *item = nil;
     JNAssetManager *assetManager = [JNAssetManager sharedManager];
     if ([assetManager.selectedAssets count] == 0) {
         return item;
     }
     
-    NSString *identifier = hywIPAsset.phAsset.localIdentifier;
+    NSString *identifier = IPAsset.phAsset.localIdentifier;
     for (JNIPAsset *asset in assetManager.selectedAssets) {
         if ([asset.phAsset.localIdentifier isEqualToString:identifier]) {
             item = asset;
@@ -30,10 +30,10 @@
     return item;
 }
 
-+ (NSInteger)indexOfAsset:(JNIPAsset *)hywIPAsset fromAssets:(NSArray *)assets {
++ (NSInteger)indexOfAsset:(JNIPAsset *)IPAsset fromAssets:(NSArray *)assets {
     JNIPAsset *item = nil;
     
-    NSString *identifier = hywIPAsset.phAsset.localIdentifier;
+    NSString *identifier = IPAsset.phAsset.localIdentifier;
     for (JNIPAsset *asset in assets) {
         if ([asset.phAsset.localIdentifier isEqualToString:identifier]) {
             item = asset;

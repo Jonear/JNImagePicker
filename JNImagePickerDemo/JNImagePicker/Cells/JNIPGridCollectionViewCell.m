@@ -20,14 +20,14 @@
     [_overlayButton addTarget:self action:@selector(overlayButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void)drawViewWithHYWIPAsset:(JNIPAsset *)hywIPAsset
-                   mediaType:(ImagePickerMediaType)mediaType {
+- (void)drawViewWithIPAsset:(JNIPAsset *)IPAsset
+                   mediaType:(JNImagePickerMediaType)mediaType {
     
-    self.hywIPAsset = hywIPAsset;
+    self.IPAsset = IPAsset;
     
     if (mediaType == kImagePickerMediaTypeAll) {
         
-        PHAsset *asset = hywIPAsset.phAsset;
+        PHAsset *asset = IPAsset.phAsset;
         if (asset.mediaType == PHAssetMediaTypeVideo) {
             [self.videoMetaView setHidden:NO];
             [self.overlayButton setHidden:YES];
@@ -55,24 +55,24 @@
     options.synchronous = YES;
     
     CGSize targetSize = [JNImagePickerHelper assetGridThumbnailSize];
-    hywIPAsset.assetRequestID = [imageManager requestImageForAsset:hywIPAsset.phAsset targetSize:targetSize contentMode:PHImageContentModeAspectFit options:options resultHandler:^(UIImage *result, NSDictionary *info) {
+    IPAsset.assetRequestID = [imageManager requestImageForAsset:IPAsset.phAsset targetSize:targetSize contentMode:PHImageContentModeAspectFit options:options resultHandler:^(UIImage *result, NSDictionary *info) {
         dispatch_async(dispatch_get_main_queue(), ^{
             if (result) {
-                hywIPAsset.isInTheCloud = NO;
+                IPAsset.isInTheCloud = NO;
             } else {
-                hywIPAsset.isInTheCloud = YES;
+                IPAsset.isInTheCloud = YES;
             }
             
             [self.imageView setImage:result];
         });
     }];
     
-    [self.overlayButton setSelected:hywIPAsset.selected];
+    [self.overlayButton setSelected:IPAsset.selected];
 }
 
 - (void)overlayButtonPressed:(UIButton *)button {
-    if (self.cellDelegate && [self.cellDelegate respondsToSelector:@selector(overlayButtonPressed:withHYWIPAsset:)]) {
-        [self.cellDelegate overlayButtonPressed:button withHYWIPAsset:self.hywIPAsset];
+    if (self.cellDelegate && [self.cellDelegate respondsToSelector:@selector(overlayButtonPressed:withIPAsset:)]) {
+        [self.cellDelegate overlayButtonPressed:button withIPAsset:self.IPAsset];
     }
 }
 

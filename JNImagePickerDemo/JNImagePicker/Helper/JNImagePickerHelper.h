@@ -12,8 +12,8 @@
 
 @interface JNImagePickerHelper : NSObject
 
-+ (JNIPAsset *)selectedAsset:(JNIPAsset *)hywIPAsset;
-+ (NSInteger)indexOfAsset:(JNIPAsset *)hywIPAsset fromAssets:(NSArray *)assets;
++ (JNIPAsset *)selectedAsset:(JNIPAsset *)IPAsset;
++ (NSInteger)indexOfAsset:(JNIPAsset *)IPAsset fromAssets:(NSArray *)assets;
 + (void)clearAssetManager;
 + (CGSize)assetGridThumbnailSize;
 

@@ -265,14 +265,14 @@
 		E6C41E781DB7853A00B580B5 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				E6C41E7F1DB7853A00B580B5 /* JNIPAssetHelper.h */,
+				E6C41E801DB7853A00B580B5 /* JNIPAssetHelper.m */,
 				E6C41E791DB7853A00B580B5 /* ALAssetsLibraryAccessor.h */,
 				E6C41E7A1DB7853A00B580B5 /* ALAssetsLibraryAccessor.m */,
 				E6C41E7B1DB7853A00B580B5 /* AVAssetExportHelper.h */,
 				E6C41E7C1DB7853A00B580B5 /* AVAssetExportHelper.m */,
 				E6C41E7D1DB7853A00B580B5 /* JNImagePickerHelper.h */,
 				E6C41E7E1DB7853A00B580B5 /* JNImagePickerHelper.m */,
-				E6C41E7F1DB7853A00B580B5 /* JNIPAssetHelper.h */,
-				E6C41E801DB7853A00B580B5 /* JNIPAssetHelper.m */,
 				E6C41E811DB7853A00B580B5 /* PhotoKitAccessor.h */,
 				E6C41E821DB7853A00B580B5 /* PhotoKitAccessor.m */,
 				E6C41E831DB7853A00B580B5 /* PrivacyHelper.h */,

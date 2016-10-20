@@ -1,5 +1,5 @@
 //
-//  HYWIPAssetHelper.m
+//  JNIPAssetHelper.m
 //  JNImagePicker
 //
 //  Created by Jonear on 13-9-4.
@@ -13,15 +13,15 @@
 @implementation JNIPAssetHelper
 
 #pragma mark - 获取图片
-+ (UIImage *)imageWithHYWIPAsset:(JNIPAsset *)hywIPAsset original:(BOOL)original {
-    return [self imageWithPHAsset:hywIPAsset.phAsset original:original];
++ (UIImage *)imageWithIPAsset:(JNIPAsset *)IPAsset original:(BOOL)original {
+    return [self imageWithPHAsset:IPAsset.phAsset original:original];
 }
 
-+ (NSData *)imageOriginalDataWithHYWIPAsset:(JNIPAsset *)hywIPAsset {
++ (NSData *)imageOriginalDataWithIPAsset:(JNIPAsset *)IPAsset {
     __block NSData *data = nil;
     PHImageRequestOptions *options = [PHImageRequestOptions new];
     options.synchronous = YES;
-    [[[PhotoKitAccessor sharedInstance] phCachingImageManager] requestImageDataForAsset:hywIPAsset.phAsset options:options resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
+    [[[PhotoKitAccessor sharedInstance] phCachingImageManager] requestImageDataForAsset:IPAsset.phAsset options:options resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
         data = imageData;
     }];
     
@@ -114,13 +114,13 @@
 
 
 #pragma mark - ALAsset保存到本地
-+ (BOOL)writeHYWIPAsset:(JNIPAsset *)hywIPAsset toFilepath:(NSString *)filepath {
++ (BOOL)writeIPAsset:(JNIPAsset *)IPAsset toFilepath:(NSString *)filepath {
     __block NSData *dest_data;
     
     PHImageRequestOptions *options = [PHImageRequestOptions new];
     options.synchronous = YES;
     
-    [[[PhotoKitAccessor sharedInstance] phCachingImageManager] requestImageDataForAsset:hywIPAsset.phAsset options:options resultHandler:^(NSData *imageData, NSString *dataUTI, UIImageOrientation orientation, NSDictionary *info) {
+    [[[PhotoKitAccessor sharedInstance] phCachingImageManager] requestImageDataForAsset:IPAsset.phAsset options:options resultHandler:^(NSData *imageData, NSString *dataUTI, UIImageOrientation orientation, NSDictionary *info) {
         dest_data = imageData;
     }];
     

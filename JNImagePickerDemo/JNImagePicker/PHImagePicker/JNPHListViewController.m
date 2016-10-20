@@ -32,7 +32,7 @@ JNPHGridViewControllerDelegate>
 
 
 @property (nonatomic, assign) NSInteger              maxCount;
-@property (nonatomic, assign) ImagePickerMediaType   mediaType;
+@property (nonatomic, assign) JNImagePickerMediaType   mediaType;
 @property (nonatomic, strong) JNImagePickerConfig   *imagePickerConfig;
 @property (strong) PHCachingImageManager *imageManager;
 

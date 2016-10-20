@@ -12,13 +12,13 @@ typedef enum : NSUInteger
 {
     kImagePickerMediaTypeAll,       // 包括相片和视频
     kImagePickerMediaTypePhoto      // 包括相片
-} ImagePickerMediaType;
+} JNImagePickerMediaType;
 
 @protocol JNPHListViewControllerDelegate;
 
 @interface JNImagePickerConfig : NSObject
 
-@property (nonatomic, assign) ImagePickerMediaType  imagePickerMediaType;
+@property (nonatomic, assign) JNImagePickerMediaType  imagePickerMediaType;
 
 @property (nonatomic,   weak) id<JNPHListViewControllerDelegate> delegate;
 

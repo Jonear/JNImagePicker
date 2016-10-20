@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HYWIPListTableViewCell : UITableViewCell
+@interface JNIPListTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *posterImageView;
 @property (weak, nonatomic) IBOutlet UILabel *localizedTitleLabel;

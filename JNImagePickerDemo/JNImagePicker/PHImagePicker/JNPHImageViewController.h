@@ -1,5 +1,5 @@
 //
-//  HYWPHImageViewController.h
+//  JNPHImageViewController.h
 //  HYWImagePicker
 //
 //  Created by 黄耀武 on 16/3/14.
@@ -15,20 +15,20 @@
 
 #include <Photos/Photos.h>
 
-@class HYWPHImageViewController;
+@class JNPHImageViewController;
 
-@protocol HYWPHImageViewControllerDelegate <NSObject>
+@protocol JNPHImageViewControllerDelegate <NSObject>
 
-- (void)hywPHImageViewController:(HYWPHImageViewController *)picker didFinishPickingImages:(NSArray *)images;
+- (void)JNPHImageViewController:(JNPHImageViewController *)picker didFinishPickingImages:(NSArray *)images;
 
-- (void)hywPHImageViewController:(HYWPHImageViewController *)picker didFinishPickingVideo:(PHAsset *)asset;
+- (void)JNPHImageViewController:(JNPHImageViewController *)picker didFinishPickingVideo:(PHAsset *)asset;
 
 @end
 
-@interface HYWPHImageViewController : UIViewController
+@interface JNPHImageViewController : UIViewController
 
 @property (nonatomic, strong) JNImagePickerConfig               *imagePickerConfig;
-@property (weak, nonatomic) id<HYWPHImageViewControllerDelegate> plImageDelegate;
+@property (weak, nonatomic) id<JNPHImageViewControllerDelegate> plImageDelegate;
 
 - (instancetype)initWithImagePickerConfig:(JNImagePickerConfig *)imagePickerConfig
                               hywIPAssets:(NSArray *)hywIPAssets

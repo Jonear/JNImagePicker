@@ -6,9 +6,9 @@
 //  Copyright © 2016年 huangyaowu. All rights reserved.
 //
 
-#import "HYWIPListTableViewCell.h"
+#import "JNIPListTableViewCell.h"
 
-@implementation HYWIPListTableViewCell
+@implementation JNIPListTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code

@@ -1,21 +1,21 @@
 //
-//  HYWPHGridViewController.m
+//  JNPHGridViewController.m
 //  HYWImagePicker
 //
 //  Created by 黄耀武 on 16/3/11.
 //  Copyright © 2016年 huangyaowu. All rights reserved.
 //
 
-#import "HYWPHGridViewController.h"
-#import "HYWIPGridCollectionViewCell.h"
-#import "HYWPHImageViewController.h"
+#import "JNPHGridViewController.h"
+#import "JNIPGridCollectionViewCell.h"
+#import "JNPHImageViewController.h"
 #import "iToast.h"
 #import "JNImagePickerHelper.h"
-#import "HYWPHListViewController.h"
+#import "JNPHListViewController.h"
 #import "JNAssetManager.h"
 #import "PhotoKitAccessor.h"
 
-static NSString * const HYWIPGridCollectionViewCellReuseIdentifier = @"HYWIPGridCollectionViewCellIdentifier";
+static NSString * const JNIPGridCollectionViewCellReuseIdentifier = @"JNIPGridCollectionViewCelldentifier";
 static NSUInteger const minimumSpacing = 2.0f;
 static NSUInteger const VIEW_COUNT_PER_CELL = 4.0f;
 static CGSize AssetGridThumbnailSize;
@@ -43,12 +43,12 @@ static CGSize AssetGridThumbnailSize;
 }
 @end
 
-@interface HYWPHGridViewController () <PHPhotoLibraryChangeObserver,
+@interface JNPHGridViewController () <PHPhotoLibraryChangeObserver,
 UICollectionViewDataSource,
 UICollectionViewDelegate,
 UICollectionViewDelegateFlowLayout,
-HYWIPGridCollectionViewCellDelegate,
-HYWPHImageViewControllerDelegate>
+JNIPGridCollectionViewCellDelegate,
+JNPHImageViewControllerDelegate>
 {
     JNAssetManager *assetManager;
     BOOL _didAppear;
@@ -72,7 +72,7 @@ HYWPHImageViewControllerDelegate>
 
 @end
 
-@implementation HYWPHGridViewController
+@implementation JNPHGridViewController
 
 - (instancetype)initWithImagePickerConfig:(JNImagePickerConfig *)imagePickerConfig
 {
@@ -185,7 +185,7 @@ HYWPHImageViewControllerDelegate>
     _collectionView.showsHorizontalScrollIndicator = NO;
     _collectionView.showsVerticalScrollIndicator = YES;
     
-    [_collectionView registerNib:[UINib nibWithNibName:@"HYWIPGridCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:HYWIPGridCollectionViewCellReuseIdentifier];
+    [_collectionView registerNib:[UINib nibWithNibName:@"JNIPGridCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:JNIPGridCollectionViewCellReuseIdentifier];
     
 }
 - (void)setBarButtonItem
@@ -204,8 +204,8 @@ HYWPHImageViewControllerDelegate>
 - (void)cancelButtonPressed:(id)sender
 {
     if (_plGridDelegate) {
-        if ([_plGridDelegate respondsToSelector:@selector(hywPHGridViewControllerDidCancel:)]) {
-            [_plGridDelegate hywPHGridViewControllerDidCancel:self];
+        if ([_plGridDelegate respondsToSelector:@selector(JNPHGridViewControllerDidCancel:)]) {
+            [_plGridDelegate JNPHGridViewControllerDidCancel:self];
         }
     }
 }
@@ -216,7 +216,7 @@ HYWPHImageViewControllerDelegate>
         return;
     }
     
-    HYWPHImageViewController *imageViewController = [[HYWPHImageViewController alloc] initWithImagePickerConfig:_imagePickerConfig hywIPAssets:assetManager.selectedAssets objectAtIndex:0];
+    JNPHImageViewController *imageViewController = [[JNPHImageViewController alloc] initWithImagePickerConfig:_imagePickerConfig hywIPAssets:assetManager.selectedAssets objectAtIndex:0];
     imageViewController.plImageDelegate = self;
     
     [self.navigationController pushViewController:imageViewController animated:YES];
@@ -251,9 +251,9 @@ HYWPHImageViewControllerDelegate>
         return;
     }
     
-    if (_plGridDelegate && [_plGridDelegate respondsToSelector:@selector(hywPHGridViewController:
+    if (_plGridDelegate && [_plGridDelegate respondsToSelector:@selector(JNPHGridViewController:
                                                                          didFinishPickingMediaWithInfo:)]) {
-        [_plGridDelegate hywPHGridViewController:self didFinishPickingMediaWithInfo:[assetManager.selectedAssets copy]];
+        [_plGridDelegate JNPHGridViewController:self didFinishPickingMediaWithInfo:[assetManager.selectedAssets copy]];
     }
 }
 
@@ -266,7 +266,7 @@ HYWPHImageViewControllerDelegate>
         return;
     }
     
-    HYWPHImageViewController *imageViewController = [[HYWPHImageViewController alloc]
+    JNPHImageViewController *imageViewController = [[JNPHImageViewController alloc]
                                                          initWithImagePickerConfig:_imagePickerConfig
                                                          hywIPAssets:@[hywIPAsset]
                                                          objectAtIndex:0];
@@ -288,7 +288,7 @@ HYWPHImageViewControllerDelegate>
     
     NSUInteger _currentIndex = [JNImagePickerHelper indexOfAsset:hywIPAsset fromAssets:filterVideoAssets];
     
-    HYWPHImageViewController *imageViewController = [[HYWPHImageViewController alloc]
+    JNPHImageViewController *imageViewController = [[JNPHImageViewController alloc]
                                                          initWithImagePickerConfig:_imagePickerConfig
                                                          hywIPAssets:filterVideoAssets
                                                          objectAtIndex:_currentIndex];
@@ -449,7 +449,7 @@ HYWPHImageViewControllerDelegate>
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    HYWIPGridCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:HYWIPGridCollectionViewCellReuseIdentifier
+    JNIPGridCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:JNIPGridCollectionViewCellReuseIdentifier
                                                                                       forIndexPath:indexPath];
     
     // Increment the cell's tag
@@ -473,7 +473,7 @@ HYWPHImageViewControllerDelegate>
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
-    [((HYWIPGridCollectionViewCell *)cell).hywIPAsset cancelAnyLoading];
+    [((JNIPGridCollectionViewCell *)cell).hywIPAsset cancelAnyLoading];
 }
 
 #pragma mark - UICollectionViewDelegate
@@ -504,18 +504,18 @@ HYWPHImageViewControllerDelegate>
     return UIEdgeInsetsMake(4, 0, 4, 0);    // 设置其边界
 }
 
-#pragma mark - HYWPHImageViewControllerDelegate
-- (void)hywPHImageViewController:(HYWPHImageViewController *)picker didFinishPickingImages:(NSArray *)images {
+#pragma mark - JNPHImageViewControllerDelegate
+- (void)JNPHImageViewController:(JNPHImageViewController *)picker didFinishPickingImages:(NSArray *)images {
     picker.plImageDelegate = nil;
     [self handelImagesForSend];
 }
-- (void)hywPHImageViewController:(HYWPHImageViewController *)picker didFinishPickingVideo:(PHAsset *)asset {
-    if (_plGridDelegate && [_plGridDelegate respondsToSelector:@selector(hywPHGridViewController:
+- (void)JNPHImageViewController:(JNPHImageViewController *)picker didFinishPickingVideo:(PHAsset *)asset {
+    if (_plGridDelegate && [_plGridDelegate respondsToSelector:@selector(JNPHGridViewController:
                                                                          didFinishPickingVideo:)]) {
-        [_plGridDelegate hywPHGridViewController:self didFinishPickingVideo:asset];
+        [_plGridDelegate JNPHGridViewController:self didFinishPickingVideo:asset];
     }
 }
-#pragma mark - HYWIPGridCollectionViewCellDelegate
+#pragma mark - JNIPGridCollectionViewCellDelegate
 - (void)overlayButtonPressed:(UIButton *)button withHYWIPAsset:(JNIPAsset *)hywIPAsset {
     if (hywIPAsset.isInTheCloud) {
         [self showICloudAlertWithHYWIPAsset:hywIPAsset];

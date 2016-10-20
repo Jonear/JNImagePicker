@@ -1,5 +1,5 @@
 //
-//  HYWPHListViewController.h
+//  JNPHListViewController.h
 //  HYWImagePicker
 //
 //  Created by 黄耀武 on 16/3/11.
@@ -9,18 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "JNImagePickerConfig.h"
 #include <Photos/Photos.h>
-@class HYWPHListViewController;
+@class JNPHListViewController;
 
-@protocol HYWPHListViewControllerDelegate <NSObject>
+@protocol JNPHListViewControllerDelegate <NSObject>
 
-- (void)hywPHListViewController:(HYWPHListViewController *)picker didFinishPickingMediaWithInfo:(NSArray *)info;
-- (void)hywPHListViewControllerDidCancel:(HYWPHListViewController *)picker;
+- (void)JNPHListViewController:(JNPHListViewController *)picker didFinishPickingMediaWithInfo:(NSArray *)info;
+- (void)JNPHListViewControllerDidCancel:(JNPHListViewController *)picker;
 @optional
-- (void)hywPHListViewController:(HYWPHListViewController *)picker didFinishPickingVideo:(PHAsset *)asset;
+- (void)JNPHListViewController:(JNPHListViewController *)picker didFinishPickingVideo:(PHAsset *)asset;
 
 @end
 
-@interface HYWPHListViewController : UIViewController
+@interface JNPHListViewController : UIViewController
 
 // 相册列表
 @property (strong) NSMutableArray *collectionsFetchResultsAssets;
@@ -30,7 +30,7 @@
 @property (strong) NSArray *collectionsLocalIdentifier;
 
 
-@property (weak, nonatomic) id<HYWPHListViewControllerDelegate> plListDelegate;
+@property (weak, nonatomic) id<JNPHListViewControllerDelegate> plListDelegate;
 
 - (instancetype)initWithImagePickerConfig:(JNImagePickerConfig *)imagePickerConfig;
 

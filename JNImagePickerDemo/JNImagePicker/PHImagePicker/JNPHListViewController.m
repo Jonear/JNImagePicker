@@ -1,26 +1,26 @@
 //
-//  HYWPHListViewController.m
+//  JNPHListViewController.m
 //  HYWImagePicker
 //
 //  Created by 黄耀武 on 16/3/11.
 //  Copyright © 2016年 huangyaowu. All rights reserved.
 //
 
-#import "HYWPHListViewController.h"
-#import "HYWIPListTableViewCell.h"
-#import "HYWPHGridViewController.h"
+#import "JNPHListViewController.h"
+#import "JNIPListTableViewCell.h"
+#import "JNPHGridViewController.h"
 #import "JNAssetManager.h"
 #import "PhotoKitAccessor.h"
 #import "JNImagePickerHelper.h"
 
-static NSString * const HYWIPListTableViewCellReuseIdentifier = @"HYWIPListTableViewCellIdentifier";
+static NSString * const JNIPListTableViewCellReuseIdentifier = @"JNIPListTableViewCellIdentifier";
 static CGSize const kAlbumThumbnailSize1 = {50.0f , 50.0f};
 
-@interface HYWPHListViewController ()
+@interface JNPHListViewController ()
 <PHPhotoLibraryChangeObserver,
 UITableViewDataSource,
 UITableViewDelegate,
-HYWPHGridViewControllerDelegate>
+JNPHGridViewControllerDelegate>
 {
     PHFetchOptions *onlyImagesOptions;
     JNAssetManager            *assetManager;
@@ -38,7 +38,7 @@ HYWPHGridViewControllerDelegate>
 
 @end
 
-@implementation HYWPHListViewController
+@implementation JNPHListViewController
 
 - (void)dealloc
 {
@@ -92,9 +92,9 @@ HYWPHGridViewControllerDelegate>
     
     _tableView.backgroundColor = [UIColor clearColor];
     
-    _tableView.rowHeight = [HYWIPListTableViewCell cellHeight];
+    _tableView.rowHeight = [JNIPListTableViewCell cellHeight];
     
-    [_tableView registerNib:[UINib nibWithNibName:@"HYWIPListTableViewCell" bundle:nil] forCellReuseIdentifier:HYWIPListTableViewCellReuseIdentifier];
+    [_tableView registerNib:[UINib nibWithNibName:@"JNIPListTableViewCell" bundle:nil] forCellReuseIdentifier:JNIPListTableViewCellReuseIdentifier];
     _tableView.delegate = self;
     _tableView.dataSource = self;
 }
@@ -120,8 +120,8 @@ HYWPHGridViewControllerDelegate>
     
     [self.imageManager stopCachingImagesForAllAssets];
     if (_plListDelegate) {
-        if ([_plListDelegate respondsToSelector:@selector(hywPHListViewControllerDidCancel:)]) {
-            [_plListDelegate hywPHListViewControllerDidCancel:self];
+        if ([_plListDelegate respondsToSelector:@selector(JNPHListViewControllerDidCancel:)]) {
+            [_plListDelegate JNPHListViewControllerDidCancel:self];
         } else {
             [self dismissViewControllerAnimated:YES completion:nil];
         }
@@ -144,7 +144,7 @@ HYWPHGridViewControllerDelegate>
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    HYWIPListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:HYWIPListTableViewCellReuseIdentifier forIndexPath:indexPath];
+    JNIPListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JNIPListTableViewCellReuseIdentifier forIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     // Increment the cell's tag
@@ -189,7 +189,7 @@ HYWPHGridViewControllerDelegate>
 }
 
 - (void)showGridViewController:(NSUInteger)index {
-    HYWPHGridViewController *assetGridViewController = [[HYWPHGridViewController alloc] initWithImagePickerConfig:_imagePickerConfig];
+    JNPHGridViewController *assetGridViewController = [[JNPHGridViewController alloc] initWithImagePickerConfig:_imagePickerConfig];
     assetGridViewController.plGridDelegate = self;
     assetGridViewController.isScrollToBottom = YES;
     
@@ -203,13 +203,13 @@ HYWPHGridViewControllerDelegate>
     }
 }
 
-#pragma mark - HYWPHGridViewControllerDelegate
-- (void)hywPHGridViewController:(HYWPHGridViewController *)picker didFinishPickingMediaWithInfo:(NSArray *)info
+#pragma mark - JNPHGridViewControllerDelegate
+- (void)JNPHGridViewController:(JNPHGridViewController *)picker didFinishPickingMediaWithInfo:(NSArray *)info
 {
     if (_plListDelegate) {
-        if ([_plListDelegate respondsToSelector:@selector(hywPHListViewController:didFinishPickingMediaWithInfo:)]) {
+        if ([_plListDelegate respondsToSelector:@selector(JNPHListViewController:didFinishPickingMediaWithInfo:)]) {
 
-            [_plListDelegate hywPHListViewController:self didFinishPickingMediaWithInfo:info];
+            [_plListDelegate JNPHListViewController:self didFinishPickingMediaWithInfo:info];
             
             /**
              *  代理出去之后，我么清理一下Manager
@@ -219,12 +219,12 @@ HYWPHGridViewControllerDelegate>
     }
 }
 
-- (void)hywPHGridViewController:(HYWPHGridViewController *)picker didFinishPickingVideo:(PHAsset *)asset
+- (void)JNPHGridViewController:(JNPHGridViewController *)picker didFinishPickingVideo:(PHAsset *)asset
 {
     if (_plListDelegate) {
-        if ([_plListDelegate respondsToSelector:@selector(hywPHListViewController:didFinishPickingVideo:)]) {
+        if ([_plListDelegate respondsToSelector:@selector(JNPHListViewController:didFinishPickingVideo:)]) {
             
-            [_plListDelegate hywPHListViewController:self didFinishPickingVideo:asset];
+            [_plListDelegate JNPHListViewController:self didFinishPickingVideo:asset];
             
             /**
              *  代理出去之后，我么清理一下Manager
@@ -234,7 +234,7 @@ HYWPHGridViewControllerDelegate>
     }
 }
 
-- (void)hywPHGridViewControllerDidCancel:(HYWPHGridViewController *)picker
+- (void)JNPHGridViewControllerDidCancel:(JNPHGridViewController *)picker
 {
     picker.plGridDelegate = nil;
     [self didCancel];

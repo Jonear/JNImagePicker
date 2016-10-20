@@ -1,16 +1,16 @@
 //
-//  HYWIPGridCollectionViewCell.m
+//  JNIPGridCollectionViewCell.m
 //  HYWImagePicker
 //
 //  Created by 黄耀武 on 16/3/11.
 //  Copyright © 2016年 huangyaowu. All rights reserved.
 //
 
-#import "HYWIPGridCollectionViewCell.h"
+#import "JNIPGridCollectionViewCell.h"
 #import "JNImagePickerHelper.h"
 #import "PhotoKitAccessor.h"
 
-@implementation HYWIPGridCollectionViewCell
+@implementation JNIPGridCollectionViewCell
 
 - (void)awakeFromNib {
     // Initialization code

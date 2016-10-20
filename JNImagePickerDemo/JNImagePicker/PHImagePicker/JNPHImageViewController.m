@@ -1,12 +1,12 @@
 //
-//  HYWPHImageViewController.m
+//  JNPHImageViewController.m
 //  HYWImagePicker
 //
 //  Created by 黄耀武 on 16/3/14.
 //  Copyright © 2016年 huangyaowu. All rights reserved.
 //
 
-#import "HYWPHImageViewController.h"
+#import "JNPHImageViewController.h"
 #import "JNAssetManager.h"
 #import "iToast.h"
 #import "JNImagePickerHelper.h"
@@ -18,7 +18,7 @@
 
 static CGSize AssetGridThumbnailSize;
 
-@interface HYWPHImageViewController () <PageViewDataSource, PageViewDelegate, UIGestureRecognizerDelegate, UIActionSheetDelegate, JNLargeImageViewDelegate>
+@interface JNPHImageViewController () <PageViewDataSource, PageViewDelegate, UIGestureRecognizerDelegate, UIActionSheetDelegate, JNLargeImageViewDelegate>
 {
     UIButton			*rightButton;
     NSInteger			_currentIndex;
@@ -56,7 +56,7 @@ static CGSize AssetGridThumbnailSize;
 @end
 
 
-@implementation HYWPHImageViewController
+@implementation JNPHImageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -242,8 +242,8 @@ static CGSize AssetGridThumbnailSize;
         
         [self saveAssetGroupID];
         
-        if (_plImageDelegate && [_plImageDelegate respondsToSelector:@selector(hywPHImageViewController:didFinishPickingImages:)]) {
-            [_plImageDelegate hywPHImageViewController:self didFinishPickingVideo:hywIPAsset.phAsset];
+        if (_plImageDelegate && [_plImageDelegate respondsToSelector:@selector(JNPHImageViewController:didFinishPickingImages:)]) {
+            [_plImageDelegate JNPHImageViewController:self didFinishPickingVideo:hywIPAsset.phAsset];
         }
         
         
@@ -251,9 +251,9 @@ static CGSize AssetGridThumbnailSize;
         if ([assetManager.selectedAssets count] <= 0) { // 一张不选直接发送，发送当前图片
             [self resetUIWhenSelected:YES];
         }
-        if (_plImageDelegate && [_plImageDelegate respondsToSelector:@selector(hywPHImageViewController:didFinishPickingImages:)]) {
+        if (_plImageDelegate && [_plImageDelegate respondsToSelector:@selector(JNPHImageViewController:didFinishPickingImages:)]) {
             NSArray *selectedImages = [NSArray arrayWithArray:assetManager.selectedAssets];
-            [_plImageDelegate hywPHImageViewController:self didFinishPickingImages:selectedImages];
+            [_plImageDelegate JNPHImageViewController:self didFinishPickingImages:selectedImages];
         }
     }
 }

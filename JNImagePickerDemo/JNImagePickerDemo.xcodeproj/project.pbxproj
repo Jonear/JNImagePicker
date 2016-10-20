@@ -17,10 +17,10 @@
 		E6C41DFD1DB77D6B00B580B5 /* JNImagePickerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41DFC1DB77D6B00B580B5 /* JNImagePickerDemoUITests.m */; };
 		E6C41E991DB7853A00B580B5 /* UIImagePickerController+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E631DB7853A00B580B5 /* UIImagePickerController+Block.m */; };
 		E6C41E9A1DB7853A00B580B5 /* UIImagePickerController+DoModal.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E651DB7853A00B580B5 /* UIImagePickerController+DoModal.m */; };
-		E6C41E9B1DB7853A00B580B5 /* HYWIPGridCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E681DB7853A00B580B5 /* HYWIPGridCollectionViewCell.m */; };
-		E6C41E9C1DB7853A00B580B5 /* HYWIPGridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E691DB7853A00B580B5 /* HYWIPGridCollectionViewCell.xib */; };
-		E6C41E9D1DB7853A00B580B5 /* HYWIPListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E6B1DB7853A00B580B5 /* HYWIPListTableViewCell.m */; };
-		E6C41E9E1DB7853A00B580B5 /* HYWIPListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E6C1DB7853A00B580B5 /* HYWIPListTableViewCell.xib */; };
+		E6C41E9B1DB7853A00B580B5 /* JNIPGridCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E681DB7853A00B580B5 /* JNIPGridCollectionViewCell.m */; };
+		E6C41E9C1DB7853A00B580B5 /* JNIPGridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E691DB7853A00B580B5 /* JNIPGridCollectionViewCell.xib */; };
+		E6C41E9D1DB7853A00B580B5 /* JNIPListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E6B1DB7853A00B580B5 /* JNIPListTableViewCell.m */; };
+		E6C41E9E1DB7853A00B580B5 /* JNIPListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E6C1DB7853A00B580B5 /* JNIPListTableViewCell.xib */; };
 		E6C41E9F1DB7853A00B580B5 /* JNLargeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E6F1DB7853A00B580B5 /* JNLargeImageView.m */; };
 		E6C41EA01DB7853A00B580B5 /* iToast.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E711DB7853A00B580B5 /* iToast.m */; };
 		E6C41EA11DB7853A00B580B5 /* JNPageItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E731DB7853A00B580B5 /* JNPageItemView.m */; };
@@ -34,12 +34,12 @@
 		E6C41EAB1DB7853A00B580B5 /* JNImagePickerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E891DB7853A00B580B5 /* JNImagePickerConfig.m */; };
 		E6C41EAC1DB7853A00B580B5 /* JNImagePickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E8B1DB7853A00B580B5 /* JNImagePickerManager.m */; };
 		E6C41EAD1DB7853A00B580B5 /* JNIPAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E8E1DB7853A00B580B5 /* JNIPAsset.m */; };
-		E6C41EAE1DB7853A00B580B5 /* HYWPHGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E911DB7853A00B580B5 /* HYWPHGridViewController.m */; };
-		E6C41EAF1DB7853A00B580B5 /* HYWPHGridViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E921DB7853A00B580B5 /* HYWPHGridViewController.xib */; };
-		E6C41EB01DB7853A00B580B5 /* HYWPHImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E941DB7853A00B580B5 /* HYWPHImageViewController.m */; };
-		E6C41EB11DB7853A00B580B5 /* HYWPHImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E951DB7853A00B580B5 /* HYWPHImageViewController.xib */; };
-		E6C41EB21DB7853A00B580B5 /* HYWPHListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E971DB7853A00B580B5 /* HYWPHListViewController.m */; };
-		E6C41EB31DB7853A00B580B5 /* HYWPHListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E981DB7853A00B580B5 /* HYWPHListViewController.xib */; };
+		E6C41EAE1DB7853A00B580B5 /* JNPHGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E911DB7853A00B580B5 /* JNPHGridViewController.m */; };
+		E6C41EAF1DB7853A00B580B5 /* JNPHGridViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E921DB7853A00B580B5 /* JNPHGridViewController.xib */; };
+		E6C41EB01DB7853A00B580B5 /* JNPHImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E941DB7853A00B580B5 /* JNPHImageViewController.m */; };
+		E6C41EB11DB7853A00B580B5 /* JNPHImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E951DB7853A00B580B5 /* JNPHImageViewController.xib */; };
+		E6C41EB21DB7853A00B580B5 /* JNPHListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41E971DB7853A00B580B5 /* JNPHListViewController.m */; };
+		E6C41EB31DB7853A00B580B5 /* JNPHListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C41E981DB7853A00B580B5 /* JNPHListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,12 +80,12 @@
 		E6C41E631DB7853A00B580B5 /* UIImagePickerController+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+Block.m"; sourceTree = "<group>"; };
 		E6C41E641DB7853A00B580B5 /* UIImagePickerController+DoModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+DoModal.h"; sourceTree = "<group>"; };
 		E6C41E651DB7853A00B580B5 /* UIImagePickerController+DoModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+DoModal.m"; sourceTree = "<group>"; };
-		E6C41E671DB7853A00B580B5 /* HYWIPGridCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWIPGridCollectionViewCell.h; sourceTree = "<group>"; };
-		E6C41E681DB7853A00B580B5 /* HYWIPGridCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWIPGridCollectionViewCell.m; sourceTree = "<group>"; };
-		E6C41E691DB7853A00B580B5 /* HYWIPGridCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYWIPGridCollectionViewCell.xib; sourceTree = "<group>"; };
-		E6C41E6A1DB7853A00B580B5 /* HYWIPListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWIPListTableViewCell.h; sourceTree = "<group>"; };
-		E6C41E6B1DB7853A00B580B5 /* HYWIPListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWIPListTableViewCell.m; sourceTree = "<group>"; };
-		E6C41E6C1DB7853A00B580B5 /* HYWIPListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYWIPListTableViewCell.xib; sourceTree = "<group>"; };
+		E6C41E671DB7853A00B580B5 /* JNIPGridCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNIPGridCollectionViewCell.h; sourceTree = "<group>"; };
+		E6C41E681DB7853A00B580B5 /* JNIPGridCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNIPGridCollectionViewCell.m; sourceTree = "<group>"; };
+		E6C41E691DB7853A00B580B5 /* JNIPGridCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JNIPGridCollectionViewCell.xib; sourceTree = "<group>"; };
+		E6C41E6A1DB7853A00B580B5 /* JNIPListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNIPListTableViewCell.h; sourceTree = "<group>"; };
+		E6C41E6B1DB7853A00B580B5 /* JNIPListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNIPListTableViewCell.m; sourceTree = "<group>"; };
+		E6C41E6C1DB7853A00B580B5 /* JNIPListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JNIPListTableViewCell.xib; sourceTree = "<group>"; };
 		E6C41E6E1DB7853A00B580B5 /* JNLargeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNLargeImageView.h; sourceTree = "<group>"; };
 		E6C41E6F1DB7853A00B580B5 /* JNLargeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNLargeImageView.m; sourceTree = "<group>"; };
 		E6C41E701DB7853A00B580B5 /* iToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iToast.h; sourceTree = "<group>"; };
@@ -112,15 +112,15 @@
 		E6C41E8B1DB7853A00B580B5 /* JNImagePickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNImagePickerManager.m; sourceTree = "<group>"; };
 		E6C41E8D1DB7853A00B580B5 /* JNIPAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNIPAsset.h; sourceTree = "<group>"; };
 		E6C41E8E1DB7853A00B580B5 /* JNIPAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNIPAsset.m; sourceTree = "<group>"; };
-		E6C41E901DB7853A00B580B5 /* HYWPHGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWPHGridViewController.h; sourceTree = "<group>"; };
-		E6C41E911DB7853A00B580B5 /* HYWPHGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWPHGridViewController.m; sourceTree = "<group>"; };
-		E6C41E921DB7853A00B580B5 /* HYWPHGridViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYWPHGridViewController.xib; sourceTree = "<group>"; };
-		E6C41E931DB7853A00B580B5 /* HYWPHImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWPHImageViewController.h; sourceTree = "<group>"; };
-		E6C41E941DB7853A00B580B5 /* HYWPHImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWPHImageViewController.m; sourceTree = "<group>"; };
-		E6C41E951DB7853A00B580B5 /* HYWPHImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYWPHImageViewController.xib; sourceTree = "<group>"; };
-		E6C41E961DB7853A00B580B5 /* HYWPHListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWPHListViewController.h; sourceTree = "<group>"; };
-		E6C41E971DB7853A00B580B5 /* HYWPHListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWPHListViewController.m; sourceTree = "<group>"; };
-		E6C41E981DB7853A00B580B5 /* HYWPHListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYWPHListViewController.xib; sourceTree = "<group>"; };
+		E6C41E901DB7853A00B580B5 /* JNPHGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNPHGridViewController.h; sourceTree = "<group>"; };
+		E6C41E911DB7853A00B580B5 /* JNPHGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNPHGridViewController.m; sourceTree = "<group>"; };
+		E6C41E921DB7853A00B580B5 /* JNPHGridViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JNPHGridViewController.xib; sourceTree = "<group>"; };
+		E6C41E931DB7853A00B580B5 /* JNPHImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNPHImageViewController.h; sourceTree = "<group>"; };
+		E6C41E941DB7853A00B580B5 /* JNPHImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNPHImageViewController.m; sourceTree = "<group>"; };
+		E6C41E951DB7853A00B580B5 /* JNPHImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JNPHImageViewController.xib; sourceTree = "<group>"; };
+		E6C41E961DB7853A00B580B5 /* JNPHListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNPHListViewController.h; sourceTree = "<group>"; };
+		E6C41E971DB7853A00B580B5 /* JNPHListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNPHListViewController.m; sourceTree = "<group>"; };
+		E6C41E981DB7853A00B580B5 /* JNPHListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JNPHListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,12 +239,12 @@
 		E6C41E661DB7853A00B580B5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				E6C41E671DB7853A00B580B5 /* HYWIPGridCollectionViewCell.h */,
-				E6C41E681DB7853A00B580B5 /* HYWIPGridCollectionViewCell.m */,
-				E6C41E691DB7853A00B580B5 /* HYWIPGridCollectionViewCell.xib */,
-				E6C41E6A1DB7853A00B580B5 /* HYWIPListTableViewCell.h */,
-				E6C41E6B1DB7853A00B580B5 /* HYWIPListTableViewCell.m */,
-				E6C41E6C1DB7853A00B580B5 /* HYWIPListTableViewCell.xib */,
+				E6C41E671DB7853A00B580B5 /* JNIPGridCollectionViewCell.h */,
+				E6C41E681DB7853A00B580B5 /* JNIPGridCollectionViewCell.m */,
+				E6C41E691DB7853A00B580B5 /* JNIPGridCollectionViewCell.xib */,
+				E6C41E6A1DB7853A00B580B5 /* JNIPListTableViewCell.h */,
+				E6C41E6B1DB7853A00B580B5 /* JNIPListTableViewCell.m */,
+				E6C41E6C1DB7853A00B580B5 /* JNIPListTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -306,15 +306,15 @@
 		E6C41E8F1DB7853A00B580B5 /* PHImagePicker */ = {
 			isa = PBXGroup;
 			children = (
-				E6C41E901DB7853A00B580B5 /* HYWPHGridViewController.h */,
-				E6C41E911DB7853A00B580B5 /* HYWPHGridViewController.m */,
-				E6C41E921DB7853A00B580B5 /* HYWPHGridViewController.xib */,
-				E6C41E931DB7853A00B580B5 /* HYWPHImageViewController.h */,
-				E6C41E941DB7853A00B580B5 /* HYWPHImageViewController.m */,
-				E6C41E951DB7853A00B580B5 /* HYWPHImageViewController.xib */,
-				E6C41E961DB7853A00B580B5 /* HYWPHListViewController.h */,
-				E6C41E971DB7853A00B580B5 /* HYWPHListViewController.m */,
-				E6C41E981DB7853A00B580B5 /* HYWPHListViewController.xib */,
+				E6C41E901DB7853A00B580B5 /* JNPHGridViewController.h */,
+				E6C41E911DB7853A00B580B5 /* JNPHGridViewController.m */,
+				E6C41E921DB7853A00B580B5 /* JNPHGridViewController.xib */,
+				E6C41E931DB7853A00B580B5 /* JNPHImageViewController.h */,
+				E6C41E941DB7853A00B580B5 /* JNPHImageViewController.m */,
+				E6C41E951DB7853A00B580B5 /* JNPHImageViewController.xib */,
+				E6C41E961DB7853A00B580B5 /* JNPHListViewController.h */,
+				E6C41E971DB7853A00B580B5 /* JNPHListViewController.m */,
+				E6C41E981DB7853A00B580B5 /* JNPHListViewController.xib */,
 			);
 			path = PHImagePicker;
 			sourceTree = "<group>";
@@ -427,13 +427,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6C41DE71DB77D6A00B580B5 /* LaunchScreen.storyboard in Resources */,
-				E6C41E9E1DB7853A00B580B5 /* HYWIPListTableViewCell.xib in Resources */,
-				E6C41EB11DB7853A00B580B5 /* HYWPHImageViewController.xib in Resources */,
+				E6C41E9E1DB7853A00B580B5 /* JNIPListTableViewCell.xib in Resources */,
+				E6C41EB11DB7853A00B580B5 /* JNPHImageViewController.xib in Resources */,
 				E6C41DE41DB77D6A00B580B5 /* Assets.xcassets in Resources */,
-				E6C41E9C1DB7853A00B580B5 /* HYWIPGridCollectionViewCell.xib in Resources */,
+				E6C41E9C1DB7853A00B580B5 /* JNIPGridCollectionViewCell.xib in Resources */,
 				E6C41DE21DB77D6A00B580B5 /* Main.storyboard in Resources */,
-				E6C41EAF1DB7853A00B580B5 /* HYWPHGridViewController.xib in Resources */,
-				E6C41EB31DB7853A00B580B5 /* HYWPHListViewController.xib in Resources */,
+				E6C41EAF1DB7853A00B580B5 /* JNPHGridViewController.xib in Resources */,
+				E6C41EB31DB7853A00B580B5 /* JNPHListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,15 +466,15 @@
 				E6C41EAB1DB7853A00B580B5 /* JNImagePickerConfig.m in Sources */,
 				E6C41EAA1DB7853A00B580B5 /* JNAssetManager.m in Sources */,
 				E6C41E9A1DB7853A00B580B5 /* UIImagePickerController+DoModal.m in Sources */,
-				E6C41EAE1DB7853A00B580B5 /* HYWPHGridViewController.m in Sources */,
+				E6C41EAE1DB7853A00B580B5 /* JNPHGridViewController.m in Sources */,
 				E6C41EAC1DB7853A00B580B5 /* JNImagePickerManager.m in Sources */,
 				E6C41DDF1DB77D6A00B580B5 /* ViewController.m in Sources */,
-				E6C41E9D1DB7853A00B580B5 /* HYWIPListTableViewCell.m in Sources */,
-				E6C41E9B1DB7853A00B580B5 /* HYWIPGridCollectionViewCell.m in Sources */,
-				E6C41EB21DB7853A00B580B5 /* HYWPHListViewController.m in Sources */,
+				E6C41E9D1DB7853A00B580B5 /* JNIPListTableViewCell.m in Sources */,
+				E6C41E9B1DB7853A00B580B5 /* JNIPGridCollectionViewCell.m in Sources */,
+				E6C41EB21DB7853A00B580B5 /* JNPHListViewController.m in Sources */,
 				E6C41EA61DB7853A00B580B5 /* JNImagePickerHelper.m in Sources */,
 				E6C41DDC1DB77D6A00B580B5 /* AppDelegate.m in Sources */,
-				E6C41EB01DB7853A00B580B5 /* HYWPHImageViewController.m in Sources */,
+				E6C41EB01DB7853A00B580B5 /* JNPHImageViewController.m in Sources */,
 				E6C41DD91DB77D6A00B580B5 /* main.m in Sources */,
 				E6C41E991DB7853A00B580B5 /* UIImagePickerController+Block.m in Sources */,
 				E6C41EA91DB7853A00B580B5 /* PrivacyHelper.m in Sources */,
@@ -716,6 +716,7 @@
 				E6C41E031DB77D6B00B580B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E6C41E041DB77D6B00B580B5 /* Build configuration list for PBXNativeTarget "JNImagePickerDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -724,6 +725,7 @@
 				E6C41E061DB77D6B00B580B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E6C41E071DB77D6B00B580B5 /* Build configuration list for PBXNativeTarget "JNImagePickerDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -732,6 +734,7 @@
 				E6C41E091DB77D6B00B580B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

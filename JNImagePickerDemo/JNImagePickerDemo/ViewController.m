@@ -11,10 +11,10 @@
 #import "JNImagePickerManager.h"
 #import "JNAssetManager.h"
 #import "JNIPAssetHelper.h"
-#import "HYWPHListViewController.h"
-#import "HYWPHImageViewController.h"
+#import "JNPHListViewController.h"
+#import "JNPHImageViewController.h"
 
-@interface ViewController () <HYWPHListViewControllerDelegate>
+@interface ViewController () <JNPHListViewControllerDelegate>
 
 @end
 
@@ -47,19 +47,19 @@
     [manager showImagePickerInViewController:self imagePickerConfig:config];
 }
 
-#pragma mark - PhotoKit HYWPHListViewControllerDelegate
-- (void)hywPHListViewController:(HYWPHListViewController *)picker didFinishPickingMediaWithInfo:(NSArray *)info {
+#pragma mark - PhotoKit JNPHListViewControllerDelegate
+- (void)JNPHListViewController:(JNPHListViewController *)picker didFinishPickingMediaWithInfo:(NSArray *)info {
     BOOL isHDImage = [[JNAssetManager sharedManager] isHDImage];
     [picker dismissViewControllerAnimated:YES completion:nil];
     
     [self sendImagesMessageWithAssetArray:info isHDImage:isHDImage];
 }
-- (void)hywPHListViewControllerDidCancel:(HYWPHListViewController *)picker {
+- (void)JNPHListViewControllerDidCancel:(JNPHListViewController *)picker {
     picker.plListDelegate = nil;
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)hywPHListViewController:(HYWPHListViewController *)picker didFinishPickingVideo:(PHAsset *)asset {
+- (void)JNPHListViewController:(JNPHListViewController *)picker didFinishPickingVideo:(PHAsset *)asset {
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 

@@ -8,9 +8,9 @@
 
 #import "JNImagePickerManager.h"
 #import "UIImagePickerController+Block.h"
-#import "HYWPHListViewController.h"
+#import "JNPHListViewController.h"
 #import "JNAssetManager.h"
-#import "HYWPHGridViewController.h"
+#import "JNPHGridViewController.h"
 #import "JNImagePickerHelper.h"
 #import "PrivacyHelper.h"
 
@@ -198,12 +198,12 @@
     [self getAllAlbumsWithOptions:onlyImagesOptions];
     
     
-    HYWPHListViewController *listController = [[HYWPHListViewController alloc] initWithImagePickerConfig:imagePickerConfig];
+    JNPHListViewController *listController = [[JNPHListViewController alloc] initWithImagePickerConfig:imagePickerConfig];
     listController.collectionsFetchResultsAssets = _collectionsFetchResultsAssets;
     listController.collectionsFetchResultsTitles = _collectionsFetchResultsTitles;
     listController.collectionsLocalIdentifier = _collectionsLocalIdentifier;
     
-    listController.plListDelegate = delegate ?: (id<HYWPHListViewControllerDelegate>)viewController;
+    listController.plListDelegate = delegate ?: (id<JNPHListViewControllerDelegate>)viewController;
     
     
     // push album vc
@@ -225,8 +225,8 @@
         if (selectedResult.count > 0) {
             NSString *resultTitle = _collectionsFetchResultsTitles[atIndex];
             
-            HYWPHGridViewController *gridController = [[HYWPHGridViewController alloc] initWithImagePickerConfig:_imagePickerConfig];
-            gridController.plGridDelegate = (id<HYWPHGridViewControllerDelegate>)listController;
+            JNPHGridViewController *gridController = [[JNPHGridViewController alloc] initWithImagePickerConfig:_imagePickerConfig];
+            gridController.plGridDelegate = (id<JNPHGridViewControllerDelegate>)listController;
             gridController.isScrollToBottom = YES;
             gridController.assetsFetchResults = selectedResult;
             gridController.navigationItem.title = resultTitle;

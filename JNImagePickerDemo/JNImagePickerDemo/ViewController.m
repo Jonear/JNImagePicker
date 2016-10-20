@@ -18,15 +18,17 @@
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
+    UIButton *_bigButton;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    UIButton *bigButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
-    [bigButton setBackgroundColor:[UIColor redColor]];
-    [bigButton addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:bigButton];
+    _bigButton = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    [_bigButton setBackgroundColor:[UIColor redColor]];
+    [_bigButton addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_bigButton];
 }
 
 
@@ -43,7 +45,7 @@
     config.imagePickerMediaType = kImagePickerMediaTypeAll;
     config.delegate = self;
     config.sendHDImage = YES;
-    config.capacity = 1;
+    config.capacity = 9;
     JNImagePickerManager *manager = [[JNImagePickerManager alloc] init];
     [manager showImagePickerInViewController:self imagePickerConfig:config];
 }
@@ -67,7 +69,10 @@
 - (void)sendImagesMessageWithAssetArray:(NSArray *)assets isHDImage:(BOOL)isHDImage {
     [assets enumerateObjectsUsingBlock:^(JNIPAsset *obj, NSUInteger idx, BOOL * _Nonnull stop) {
         UIImage *image = [JNIPAssetHelper imageWithIPAsset:obj original:isHDImage];
-        NSLog(@"%@", image);
+        if (image) {
+            [_bigButton setBackgroundImage:image forState:UIControlStateNormal];
+            *stop = YES;
+        }
     }];
     
 }

@@ -1,9 +1,9 @@
 //
-//  HYWImagePickerManager.m
-//  HYWImagePicker
+//  JNImagePickerManager.m
+//  JNImagePicker
 //
-//  Created by 黄耀武 on 16/3/14.
-//  Copyright © 2016年 huangyaowu. All rights reserved.
+//  Created by Jonear on 16/3/14.
+//  Copyright © 2016年 Jonear. All rights reserved.
 //
 
 #import "JNImagePickerManager.h"
@@ -211,7 +211,7 @@
     
     if (_collectionsFetchResultsAssets.count > 0) {
         // 默认显示第一个相册-相机胶卷
-//#warning huangyaowu
+//#warning Jonear
         NSInteger atIndex = 0;
 //        for (NSInteger i = 0; i < _collectionsFetchResultsAssets.count; i++) {
 //            NSString *identifier = _collectionsLocalIdentifier[i];

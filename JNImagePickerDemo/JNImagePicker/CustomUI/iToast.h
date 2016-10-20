@@ -3,7 +3,7 @@
 //  eim_iphone
 //
 //  Created by zhou jezhee on 11/21/12.
-//  Copyright (c) 2012 Netease. All rights reserved.
+//  Copyright (c) 2012 Jonear. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

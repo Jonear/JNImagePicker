@@ -1,9 +1,9 @@
 //
 //  HYWIPAssetHelper.m
-//  yixin_iphone
+//  JNImagePicker
 //
-//  Created by huangyaowu on 13-9-4.
-//  Copyright (c) 2013年 Netease. All rights reserved.
+//  Created by Jonear on 13-9-4.
+//  Copyright (c) 2013年 Jonear. All rights reserved.
 //
 
 #import "JNIPAssetHelper.h"

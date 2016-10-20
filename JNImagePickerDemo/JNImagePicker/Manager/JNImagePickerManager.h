@@ -1,9 +1,9 @@
 //
-//  HYWImagePickerManager.h
-//  HYWImagePicker
+//  JNImagePickerManager.h
+//  JNImagePicker
 //
-//  Created by 黄耀武 on 16/3/14.
-//  Copyright © 2016年 huangyaowu. All rights reserved.
+//  Created by Jonear on 16/3/14.
+//  Copyright © 2016年 Jonear. All rights reserved.
 //
 //  提示：
 //  1、调用系统相册和拍照的ActionSheet

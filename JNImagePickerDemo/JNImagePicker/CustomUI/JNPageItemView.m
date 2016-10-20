@@ -1,9 +1,9 @@
 //
 //  PageView.m
-//  yixin_iphone
+//  JNImagePicker
 //
 //  Created by amao on 13-5-14.
-//  Copyright (c) 2013年 Netease. All rights reserved.
+//  Copyright (c) 2013年 Jonear. All rights reserved.
 //
 
 #import "JNPageItemView.h"

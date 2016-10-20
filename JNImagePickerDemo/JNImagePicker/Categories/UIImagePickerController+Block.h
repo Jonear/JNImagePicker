@@ -1,9 +1,9 @@
 //
 //  UIImagePickerController+Block.h
-//  yixin_iphone
+//  JNImagePicker
 //
-//  Created by 黄耀武 on 15/1/9.
-//  Copyright (c) 2015年 Netease. All rights reserved.
+//  Created by Jonear on 15/1/9.
+//  Copyright (c) 2015年 Jonear. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

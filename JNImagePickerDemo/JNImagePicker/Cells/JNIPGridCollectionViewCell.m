@@ -1,9 +1,9 @@
 //
 //  JNIPGridCollectionViewCell.m
-//  HYWImagePicker
+//  JNImagePicker
 //
-//  Created by 黄耀武 on 16/3/11.
-//  Copyright © 2016年 huangyaowu. All rights reserved.
+//  Created by Jonear on 16/3/11.
+//  Copyright © 2016年 Jonear. All rights reserved.
 //
 
 #import "JNIPGridCollectionViewCell.h"

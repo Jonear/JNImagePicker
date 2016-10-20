@@ -1,9 +1,9 @@
 //
 //  HYWLargeImageView.h
-//  yixin_iphone
+//  JNImagePicker
 //
-//  Created by 黄耀武 on 14/12/24.
-//  Copyright (c) 2014年 Netease. All rights reserved.
+//  Created by Jonear on 14/12/24.
+//  Copyright (c) 2014年 Jonear. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

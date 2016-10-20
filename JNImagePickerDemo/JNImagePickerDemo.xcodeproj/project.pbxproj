@@ -254,10 +254,10 @@
 			children = (
 				E6C41E6E1DB7853A00B580B5 /* JNLargeImageView.h */,
 				E6C41E6F1DB7853A00B580B5 /* JNLargeImageView.m */,
-				E6C41E701DB7853A00B580B5 /* iToast.h */,
-				E6C41E711DB7853A00B580B5 /* iToast.m */,
 				E6C41E721DB7853A00B580B5 /* JNPageItemView.h */,
 				E6C41E731DB7853A00B580B5 /* JNPageItemView.m */,
+				E6C41E701DB7853A00B580B5 /* iToast.h */,
+				E6C41E711DB7853A00B580B5 /* iToast.m */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";

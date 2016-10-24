@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E6C12BBE1DBDD91D0080C8ED /* JNAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6C12BBD1DBDD91D0080C8ED /* JNAssets.xcassets */; };
 		E6C41DD91DB77D6A00B580B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41DD81DB77D6A00B580B5 /* main.m */; };
 		E6C41DDC1DB77D6A00B580B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41DDB1DB77D6A00B580B5 /* AppDelegate.m */; };
 		E6C41DDF1DB77D6A00B580B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C41DDE1DB77D6A00B580B5 /* ViewController.m */; };
@@ -60,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E6C12BBD1DBDD91D0080C8ED /* JNAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = JNAssets.xcassets; sourceTree = "<group>"; };
 		E6C41DD41DB77D6A00B580B5 /* JNImagePickerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JNImagePickerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6C41DD81DB77D6A00B580B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E6C41DDA1DB77D6A00B580B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				E6C41E851DB7853A00B580B5 /* Manager */,
 				E6C41E8C1DB7853A00B580B5 /* Model */,
 				E6C41E8F1DB7853A00B580B5 /* PHImagePicker */,
+				E6C12BBD1DBDD91D0080C8ED /* JNAssets.xcassets */,
 			);
 			path = JNImagePicker;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				E6C41DE41DB77D6A00B580B5 /* Assets.xcassets in Resources */,
 				E6C41E9C1DB7853A00B580B5 /* JNIPGridCollectionViewCell.xib in Resources */,
 				E6C41DE21DB77D6A00B580B5 /* Main.storyboard in Resources */,
+				E6C12BBE1DBDD91D0080C8ED /* JNAssets.xcassets in Resources */,
 				E6C41EAF1DB7853A00B580B5 /* JNPHGridViewController.xib in Resources */,
 				E6C41EB31DB7853A00B580B5 /* JNPHListViewController.xib in Resources */,
 			);

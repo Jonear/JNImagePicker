@@ -19,4 +19,4 @@ photo picker: <br/>
 
 <br/>
 
- ![image](https://github.com/Jonear/JNImagePicker/jngif.gif)
+ ![image](https://github.com/Jonear/JNImagePicker/raw/master/jngif.gif)

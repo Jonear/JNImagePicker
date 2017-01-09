@@ -25,6 +25,6 @@ typedef enum : NSUInteger
 @property (nonatomic, assign) NSInteger             capacity;   // 最多选择张数
 @property (nonatomic, strong) NSString              *tip;       // 超过capacity时的提示文案
 @property (nonatomic, assign) BOOL                  sendHDImage;// 是否有发送原图功能
-@property (nonatomic, strong) NSString              *sendTitle; // 发送按钮文案
+@property (nonatomic, strong) NSString              *sendTitle; // 确定按钮文案
 
 @end

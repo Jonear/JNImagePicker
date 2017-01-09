@@ -16,3 +16,7 @@ photo picker: <br/>
 3. Support video selection <br/>
 4. Use photoKit, only support ios8 above <br/>
 5. Support original image selection <br/>
+
+<br/>
+
+ ![image](https://github.com/Jonear/JNImagePicker/jngif.gif)
